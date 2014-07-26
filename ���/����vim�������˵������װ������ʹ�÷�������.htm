@@ -1,0 +1,1640 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+     
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    
+<head>
+    <title>经典vim插件功能说明、安装方法和使用方法介绍（已更新） - tge7618291的专栏
+        - 博客频道 - CSDN.NET</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="1 #=============================================================================&#160;&#160;2 &#160;转载请注明出处:&#160;http://blog.csdn.net/tge7618291&#160;&#160;&#160;&#160; &#160;&#160;&#160; &#160; &#160; &#160; &#160; &#160; &#160; http://nuoerlz.35free.net&#160; 8 #==================" />
+    <script src="http://static.blog.csdn.net/scripts/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://static.blog.csdn.net/scripts/ad.js?v=1.1"></script>
+        <!--new top-->
+               <link rel="stylesheet" href="http://static.csdn.net/public/common/toolbar/css/index.css">        <!--new top-->
+
+    <link rel="Stylesheet" type="text/css" href="http://static.blog.csdn.net/skin/default/css/style.css?v=1.1" />
+    <link id="RSSLink" title="RSS" type="application/rss+xml" rel="alternate" href="/tge7618291/rss/list" />
+    <link rel="shortcut icon" href="http://csdnimg.cn/public/favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/default.css" />
+ 
+
+</head>
+<body>
+    
+   
+      <!--new top-->
+    <script id="toolbar-tpl-scriptId" fixed="true" prod="blog" skin="black" src="http://static.csdn.net/public/common/toolbar/js/html.js" type="text/javascript"></script>
+     <!--new top-->
+    <div id="container">
+        <div id="header">
+    <div class="header">
+        <div id="blog_title">
+            <h2>
+                <a href="http://blog.csdn.net/tge7618291">tge7618291的专栏</a></h2>
+            <h3></h3>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+<div id="navigator">
+    <div class="navigator_bg">
+    </div>
+    <div class="navigator">
+        <ul>
+                <li id="btnContents"><a href="http://blog.csdn.net/tge7618291?viewmode=contents"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_mulu'])">
+                    <img src="http://static.blog.csdn.net/images/ico_list.gif">目录视图</span></a></li>
+                <li id="btnView"><a href="http://blog.csdn.net/tge7618291?viewmode=list"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_zhaiyao'])">
+                    <img src="http://static.blog.csdn.net/images/ico_summary.gif">摘要视图</span></a></li>
+                <li id="btnRss"><a href="http://blog.csdn.net/tge7618291/rss/list"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_RSS'])">
+                    <img src="http://static.blog.csdn.net/images/ico_rss.gif">订阅</span></a></li>                
+
+            </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    var username = "tge7618291";
+    var _blogger = username;
+    var blog_address = "http://blog.csdn.net/tge7618291";
+    var static_host = "http://static.blog.csdn.net";
+    var currentUserName = "";  
+</script>
+
+        <div id="body">
+            <div id="main">
+                <div class="main">
+<div class="notice tracking-ad" data-mod='popu_3' > 
+
+<a href="http://blog.csdn.net/blogdevteam/article/details/25387451"target="_blank">
+<font color=blue>有奖征资源，博文分享有内涵
+</font></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="http://blog.csdn.net/blogdevteam/article/details/37602759">
+<font color=red>6月推荐文章汇总 
+</font></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://blog.csdn.net/blogdevteam/article/details/37874361"target="_blank">
+<font color=blue>CSDN博文大赛初赛晋级名单公布
+</font></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+</div>                    <link href="http://static.blog.csdn.net/css/comment1.css" type="text/css" rel="stylesheet" />
+<link href="http://static.blog.csdn.net/css/style1.css" type="text/css" rel="stylesheet" />
+<script language='JavaScript' type='text/javascript' src='http://download.csdn.net/js/jquery.cookie.js'></script>
+<script type="text/javascript" src="http://csdnimg.cn/rabbit/search-service/main.js"></script>
+<div id="article_details" class="details">
+    <div class="article_title">   
+         <span class="ico ico_type_Original"></span>
+
+
+    <h1>
+        <span class="link_title"><a href="/tge7618291/article/details/4216977">
+        经典vim插件功能说明、安装方法和使用方法介绍（已更新）
+        </a></span>
+    </h1>
+</div>
+
+    <div class="article_manage">
+        <span class="link_categories">
+        分类：
+            <a href="/tge7618291/article/category/536024" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_fenlei']);">linux</a> 
+        </span>
+    <span class="link_postdate">2009-05-26 13:11</span>
+    <span class="link_view" title="阅读次数">79909人阅读</span>
+    <span class="link_comments" title="评论次数"><a href="#comments" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_pinglun'])">评论</a>(28)</span>
+    <span class="link_collect"><a href="javascript:void(0);" onclick="javascript:_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_shoucang']);collectArticle('经典vim插件功能说明、安装方法和使用方法介绍（已更新）','4216977');return false;" title="收藏">收藏</a></span>
+    <span class="link_report"><a href="#report"  onclick="javascript:_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_jubao']);report(4216977,2);return false;" title="举报">举报</a></span>
+    
+</div>
+<div class="tag2box"><a href='http://www.csdn.net/tag/vim' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">vim</a><a href='http://www.csdn.net/tag/file' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">file</a><a href='http://www.csdn.net/tag/windows' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">windows</a><a href='http://www.csdn.net/tag/templates' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">templates</a><a href='http://www.csdn.net/tag/filter' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">filter</a></div>
+
+    
+<div id="article_content" class="article_content">
+
+<p><span style="font-family:monospace"><span style="color:#a52a2a">&nbsp;&nbsp;1 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">&nbsp;&nbsp;2 </span>&nbsp;转载请注明出处:&nbsp;http://blog.csdn.net/tge7618291</span></p>
+<p><span style="font-family:monospace"><span style="color:#a52a2a">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a target="_blank" target="_blank" href="http://nuoerlz.is-programmer.com/">http://nuoerlz.is-programmer.com</a></span></span></p>
+<p><span style="font-family:monospace"><span style="color:#a52a2a">&nbsp; 8 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">&nbsp;&nbsp;9 </span><span style="color:#ff00ff"><strong>1. 查看 key 相关信息说明的命令&nbsp;&nbsp;:help keycodes</strong></span><br>
+<span style="color:#a52a2a">&nbsp;10 </span><br>
+<span style="color:#a52a2a">&nbsp;11 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">&nbsp;12 </span><span style="color:#ff00ff"><strong>2. ctags</strong></span><br>
+<span style="color:#a52a2a">&nbsp;13 </span><span style="color:#6a5acd">(1)</span>. 帮助手册查看<br>
+<span style="color:#a52a2a">&nbsp;14 </span>&nbsp;&nbsp;&nbsp;&nbsp;:help usr_29<br>
+<span style="color:#a52a2a">&nbsp;15 </span><br>
+<span style="color:#a52a2a">&nbsp;16 </span><span style="color:#6a5acd">(2)</span>. 功能<br>
+<span style="color:#a52a2a">&nbsp;17 </span>&nbsp;&nbsp;&nbsp;&nbsp;ctags的功能, 只要在unix/linux环境编程过的人都知道它的历害! 我在这也作个小<br>
+<span style="color:#a52a2a">&nbsp;18 </span>&nbsp;&nbsp;&nbsp;&nbsp;小介绍吧ndow=0: 对浏览代码非常的方便, 可以在函数, 变量之间跳来跳去等等.<span style="color:#6a5acd">(注</span><br>
+<span style="color:#a52a2a">&nbsp;19 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;意: 我这里说到的仅是小小的一部分!)</span>.<br>
+<span style="color:#a52a2a">&nbsp;20 </span><br>
+<span style="color:#a52a2a">&nbsp;21 </span><span style="color:#6a5acd">(3)</span>. 安装<br>
+<span style="color:#a52a2a">&nbsp;22 </span>&nbsp;&nbsp;&nbsp;&nbsp;首先, 下载ctags安装包, 然后解压并安装, 命令如下:<br>
+<span style="color:#a52a2a">&nbsp;23 </span>&nbsp;&nbsp;&nbsp;&nbsp;$ tar -xzvf ctags-5.6.tar.gz<br>
+<span style="color:#a52a2a">&nbsp;24 </span>&nbsp;&nbsp;&nbsp;&nbsp;$ cd ctags-5.6<br>
+<span style="color:#a52a2a">&nbsp;25 </span>&nbsp;&nbsp;&nbsp;&nbsp;$ make<br>
+<span style="color:#a52a2a">&nbsp;26 </span>&nbsp;&nbsp;&nbsp;&nbsp;# make install&nbsp;&nbsp; // 需要root权限<br>
+<span style="color:#a52a2a">&nbsp;27 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;或:<br>
+<span style="color:#a52a2a">&nbsp;28 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ tar -xzvf ctags-5.7.tar.gz<br>
+<span style="color:#a52a2a">&nbsp;29 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ cd ctags-5.7<br>
+<span style="color:#a52a2a">&nbsp;30 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ ./configure<br>
+<span style="color:#a52a2a">&nbsp;31 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# make<br>
+<span style="color:#a52a2a">&nbsp;32 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# make install<br>
+<span style="color:#a52a2a">&nbsp;33 </span><br>
+<span style="color:#a52a2a">&nbsp;34 </span><br>
+<span style="color:#a52a2a">&nbsp;35 </span><span style="color:#6a5acd">(4)</span>. 使用方法<br>
+<span style="color:#a52a2a">&nbsp;36 </span>&nbsp;&nbsp;&nbsp;&nbsp;然后去你的源码目录, 如果你的源码是多层的目录, 就去最上层的目录, 在该目录下<br>
+<span style="color:#a52a2a">&nbsp;37 </span>&nbsp;&nbsp;&nbsp;&nbsp;运行命令: ctags -R<br>
+<span style="color:#a52a2a">&nbsp;38 </span>&nbsp;&nbsp;&nbsp;&nbsp;我现在以 vim71 的源码目录做演示<br>
+<span style="color:#a52a2a">&nbsp;39 </span>&nbsp;&nbsp;&nbsp;&nbsp;$ cd /home/nuoerll/vim71<br>
+<span style="color:#a52a2a">&nbsp;40 </span>&nbsp;&nbsp;&nbsp;&nbsp;$ ctags -R<br>
+<span style="color:#a52a2a">&nbsp;41 </span>&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<span style="color:#a52a2a">&nbsp;42 </span>&nbsp;&nbsp;&nbsp;&nbsp;此时在/home/nuoerll/vim71目录下会生成一个 tags 文件, 现在用vim打开<br>
+<span style="color:#a52a2a">&nbsp;43 </span>&nbsp;&nbsp;&nbsp;&nbsp;/home/nuoerll/vim71/src/main.c<br>
+<span style="color:#a52a2a">&nbsp;44 </span>&nbsp;&nbsp;&nbsp;&nbsp;$ vim /home/nuoerll/vim71/src/main.c<br>
+<span style="color:#a52a2a">&nbsp;45 </span>&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<span style="color:#a52a2a">&nbsp;46 </span>&nbsp;&nbsp;&nbsp;&nbsp;再在vim中运行命令:<br>
+<span style="color:#a52a2a">&nbsp;47 </span>&nbsp;&nbsp;&nbsp;&nbsp;:set tags=/home/nuoerll/vim71/tags<br>
+<span style="color:#a52a2a">&nbsp;48 </span>&nbsp;&nbsp;&nbsp;&nbsp;该命令将tags文件加入到vim中来, 你也可以将这句话放到~/.vimrc中去, 如果你经<br>
+<span style="color:#a52a2a">&nbsp;49 </span>&nbsp;&nbsp;&nbsp;&nbsp;常在这个工程编程的话.<br>
+<span style="color:#a52a2a">&nbsp;50 </span>&nbsp;&nbsp;&nbsp;&nbsp;对于经常在不同工程间编程, 可以在.vimrc中设置:<br>
+<span style="color:#a52a2a">&nbsp;51 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set tags=tags;&nbsp;&nbsp;&nbsp;&nbsp;// ; 不能没有<br>
+<span style="color:#a52a2a">&nbsp;52 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set autochdir<br>
+<span style="color:#a52a2a">&nbsp;53 </span><br>
+<span style="color:#a52a2a">&nbsp;54 </span><span style="color:#6a5acd">(5)</span>. 使用例子<br>
+<span style="color:#a52a2a">&nbsp;55 </span>&nbsp;&nbsp;&nbsp;&nbsp;把光标定位到某一函数名上, 按下 Ctar &#43; ], vim就可以自动切换到该函数定义处!<br>
+<span style="color:#a52a2a">&nbsp;56 </span>&nbsp;&nbsp;&nbsp;&nbsp;要返回只需要按下Ctrl &#43; t .<br>
+<span style="color:#a52a2a">&nbsp;57 </span>&nbsp;&nbsp;&nbsp;&nbsp;更多用法, 在vim命令模式输入 :help usr_29 查看即可.<br>
+<span style="color:#a52a2a">&nbsp;58 </span><br>
+<span style="color:#a52a2a">&nbsp;59 </span><br>
+<span style="color:#a52a2a">&nbsp;60 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">&nbsp;61 </span><span style="color:#ff00ff"><strong>3. TagList 插件</strong></span><br>
+<span style="color:#a52a2a">&nbsp;62 </span><span style="color:#6a5acd">(1)</span>. 帮助手册查看<br>
+<span style="color:#a52a2a">&nbsp;63 </span>&nbsp;&nbsp;&nbsp;&nbsp;:help taglist.txt<br>
+<span style="color:#a52a2a">&nbsp;64 </span><br>
+<span style="color:#a52a2a">&nbsp;65 </span><span style="color:#6a5acd">(2)</span>. 功能<br>
+<span style="color:#a52a2a">&nbsp;66 </span>&nbsp;&nbsp;&nbsp;&nbsp;高效地浏览源码, 其功能就像vc中的workpace, 那里面列出了当前文件中的所有宏,<br>
+<span style="color:#a52a2a">&nbsp;67 </span>&nbsp;&nbsp;&nbsp;&nbsp;全局变量, 函数名等.<br>
+<span style="color:#a52a2a">&nbsp;68 </span><br>
+<span style="color:#a52a2a">&nbsp;69 </span><span style="color:#6a5acd">(3)</span>. 安装<br>
+<span style="color:#a52a2a">&nbsp;70 </span>&nbsp;&nbsp;&nbsp;&nbsp;下载taglist压缩包, 然后把解压的两个文件taglist.vim 和 taglist.txt 分别放到<br>
+<span style="color:#a52a2a">&nbsp;71 </span>&nbsp;&nbsp;&nbsp;&nbsp;$HOME/.vim/plugin 和 $HOME/.vim/doc 目录中.<br>
+<span style="color:#a52a2a">&nbsp;72 </span><br>
+<span style="color:#a52a2a">&nbsp;73 </span><span style="color:#6a5acd">(4)</span>. 使用方法<br>
+<span style="color:#a52a2a">&nbsp;74 </span>&nbsp;&nbsp;&nbsp;&nbsp;首先请先在你的~/.vimrc文件中添加下面语句:<br>
+<span style="color:#a52a2a">&nbsp;75 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let Tlist_Ctags_Cmd='<span style="color:#2e8b57"><strong>/bin/ctags</strong></span>'&nbsp;&nbsp; // 若在windows中应写成: let/<br>
+<span style="color:#a52a2a">&nbsp;76 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tlist_Ctags_Cmd='<span style="color:#2e8b57"><strong>ctags.exe</strong></span>'<br>
+<span style="color:#a52a2a">&nbsp;77 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let Tlist_Show_One_File=1<br>
+<span style="color:#a52a2a">&nbsp;78 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let Tlist_OnlyWindow=1<br>
+<span style="color:#a52a2a">&nbsp;79 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let Tlist_Use_Right_Window=0<br>
+<span style="color:#a52a2a">&nbsp;80 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let Tlist_Sort_Type='<span style="color:#2e8b57"><strong>name</strong></span>'<br>
+<span style="color:#a52a2a">&nbsp;81 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let Tlist_Exit_OnlyWindow=1<br>
+<span style="color:#a52a2a">&nbsp;82 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let Tlist_Show_Menu=1<br>
+<span style="color:#a52a2a">&nbsp;83 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let Tlist_Max_Submenu_Items=10<br>
+<span style="color:#a52a2a">&nbsp;84 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let Tlist_Max_Tag_length=20<br>
+<span style="color:#a52a2a">&nbsp;85 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let Tlist_Use_SingleClick=0<br>
+<span style="color:#a52a2a">&nbsp;86 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let Tlist_Auto_Open=0<br>
+<span style="color:#a52a2a">&nbsp;87 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let Tlist_Close_On_Select=0<br>
+<span style="color:#a52a2a">&nbsp;88 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let Tlist_File_Fold_Auto_Close=1<br>
+<span style="color:#a52a2a">&nbsp;89 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let Tlist_GainFocus_On_ToggleOpen=0<br>
+<span style="color:#a52a2a">&nbsp;90 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let Tlist_Process_File_Always=1<br>
+<span style="color:#a52a2a">&nbsp;91 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let Tlist_WinHeight=10<br>
+<span style="color:#a52a2a">&nbsp;92 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let Tlist_WinWidth=18<br>
+<span style="color:#a52a2a">&nbsp;93 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let Tlist_Use_Horiz_Window=0<br>
+<span style="color:#a52a2a">&nbsp;94 </span><br>
+<span style="color:#a52a2a">&nbsp;95 </span>&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<span style="color:#a52a2a">&nbsp;96 </span>&nbsp;&nbsp;&nbsp;&nbsp;此时用vim打开一个c源文件试试:<br>
+<span style="color:#a52a2a">&nbsp;97 </span>&nbsp;&nbsp;&nbsp;&nbsp;$ vim ~/vim/src/main.c<br>
+<span style="color:#a52a2a">&nbsp;98 </span>&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<span style="color:#a52a2a">&nbsp;99 </span>&nbsp;&nbsp;&nbsp;&nbsp;进入vim后用下面的命令打开taglist窗口.<br>
+<span style="color:#a52a2a">100 </span>&nbsp;&nbsp;&nbsp;&nbsp;:Tlist<br>
+<span style="color:#a52a2a">101 </span><br>
+<span style="color:#a52a2a">102 </span>&nbsp;&nbsp;&nbsp;&nbsp;为了更方便地使用, 可以在.vimrc文件中加入:<br>
+<span style="color:#a52a2a">103 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map &lt;<span style="color:#6a5acd">silent</span>&gt; &lt;<span style="color:#6a5acd">leader</span>&gt;tl :TlistToggle&lt;<span style="color:#6a5acd">CR</span>&gt;<br>
+<span style="color:#a52a2a">104 </span>&nbsp;&nbsp;&nbsp;&nbsp;这样就可以用 &quot;<span style="color:#2e8b57"><strong>,tl</strong></span>&quot; 命令进行taglist窗口的打开和关闭之间方便切换了. // 这里<br>
+<span style="color:#a52a2a">105 </span>&nbsp;&nbsp;&nbsp;&nbsp;的&quot;<span style="color:#2e8b57"><strong>,</strong></span>&quot;是我.vimrc设置的leader, 你也可以设置成别的, 在.vimrc中修改即可, 如我<br>
+<span style="color:#a52a2a">106 </span>&nbsp;&nbsp;&nbsp;&nbsp;的: let mapleader=&quot;<span style="color:#2e8b57"><strong>,</strong></span>&quot;<br>
+<span style="color:#a52a2a">107 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<span style="color:#a52a2a">108 </span>&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<span style="color:#a52a2a">109 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">110 </span><span style="color:#ff00ff"><strong>4. WinManager 插件</strong></span><br>
+<span style="color:#a52a2a">111 </span><span style="color:#6a5acd">(1)</span>. 帮助手册查看<br>
+<span style="color:#a52a2a">112 </span>&nbsp;&nbsp;&nbsp;&nbsp;:help winmanager<br>
+<span style="color:#a52a2a">113 </span><br>
+<span style="color:#a52a2a">114 </span><span style="color:#6a5acd">(2)</span>. 功能<br>
+<span style="color:#a52a2a">115 </span>&nbsp;&nbsp;&nbsp;&nbsp;管理各个窗口, 或者说整合各个窗口.<br>
+<span style="color:#a52a2a">116 </span><br>
+<span style="color:#a52a2a">117 </span><span style="color:#6a5acd">(3)</span>. 安装<br>
+<span style="color:#a52a2a">118 </span>&nbsp;&nbsp;&nbsp;&nbsp;下载WinManager.zip压缩包, 解压后把*.vim文件放到 $HOME/.vim/plugin 目录中,<br>
+<span style="color:#a52a2a">119 </span>&nbsp;&nbsp;&nbsp;&nbsp;把*.txt文件放到 $HOME/.vim/doc 目录中.<br>
+<span style="color:#a52a2a">120 </span><br>
+<span style="color:#a52a2a">121 </span><span style="color:#6a5acd">(4)</span>. 使用方法<br>
+<span style="color:#a52a2a">122 </span>&nbsp;&nbsp;&nbsp;&nbsp;在.vimrc中加入如下设置:<br>
+<span style="color:#a52a2a">123 </span>&nbsp;&nbsp;&nbsp;&nbsp;let g:winManagerWindowLayout='<span style="color:#2e8b57"><strong>FileExplorer|BufExplorer</strong></span>'&nbsp;&nbsp;// 这里可以设置/<br>
+<span style="color:#a52a2a">124 </span>&nbsp;&nbsp;&nbsp;&nbsp;为多个窗口, 如'<span style="color:#2e8b57"><strong>FileExplorer|BufExplorer|TagList</strong></span>'<br>
+<span style="color:#a52a2a">125 </span>&nbsp;&nbsp;&nbsp;&nbsp;let g:persistentBehaviour=0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 只剩一个窗口时, 退出vim.<br>
+<span style="color:#a52a2a">126 </span>&nbsp;&nbsp;&nbsp;&nbsp;let g:winManagerWidth=20<br>
+<span style="color:#a52a2a">127 </span>&nbsp;&nbsp;&nbsp;&nbsp;let g:defaultExplorer=1<br>
+<span style="color:#a52a2a">128 </span>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;<span style="color:#6a5acd">silent</span>&gt; &lt;<span style="color:#6a5acd">leader</span>&gt;fir :FirstExplorerWindow&lt;<span style="color:#6a5acd">cr</span>&gt;<br>
+<span style="color:#a52a2a">129 </span>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;<span style="color:#6a5acd">silent</span>&gt; &lt;<span style="color:#6a5acd">leader</span>&gt;bot :BottomExplorerWindow&lt;<span style="color:#6a5acd">cr</span>&gt;<br>
+<span style="color:#a52a2a">130 </span>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;<span style="color:#6a5acd">silent</span>&gt; &lt;<span style="color:#6a5acd">leader</span>&gt;wm :WMToggle&lt;<span style="color:#6a5acd">cr</span>&gt;<br>
+<span style="color:#a52a2a">131 </span><br>
+<span style="color:#a52a2a">132 </span><span style="color:#6a5acd">(5)</span>. 使用例子<br>
+<span style="color:#a52a2a">133 </span>&nbsp;&nbsp;&nbsp;&nbsp;在终端输入vim启动vim:<br>
+<span style="color:#a52a2a">134 </span>&nbsp;&nbsp;&nbsp;&nbsp;$vim<br>
+<span style="color:#a52a2a">135 </span>&nbsp;&nbsp;&nbsp;&nbsp;在正常模式下, 敲入 &quot;<span style="color:#2e8b57"><strong>,wm</strong></span>&quot; 即可看到, vim的左侧新建了两个窗口:FileExplorer和<br>
+<span style="color:#a52a2a">136 </span>&nbsp;&nbsp;&nbsp;&nbsp;BufExplorer, 这样我们即可在FileExplorer窗口很方便地对目录进行查看, 编辑等<br>
+<span style="color:#a52a2a">137 </span>&nbsp;&nbsp;&nbsp;&nbsp;操作; 在BufExplorer窗口中查看当前vim已经打开那些文件.<br>
+<span style="color:#a52a2a">138 </span><br>
+<span style="color:#a52a2a">139 </span><br>
+<span style="color:#a52a2a">140 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">141 </span><span style="color:#ff00ff"><strong>5. cscope</strong></span><br>
+<span style="color:#a52a2a">142 </span><span style="color:#6a5acd">(1)</span>. 帮助手册查看<br>
+<span style="color:#a52a2a">143 </span>&nbsp;&nbsp;&nbsp;&nbsp;:help if_cscop.txt<br>
+<span style="color:#a52a2a">144 </span><br>
+<span style="color:#a52a2a">145 </span><span style="color:#6a5acd">(2)</span>. 功能<br>
+<span style="color:#a52a2a">146 </span>&nbsp;&nbsp;&nbsp;&nbsp;用Cscope自己的话说 - &quot;<span style="color:#2e8b57"><strong>你可以把它当做是超过频的ctags</strong></span>&quot;, 其功能和强大程度可见<br>
+<span style="color:#a52a2a">147 </span>&nbsp;&nbsp;&nbsp;&nbsp;一斑吧, 关于它的介绍我就不详细说了, 如果你安装好了前文介绍的帮助手册.<br>
+<span style="color:#a52a2a">148 </span><br>
+<span style="color:#a52a2a">149 </span><span style="color:#6a5acd">(3)</span>. 安装<br>
+<span style="color:#a52a2a">150 </span>&nbsp;&nbsp;&nbsp;&nbsp;如果是在linux环境中, cscope一般都会随系统一起安装了; 在windows环境中, 则需<br>
+<span style="color:#a52a2a">151 </span>&nbsp;&nbsp;&nbsp;&nbsp;要下载windows版本的<span style="color:#6a5acd">(cscope.exe)</span>, 然后把它放到path环境变量所设<br>
+<span style="color:#a52a2a">152 </span>&nbsp;&nbsp;&nbsp;&nbsp;置的目录中<span style="color:#6a5acd">(如: C:/Program Files/Vim/vim72)</span>.<br>
+<span style="color:#a52a2a">153 </span><br>
+<span style="color:#a52a2a">154 </span><span style="color:#6a5acd">(4)</span>. 使用方法<br>
+<span style="color:#a52a2a">155 </span>&nbsp;&nbsp;&nbsp;&nbsp;在.vimrc中增加如下设置, 就可以利用相应的快捷键进行不同的查找了.<br>
+<span style="color:#a52a2a">156 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if has<span style="color:#6a5acd">(&quot;cscope&quot;)</span><br>
+<span style="color:#a52a2a">157 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set cscopetag&nbsp;&nbsp; &quot;<span style="color:#2e8b57"><strong>&nbsp;使支持用 Ctrl&#43;]&nbsp;&nbsp;和 Ctrl&#43;t 快捷键在代码间跳来跳去</strong></span><br>
+<span style="color:#a52a2a">158 </span><span style="color:#2e8b57"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>&quot;<span style="color:#2e8b57"><strong>&nbsp;check cscope for definition of a symbol before checking ctags:</strong></span><br>
+<span style="color:#a52a2a">159 </span><span style="color:#2e8b57"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>&quot; set to 1 if you want the reverse search order.<br>
+<span style="color:#a52a2a">160 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set csto=1<br>
+<span style="color:#a52a2a">161 </span><br>
+<span style="color:#a52a2a">162 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#2e8b57"><strong>&nbsp;add any cscope database in current directory</strong></span><br>
+<span style="color:#a52a2a">163 </span><span style="color:#2e8b57"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if filereadable(</strong></span><span style="color:#6a5acd">&quot;cscope.out&quot;)</span><br>
+<span style="color:#a52a2a">164 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cs add cscope.out<br>
+<span style="color:#a52a2a">165 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#2e8b57"><strong>&nbsp;else add the database pointed to by environment variable</strong></span><br>
+<span style="color:#a52a2a">166 </span><span style="color:#2e8b57"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elseif $CSCOPE_DB !=</strong></span>&quot;&quot;<br>
+<span style="color:#a52a2a">167 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cs add $CSCOPE_DB<br>
+<span style="color:#a52a2a">168 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;endif<br>
+<span style="color:#a52a2a">169 </span><br>
+<span style="color:#a52a2a">170 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot; show msg when any other cscope db added<br>
+<span style="color:#a52a2a">171 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set cscopeverbose<br>
+<span style="color:#a52a2a">172 </span><br>
+<span style="color:#a52a2a">173 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;<span style="color:#6a5acd">C-/</span>&gt;s :cs find s &lt;<span style="color:#6a5acd">C-R</span>&gt;=expand<span style="color:#6a5acd">(&quot;&lt;cword&gt;&quot;)</span>&lt;<span style="color:#6a5acd">CR</span>&gt;&lt;<span style="color:#6a5acd">CR</span>&gt;<br>
+<span style="color:#a52a2a">174 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;<span style="color:#6a5acd">C-/</span>&gt;g :cs find g &lt;<span style="color:#6a5acd">C-R</span>&gt;=expand<span style="color:#6a5acd">(&quot;&lt;cword&gt;&quot;)</span>&lt;<span style="color:#6a5acd">CR</span>&gt;&lt;<span style="color:#6a5acd">CR</span>&gt;<br>
+<span style="color:#a52a2a">175 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;<span style="color:#6a5acd">C-/</span>&gt;c :cs find c &lt;<span style="color:#6a5acd">C-R</span>&gt;=expand<span style="color:#6a5acd">(&quot;&lt;cword&gt;&quot;)</span>&lt;<span style="color:#6a5acd">CR</span>&gt;&lt;<span style="color:#6a5acd">CR</span>&gt;<br>
+<span style="color:#a52a2a">176 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;<span style="color:#6a5acd">C-/</span>&gt;t :cs find t &lt;<span style="color:#6a5acd">C-R</span>&gt;=expand<span style="color:#6a5acd">(&quot;&lt;cword&gt;&quot;)</span>&lt;<span style="color:#6a5acd">CR</span>&gt;&lt;<span style="color:#6a5acd">CR</span>&gt;<br>
+<span style="color:#a52a2a">177 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;<span style="color:#6a5acd">C-/</span>&gt;e :cs find e &lt;<span style="color:#6a5acd">C-R</span>&gt;=expand<span style="color:#6a5acd">(&quot;&lt;cword&gt;&quot;)</span>&lt;<span style="color:#6a5acd">CR</span>&gt;&lt;<span style="color:#6a5acd">CR</span>&gt;<br>
+<span style="color:#a52a2a">178 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;<span style="color:#6a5acd">C-/</span>&gt;f :cs find f &lt;<span style="color:#6a5acd">C-R</span>&gt;=expand<span style="color:#6a5acd">(&quot;&lt;cfile&gt;&quot;)</span>&lt;<span style="color:#6a5acd">CR</span>&gt;&lt;<span style="color:#6a5acd">CR</span>&gt;<br>
+<span style="color:#a52a2a">179 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;<span style="color:#6a5acd">C-/</span>&gt;i :cs find i ^&lt;<span style="color:#6a5acd">C-R</span>&gt;=expand<span style="color:#6a5acd">(&quot;&lt;cfile&gt;&quot;)</span>&lt;<span style="color:#6a5acd">CR</span>&gt;$&lt;<span style="color:#6a5acd">CR</span>&gt;<br>
+<span style="color:#a52a2a">180 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;<span style="color:#6a5acd">C-/</span>&gt;d :cs find d &lt;<span style="color:#6a5acd">C-R</span>&gt;=expand<span style="color:#6a5acd">(&quot;&lt;cword&gt;&quot;)</span>&lt;<span style="color:#6a5acd">CR</span>&gt;&lt;<span style="color:#6a5acd">CR</span>&gt;<br>
+<span style="color:#a52a2a">181 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;endif<br>
+<span style="color:#a52a2a">182 </span><br>
+<span style="color:#a52a2a">183 </span><span style="color:#6a5acd">(5)</span>. 使用例子<br>
+<span style="color:#a52a2a">184 </span>&nbsp;&nbsp;&nbsp;&nbsp;首先进入源码目录, 在linux终端中输入以下命令以创建cscope数据库:<br>
+<span style="color:#a52a2a">185 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ find ~/work/..Project/ -name &quot;<span style="color:#2e8b57"><strong>*.h</strong></span>&quot; -o -name &quot;<span style="color:#2e8b57"><strong>*.cpp</strong></span>&quot; &gt; cscope.files<br>
+<span style="color:#a52a2a">186 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ cscope -bkq -i cscope.files<br>
+<span style="color:#a52a2a">187 </span>&nbsp;&nbsp;&nbsp;&nbsp;如果是在windows环境中, 则换成如下命令:<br>
+<span style="color:#a52a2a">188 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dir /s /b *.cpp *.h &gt; cscope.files<br>
+<span style="color:#a52a2a">189 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cscope -b -q -k -i cscope.files<br>
+<span style="color:#a52a2a">190 </span><br>
+<span style="color:#a52a2a">191 </span>&nbsp;&nbsp;&nbsp;&nbsp;然后, 用vim打开一个源文件<span style="color:#6a5acd">(如: vim main.cpp)</span>,<br>
+<span style="color:#a52a2a">192 </span>&nbsp;&nbsp;&nbsp;&nbsp;打开后, 第一件事就是导入cscope数据库了:<br>
+<span style="color:#a52a2a">193 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:cs add /home/yourname/workpace/cscope.out /home/yourname/workpace<br>
+<span style="color:#a52a2a">194 </span><br>
+<span style="color:#a52a2a">195 </span>&nbsp;&nbsp;&nbsp;&nbsp;cscope数据库导入成功后, 就可以利用&quot;<span style="color:#2e8b57"><strong>步骤(4)</strong></span>&quot;中定义的快捷键进行相关的查找,<br>
+<span style="color:#a52a2a">196 </span>&nbsp;&nbsp;&nbsp;&nbsp;浏览等操作了<span style="color:#6a5acd">(当然也可以直接利用相关命令, 嘿嘿)</span>.<br>
+<span style="color:#a52a2a">197 </span><br>
+<span style="color:#a52a2a">198 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">199 </span><span style="color:#ff00ff"><strong>5. c.vim 插件</strong></span><br>
+<span style="color:#a52a2a">200 </span><span style="color:#6a5acd">(1)</span>. 帮助手册查看<br>
+<span style="color:#a52a2a">201 </span>&nbsp;&nbsp;&nbsp;&nbsp;help csupport<br>
+<span style="color:#a52a2a">202 </span><br>
+<span style="color:#a52a2a">203 </span><span style="color:#6a5acd">(2)</span>. 功能<br>
+<span style="color:#a52a2a">204 </span>&nbsp;&nbsp;&nbsp;&nbsp;C/C&#43;&#43;-IDE for Vim/gVim. 简单的说, 就是如果安装配置好后, vim/gvim就是一个<br>
+<span style="color:#a52a2a">205 </span>&nbsp;&nbsp;&nbsp;&nbsp;c/c&#43;&#43;编程的一个IDE, 其功能堪比windows里常用的vc.<br>
+<span style="color:#a52a2a">206 </span><br>
+<span style="color:#a52a2a">207 </span><span style="color:#6a5acd">(3)</span>. 安装<br>
+<span style="color:#a52a2a">208 </span>&nbsp;&nbsp;&nbsp;&nbsp;下载cvim.zip压缩包后, 把压缩包copy到 $HOME/.vim 目录<span style="color:#6a5acd">(windows下, copy 到</span><br>
+<span style="color:#a52a2a">209 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C:/Program Files/Vim/vimfiles)</span>下解压, 即可.<br>
+<span style="color:#a52a2a">210 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unzip cvim.zip&nbsp;&nbsp;&nbsp;&nbsp;// 解压命令<br>
+<span style="color:#a52a2a">211 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<span style="color:#a52a2a">212 </span><span style="color:#6a5acd">(4)</span>. 使用方法<br>
+<span style="color:#a52a2a">213 </span>&nbsp;&nbsp;&nbsp;&nbsp;安装好后就可以直接用了, 具体例子看&quot;<span style="color:#2e8b57"><strong>使用例子</strong></span>&quot;.<br>
+<span style="color:#a52a2a">214 </span>&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<span style="color:#a52a2a">215 </span><span style="color:#6a5acd">(5)</span>. 使用例子<br>
+<span style="color:#a52a2a">216 </span>&nbsp;&nbsp;&nbsp;&nbsp;在终端用vim打开一个c文件:<br>
+<span style="color:#a52a2a">217 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$vim hello.c<br>
+<span style="color:#a52a2a">218 </span>&nbsp;&nbsp;&nbsp;&nbsp;进入vim, 敲入 &quot;<span style="color:#2e8b57"><strong>/im</strong></span>&quot; 即可发现一个main函数框架就这样快捷简单完美地写出.&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<span style="color:#a52a2a">219 </span><br>
+<span style="color:#a52a2a">220 </span>&nbsp;&nbsp;&nbsp;&nbsp;我比效常用的的操作有<span style="color:#6a5acd">(第一列为命令, 第二列为说明, 第三列为该命令所支持的模</span><br>
+<span style="color:#a52a2a">221 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;式(n:普通模式, v:可视模式, i:插入模式)</span>:<br>
+<span style="color:#a52a2a">222 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Help -----------------------------------------------<br>
+<span style="color:#a52a2a">223 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/hm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; show manual for word under the cursor<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">224 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/hp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; show plugin help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">225 </span><br>
+<span style="color:#a52a2a">226 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Comments -------------------------------------------<br>
+<span style="color:#a52a2a">227 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/cl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end-of-line <span style="background-color:rgb(255,255,0)">
+<span style="color:#0000ff">comment</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#6a5acd">
+(n,v,i)</span><br>
+<span style="color:#a52a2a">228 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/cj&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; adjust end-of-line <span style="background-color:rgb(255,255,0)">
+<span style="color:#0000ff">comment</span></span><span style="color:#6a5acd">(s)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">229 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/cs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; set end-of-line <span style="background-color:rgb(255,255,0)">
+<span style="color:#0000ff">comment</span></span>&nbsp;column&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n)</span><br>
+<span style="color:#a52a2a">230 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/c*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; code -&gt; <span style="background-color:rgb(255,255,0)">
+<span style="color:#0000ff">comment</span></span>&nbsp;/* */&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#6a5acd">
+(n,v)</span><br>
+<span style="color:#a52a2a">231 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/cc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; code -&gt; <span style="background-color:rgb(255,255,0)">
+<span style="color:#0000ff">comment</span></span>&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v)</span><br>
+<span style="color:#a52a2a">232 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/co&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="background-color:rgb(255,255,0)">
+<span style="color:#0000ff">comment</span></span>&nbsp;-&gt; code&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#6a5acd">
+(n,v)</span><br>
+<span style="color:#a52a2a">233 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/cfr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frame <span style="background-color:rgb(255,255,0)">
+<span style="color:#0000ff">comment</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#6a5acd">
+(n,i)</span><br>
+<span style="color:#a52a2a">234 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/cfu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function <span style="background-color:rgb(255,255,0)">
+<span style="color:#0000ff">comment</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">235 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/cme&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;method description&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">236 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ccl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;class description&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">237 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/cd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">238 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ct&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; date /&amp; time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">239 </span><br>
+<span style="color:#a52a2a">240 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Statements ------------------------------------------<br>
+<span style="color:#a52a2a">241 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/sd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; do {<span style="color:#6a5acd">&nbsp;</span>}&nbsp;while&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">242 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/sfo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for {<span style="color:#6a5acd">&nbsp;</span>}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">243 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/sife&nbsp;&nbsp;&nbsp;&nbsp; if {<span style="color:#6a5acd">&nbsp;</span>}&nbsp;else {<span style="color:#6a5acd">&nbsp;</span>}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">244 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/se&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else {<span style="color:#6a5acd">&nbsp;</span>}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">245 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/swh&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while {<span style="color:#6a5acd">&nbsp;</span>}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">246 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ss&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; switch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">247 </span><br>
+<span style="color:#a52a2a">248 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Preprocessor -----------------------------------------<br>
+<span style="color:#a52a2a">249 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/p&lt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #include &lt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">250 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/p''&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#include &quot;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">251 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/pd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #define&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">252 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/pu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #undef&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">253 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/pie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#if&nbsp;&nbsp;#else #endif&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">254 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/pid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#ifdef #else #endif&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">255 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/pin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#ifndef #else #endif&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">256 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/pind&nbsp;&nbsp;&nbsp;&nbsp; #ifndef #def #endif&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">257 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/pi0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#if 0 #endif&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">258 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/pr0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remove #if 0 #endif&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">259 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/pe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #<span style="background-color:rgb(255,0,0)"><span style="color:#ffffff">error</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">260 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/pl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #line&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">261 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/pp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #pragma&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">262 </span><br>
+<span style="color:#a52a2a">263 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Idioms ------------------------------------------------<br>
+<span style="color:#a52a2a">264 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/if&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">265 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/isf&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;static function&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">266 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/im&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; main()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">267 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/i0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for<span style="color:#6a5acd">( x=0; x&lt;n; x&#43;=1 )</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">268 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/in&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for<span style="color:#6a5acd">( x=n-1; x&gt;=0; x-=1 )</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">269 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; enum&nbsp;&nbsp; &#43; typedef&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">270 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/is&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; struct &#43; typedef&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">271 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/iu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; union&nbsp;&nbsp;&#43; typedef&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">272 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">273 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/isc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scanf()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">274 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ica&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p=calloc()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">275 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ima&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p=malloc()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">276 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/isi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sizeof()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">277 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ias&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assert()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v)</span><br>
+<span style="color:#a52a2a">278 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ii&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; open input file&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">279 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/io&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; open output file&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">280 </span><br>
+<span style="color:#a52a2a">281 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Snippets ------------------------------------------------<br>
+<span style="color:#a52a2a">282 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/nr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; read code snippet&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">283 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/nw&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; write code snippet&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">284 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ne&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; edit code snippet&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">285 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/np&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pick up prototype&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">286 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ni&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; insert prototype<span style="color:#6a5acd">(s)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">287 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/nc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; clear&nbsp;&nbsp;prototype<span style="color:#6a5acd">(s)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">288 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ns&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; show&nbsp;&nbsp; prototype<span style="color:#6a5acd">(s)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">289 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ntl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;edit local templates&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">290 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ntg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;edit global templates&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">291 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ntr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rebuild templates&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">292 </span><br>
+<span style="color:#a52a2a">293 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- C&#43;&#43; ----------------------------------------------------<br>
+<span style="color:#a52a2a">294 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&#43;co&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&nbsp;&lt;&lt;&nbsp;&nbsp;&lt;&lt; endl;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">295 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&#43;c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; class&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">296 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&#43;cn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;class <span style="color:#6a5acd">
+(using new)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">297 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&#43;ci&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;class implementation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">298 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&#43;cni&nbsp;&nbsp;&nbsp;&nbsp; class <span style="color:#6a5acd">
+(using new)</span>&nbsp;implementation&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">299 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&#43;mi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;method implementation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">300 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&#43;ai&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;accessor implementation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">301 </span><br>
+<span style="color:#a52a2a">302 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&#43;tc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;template class&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">303 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&#43;tcn&nbsp;&nbsp;&nbsp;&nbsp; template class <span style="color:#6a5acd">
+(using new)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">304 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&#43;tci&nbsp;&nbsp;&nbsp;&nbsp; template class implementation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">305 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&#43;tcni&nbsp;&nbsp;&nbsp;&nbsp;template class <span style="color:#6a5acd">
+(using new)</span>&nbsp;impl.&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">306 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&#43;tmi&nbsp;&nbsp;&nbsp;&nbsp; template method implementation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">307 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&#43;tai&nbsp;&nbsp;&nbsp;&nbsp; template accessor implementation&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">308 </span><br>
+<span style="color:#a52a2a">309 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&#43;tf&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;template function&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">310 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&#43;ec&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="background-color:rgb(255,0,0)"><span style="color:#ffffff">error</span></span>&nbsp;class&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">311 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&#43;tr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try ... catch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">312 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&#43;ca&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;catch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">313 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&#43;c.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;catch<span style="color:#6a5acd">(...)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">314 </span><br>
+<span style="color:#a52a2a">315 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Run ---------------------------------------------------<br>
+<span style="color:#a52a2a">316 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/rc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; save and compile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">317 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/rl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; link&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">318 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/rr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; run&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">319 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ra&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; set comand line arguments&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">320 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/rm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; run make&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">321 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/rg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cmd. line arg. for make&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">322 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/rp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; run splint&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">323 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ri&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cmd. line arg. for splint&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">324 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/rk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; run CodeCheck <span style="color:#6a5acd">
+(TM)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">325 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/re&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cmd. line arg. for CodeCheck<span style="color:#6a5acd">(TM)</span>&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">326 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/rd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; run indent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">327 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/rh&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hardcopy buffer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,v,i)</span><br>
+<span style="color:#a52a2a">328 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/rs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; show plugin settings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">329 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/rx&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; set xterm size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n, only Linux/UNIX &amp; GUI)</span><br>
+<span style="color:#a52a2a">330 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; change output destination&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(n,i)</span><br>
+<span style="color:#a52a2a">331 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<span style="color:#a52a2a">332 </span>&nbsp;&nbsp;&nbsp;&nbsp;关于此插件的更多功能和各种说明, 请查看帮助手册, help csupport.<br>
+<span style="color:#a52a2a">333 </span><br>
+<span style="color:#a52a2a">334 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<span style="color:#a52a2a">335 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">336 </span><span style="color:#ff00ff"><strong>6. omnicppcoplete 插件</strong></span><br>
+<span style="color:#a52a2a">337 </span><span style="color:#6a5acd">(1)</span>. 帮助手册查看<br>
+<span style="color:#a52a2a">338 </span>&nbsp;&nbsp;&nbsp;&nbsp;:help omnicppcoplete<br>
+<span style="color:#a52a2a">339 </span><span style="color:#6a5acd">(2)</span>. 功能<br>
+<span style="color:#a52a2a">340 </span>&nbsp;&nbsp;&nbsp;&nbsp;实现像vc那样的代码自动补全功能, 比如 this-&gt;&lt;<span style="color:#6a5acd">Ctrl&#43;X</span>&gt;&lt;<span style="color:#6a5acd">Ctrl&#43;O</span>&gt; 后, 将出现一个<br>
+<span style="color:#a52a2a">341 </span>&nbsp;&nbsp;&nbsp;&nbsp;提示框, 其中包含了this指针所有可以接收的函数或数据成员等.<br>
+<span style="color:#a52a2a">342 </span><span style="color:#6a5acd">(3)</span>. 安装<br>
+<span style="color:#a52a2a">343 </span>&nbsp;&nbsp;&nbsp;&nbsp;把下载下来的 omnicppcoplete-0.41.zip 压缩包copy到 $HOME/.vim/<span style="color:#6a5acd">(windows 复</span><br>
+<span style="color:#a52a2a">344 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;制到 C:/Program Files/Vim/vimfiles )</span>, 然后解压, 即可.<br>
+<span style="color:#a52a2a">345 </span><span style="color:#6a5acd">(4)</span>. 使用方法<br>
+<span style="color:#a52a2a">346 </span>&nbsp;&nbsp;&nbsp;&nbsp;在.vimrc中添加以下两条语句:<br>
+<span style="color:#a52a2a">347 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set nocp&nbsp;&nbsp; &quot;<span style="color:#2e8b57"><strong>不兼容vi</strong></span><br>
+<span style="color:#a52a2a">348 </span><span style="color:#2e8b57"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;filetype plugin on&nbsp;&nbsp;</strong></span>&quot;开启文件类型识别功能<br>
+<span style="color:#a52a2a">349 </span>&nbsp;&nbsp;&nbsp;&nbsp;进入c&#43;&#43;源码目录, 在终端执行命令 ctags -R --c&#43;&#43;-kinds=&#43;p --fields=&#43;iaS<br>
+<span style="color:#a52a2a">350 </span>&nbsp;&nbsp;&nbsp;&nbsp;--extra=&#43;q .<br>
+<span style="color:#a52a2a">351 </span><span style="color:#6a5acd">(5)</span>. 使用例子<br>
+<span style="color:#a52a2a">352 </span>&nbsp;&nbsp;&nbsp;&nbsp;编写c&#43;&#43;代码时, 如要自动补全, 敲入 Ctrl&#43;X Ctrl&#43;O, 即可在出现的提示框中用<br>
+<span style="color:#a52a2a">353 </span>&nbsp;&nbsp;&nbsp;&nbsp;Ctrl&#43;N 选择符合要求的.<br>
+<span style="color:#a52a2a">354 </span><br>
+<span style="color:#a52a2a">355 </span><br>
+<span style="color:#a52a2a">356 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">357 </span><span style="color:#ff00ff"><strong>7. a.vim插件</strong></span><br>
+<span style="color:#a52a2a">358 </span><span style="color:#6a5acd">(1)</span>. 帮助手册查看<br>
+<span style="color:#a52a2a">359 </span>&nbsp;&nbsp;&nbsp;&nbsp;这个插件没有帮助手册, 不过大可放心使用, 其提供的功能也不是很多, 就几条命令<br>
+<span style="color:#a52a2a">360 </span>&nbsp;&nbsp;&nbsp;&nbsp;, 但是用起来真的是很方便.<br>
+<span style="color:#a52a2a">361 </span><span style="color:#6a5acd">(2)</span>. 功能<br>
+<span style="color:#a52a2a">362 </span>&nbsp;&nbsp;&nbsp;&nbsp;在 .h 和 .c/.cpp 文件中切换. <span style="color:#6a5acd">
+(英文原句 &quot;A few of quick commands to swtich</span><br>
+<span style="color:#a52a2a">363 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;between source files and header files quickly.&quot;)</span><br>
+<span style="color:#a52a2a">364 </span><span style="color:#6a5acd">(3)</span>. 安装<br>
+<span style="color:#a52a2a">365 </span>&nbsp;&nbsp;&nbsp;&nbsp;把下载到的a.vim插件放到 $HOME/.vim/plugin 目录下, 即可.<br>
+<span style="color:#a52a2a">366 </span><span style="color:#6a5acd">(4)</span>. 使用方法<br>
+<span style="color:#a52a2a">367 </span>&nbsp;&nbsp;&nbsp;&nbsp;只要在vim中输入以下命令即可完成相应的功能:<br>
+<span style="color:#a52a2a">368 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:A switches to the header file corresponding to the current file being<br>
+<span style="color:#a52a2a">369 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;edited <span style="color:#6a5acd">
+(or vise versa)</span><br>
+<span style="color:#a52a2a">370 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:AS splits and switches<br>
+<span style="color:#a52a2a">371 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:AV vertical splits and switches<br>
+<span style="color:#a52a2a">372 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:AT new tab and switches<br>
+<span style="color:#a52a2a">373 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:AN cycles through matches<br>
+<span style="color:#a52a2a">374 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:IH switches to file under cursor<br>
+<span style="color:#a52a2a">375 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:IHS splits and switches<br>
+<span style="color:#a52a2a">376 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:IHV vertical splits and switches<br>
+<span style="color:#a52a2a">377 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:IHT new tab and switches<br>
+<span style="color:#a52a2a">378 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:IHN cycles through matches<br>
+<span style="color:#a52a2a">379 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:#6a5acd">Leader</span>&gt;ih switches to file under cursor<br>
+<span style="color:#a52a2a">380 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:#6a5acd">Leader</span>&gt;is switches to the alternate file of file under cursor<span style="color:#6a5acd">(e.g.</span><br>
+<span style="color:#a52a2a">381 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;&nbsp;&lt;foo.h&gt; switches to foo.cpp)</span><br>
+<span style="color:#a52a2a">382 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:#6a5acd">Leader</span>&gt;ihn cycles through matches<br>
+<span style="color:#a52a2a">383 </span><br>
+<span style="color:#a52a2a">384 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">385 </span><span style="color:#ff00ff"><strong>8. VisualMark.vim插件</strong></span><br>
+<span style="color:#a52a2a">386 </span><span style="color:#6a5acd">(1)</span>. 帮助手册查看<br>
+<span style="color:#a52a2a">387 </span>&nbsp;&nbsp;&nbsp;&nbsp;这个插件没有帮助手册, 不过大可放心使用, 其提供的功能也不是很多, 就几条命令<br>
+<span style="color:#a52a2a">388 </span>&nbsp;&nbsp;&nbsp;&nbsp;, 但是用起来真的是很方便.<br>
+<span style="color:#a52a2a">389 </span><span style="color:#6a5acd">(2)</span>. 功能<br>
+<span style="color:#a52a2a">390 </span>&nbsp;&nbsp;&nbsp;&nbsp;高亮书签.<br>
+<span style="color:#a52a2a">391 </span><span style="color:#6a5acd">(3)</span>. 安装<br>
+<span style="color:#a52a2a">392 </span>&nbsp;&nbsp;&nbsp;&nbsp;把下载好的VisualMark.vim插件放到 $HOME/.vim/plugin 目录下, 即可.<br>
+<span style="color:#a52a2a">393 </span><span style="color:#6a5acd">(4)</span>. 使用方法<br>
+<span style="color:#a52a2a">394 </span>&nbsp;&nbsp;&nbsp;&nbsp;只要在vim中执行以下命令即可完成相应的功能:<br>
+<span style="color:#a52a2a">395 </span><span style="background-color:rgb(190,190,190)"><span style="color:#00008b">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.</span></span>&nbsp;&nbsp;For gvim, use &quot;<span style="color:#2e8b57"><strong>Ctrl &#43; F2</strong></span>&quot; to toggle a visual mark.<br>
+<span style="color:#a52a2a">396 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For both vim and gvim, use &quot;<span style="color:#2e8b57"><strong>mm</strong></span>&quot; to toggle a visual mark.<br>
+<span style="color:#a52a2a">397 </span><span style="background-color:rgb(190,190,190)"><span style="color:#00008b">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.</span></span>&nbsp;&nbsp;Use &quot;<span style="color:#2e8b57"><strong>F2</strong></span>&quot; to navigate through the visual marks forward in the<br>
+<span style="color:#a52a2a">398 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; file.<br>
+<span style="color:#a52a2a">399 </span><span style="background-color:rgb(190,190,190)"><span style="color:#00008b">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.</span></span>&nbsp;&nbsp;Use &quot;<span style="color:#2e8b57"><strong>Shift &#43; F2</strong></span>&quot; to navigate backwards.<br>
+<span style="color:#a52a2a">400 </span><br>
+<span style="color:#a52a2a">401 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">402 </span><span style="color:#ff00ff"><strong>9. Mark.vim插件</strong></span><br>
+<span style="color:#a52a2a">403 </span><span style="color:#6a5acd">(1)</span>. 帮助手册查看<br>
+<span style="color:#a52a2a">404 </span>&nbsp;&nbsp;&nbsp;&nbsp; 这个插件没有帮助手册, 不过大可放心使用, 其提供的功能也不是很多, 就几条命<br>
+<span style="color:#a52a2a">405 </span>&nbsp;&nbsp;&nbsp;&nbsp; 令, 但是用起来真的是很方便.<br>
+<span style="color:#a52a2a">406 </span><br>
+<span style="color:#a52a2a">407 </span><span style="color:#6a5acd">(2)</span>. 功能<br>
+<span style="color:#a52a2a">408 </span>&nbsp;&nbsp;&nbsp;&nbsp; 这个插件与vim中自带的'<span style="color:#2e8b57"><strong>*</strong></span>'与'<span style="color:#2e8b57"><strong>#</strong></span>'非常相像. 不同之处是: vim中的'<span style="color:#2e8b57"><strong>*</strong></span>'与'<span style="color:#2e8b57"><strong>#</strong></span>'命令只<br>
+<span style="color:#a52a2a">409 </span>&nbsp;&nbsp;&nbsp;&nbsp; 能同时高亮一个同类词组<span style="color:#6a5acd">(或正则表达式的搜索结果)</span>, 而Mark.vim插件可以同时高<br>
+<span style="color:#a52a2a">410 </span>&nbsp;&nbsp;&nbsp;&nbsp; 亮多个.<br>
+<span style="color:#a52a2a">411 </span><br>
+<span style="color:#a52a2a">412 </span><span style="color:#6a5acd">(3)</span>. 安装<br>
+<span style="color:#a52a2a">413 </span>&nbsp;&nbsp;&nbsp;&nbsp;把下载好的Mark.vim插件放到 $HOME/.vim/plugin 目录中, 即可.<br>
+<span style="color:#a52a2a">414 </span><br>
+<span style="color:#a52a2a">415 </span><span style="color:#6a5acd">(4)</span>. 使用方法<br>
+<span style="color:#a52a2a">416 </span>&nbsp;&nbsp;&nbsp;&nbsp;/m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mark or unmark the word under <span style="color:#6a5acd">
+(or before)</span>&nbsp;the cursor<br>
+<span style="color:#a52a2a">417 </span>&nbsp;&nbsp;&nbsp;&nbsp;/r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manually input a regular expression. 用于搜索.<br>
+<span style="color:#a52a2a">418 </span>&nbsp;&nbsp;&nbsp;&nbsp;/n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clear this mark <span style="color:#6a5acd">
+(i.e. the mark under the cursor)</span>, or clear all<br>
+<span style="color:#a52a2a">419 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;highlighted marks .<br>
+<span style="color:#a52a2a">420 </span>&nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;把光标向前切换到当前被Mark的MarkWords中的下一个MarkWord.<br>
+<span style="color:#a52a2a">421 </span>&nbsp;&nbsp;&nbsp;&nbsp;/#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;把光标向后切换到当前被Mark的MarkWords中的上一个MarkWord.<br>
+<span style="color:#a52a2a">422 </span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;把光标向前切换到所有被Mark的MarkWords中的下一个MarkWord.<br>
+<span style="color:#a52a2a">423 </span>&nbsp;&nbsp;&nbsp;&nbsp;/?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;把光标向后切换到所有被Mark的MarkWords中的上一个MarkWord.<br>
+<span style="color:#a52a2a">424 </span><br>
+<span style="color:#a52a2a">425 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;说明: 这些命令中的 '/' 是 vim 中的 mapleader, 你也可以设置为别的: 如,<br>
+<span style="color:#a52a2a">426 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;若要设置为 '<span style="color:#2e8b57"><strong>,</strong></span>', 把下面这条语句加到.vimrc文件中, 即可,<br>
+<span style="color:#a52a2a">427 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let mapleader=&quot;<span style="color:#2e8b57"><strong>,</strong></span>&quot;<br>
+<span style="color:#a52a2a">428 </span><br>
+<span style="color:#a52a2a">429 </span><br>
+<span style="color:#a52a2a">430 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">431 </span><span style="color:#ff00ff"><strong>10. code_complete.vim插件</strong></span><br>
+<span style="color:#a52a2a">432 </span><span style="color:#6a5acd">(1)</span>. 帮助手册查看<br>
+<span style="color:#a52a2a">433 </span><span style="color:#6a5acd">(2)</span>. 功能<br>
+<span style="color:#a52a2a">434 </span>&nbsp;&nbsp;&nbsp;&nbsp; 函数参数提示.<br>
+<span style="color:#a52a2a">435 </span><br>
+<span style="color:#a52a2a">436 </span><span style="color:#6a5acd">(3)</span>. 安装<br>
+<span style="color:#a52a2a">437 </span>&nbsp;&nbsp;&nbsp;&nbsp; 下载code_complete.vim插件放到 C:/Program Files/Vim/vimfiles 目录中, 即可.<br>
+<span style="color:#a52a2a">438 </span><br>
+<span style="color:#a52a2a">439 </span><span style="color:#6a5acd">(4)</span>. 使用方法<br>
+<span style="color:#a52a2a">440 </span>&nbsp;&nbsp;&nbsp;&nbsp; 进入源码目录, 执行如下命令:<br>
+<span style="color:#a52a2a">441 </span>&nbsp;&nbsp;&nbsp;&nbsp; ctags -R --c-kinds=&#43;p --fields=&#43;S .<br>
+<span style="color:#a52a2a">442 </span><br>
+<span style="color:#a52a2a">443 </span><span style="color:#6a5acd">(5)</span>. 使用例子<br>
+<span style="color:#a52a2a">444 </span>&quot;<span style="color:#2e8b57"><strong>&nbsp;Usage:</strong></span><br>
+<span style="color:#a52a2a">445 </span>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hotkey:<br>
+<span style="color:#a52a2a">446 </span>&quot;<span style="color:#2e8b57"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>&quot;&lt;<span style="color:#6a5acd">tab</span>&gt;&quot;<span style="color:#2e8b57"><strong>&nbsp;(default value of g:completekey)</strong></span><br>
+<span style="color:#a52a2a">447 </span>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Do all the jobs with this key, see<br>
+<span style="color:#a52a2a">448 </span>&quot;<span style="color:#2e8b57"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; example:</strong></span><br>
+<span style="color:#a52a2a">449 </span>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; press &lt;<span style="color:#2e8b57"><strong>tab&gt; after function name and (</strong></span><br>
+<span style="color:#a52a2a">450 </span>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; foo ( &lt;<span style="color:#2e8b57"><strong>tab&gt;</strong></span><br>
+<span style="color:#a52a2a">451 </span>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; becomes:<br>
+<span style="color:#a52a2a">452 </span>&quot;<span style="color:#2e8b57"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; foo ( /&lt;first param&gt;`,/&lt;second param&gt;` )</strong></span><br>
+<span style="color:#a52a2a">453 </span>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; press &lt;<span style="color:#2e8b57"><strong>tab&gt; after code template</strong></span><br>
+<span style="color:#a52a2a">454 </span>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if &lt;<span style="color:#2e8b57"><strong>tab&gt;</strong></span><br>
+<span style="color:#a52a2a">455 </span>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; becomes:<br>
+<span style="color:#a52a2a">456 </span>&quot;<span style="color:#2e8b57"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if( /&lt;...&gt;` )</strong></span><br>
+<span style="color:#a52a2a">457 </span>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#2e8b57">
+<strong>{</strong></span><br>
+<span style="color:#a52a2a">458 </span>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /&lt;<span style="color:#2e8b57"><strong>...&gt;`</strong></span><br>
+<span style="color:#a52a2a">459 </span>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+<span style="color:#a52a2a">460 </span><br>
+<span style="color:#a52a2a">461 </span><br>
+<span style="color:#a52a2a">462 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">463 </span><span style="color:#ff00ff"><strong>11. autoproto.vim</strong></span><br>
+<span style="color:#a52a2a">464 </span>Using this script, typing ``<span style="color:#6a5acd">(`` will result in (|)</span>, where | is the cursor<br>
+<span style="color:#a52a2a">465 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;position and the double backticks are just marking input. Typing a<br>
+<span style="color:#a52a2a">466 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``)`` will move the cursor outside the parens. This moving outside<br>
+<span style="color:#a52a2a">467 </span>works even in nested scenarios. Typing ``if<span style="color:#6a5acd">(my_array['key`` results in</span><br>
+<span style="color:#a52a2a">468 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(my_array['key|'])</span>&nbsp;and ``)`` gets you if<span style="color:#6a5acd">(my_array['key'])</span>|.<br>
+<span style="color:#a52a2a">469 </span><br>
+<span style="color:#a52a2a">470 </span>The paired characters are: [, (, ｛, &quot;<span style="color:#2e8b57"><strong>, ';&nbsp;&nbsp; //</strong></span>&quot;<br>
+<span style="color:#a52a2a">471 </span><br>
+<span style="color:#a52a2a">472 </span>If you like this script, you should also check out surround.vim<br>
+<span style="color:#a52a2a">473 </span><br>
+<span style="color:#a52a2a">474 </span><br>
+<span style="color:#a52a2a">475 </span><br>
+<span style="color:#a52a2a">476 </span><br>
+<span style="color:#a52a2a">477 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">478 </span><span style="color:#ff00ff"><strong>12. pyclewn</strong></span><br>
+<span style="color:#a52a2a">479 </span>pyclewn在unix, windows下的安装方法:<br>
+<span style="color:#a52a2a">480 </span><span style="color:#0000ff"><span style="text-decoration:underline"><a target="_blank" target="_blank" href="http://pyclewn.wiki.sourceforge.net/install">http://pyclewn.wiki.sourceforge.net/install</a></span></span>&#43;<br>
+<span style="color:#a52a2a">481 </span><br>
+<span style="color:#a52a2a">482 </span>下载安装python<br>
+<span style="color:#a52a2a">483 </span><span style="color:#0000ff"><span style="text-decoration:underline"><a target="_blank" target="_blank" href="http://www.python.org/download/">http://www.python.org/download/</a></span></span><br>
+<span style="color:#a52a2a">484 </span><br>
+<span style="color:#a52a2a">485 </span>python补丁<span style="color:#6a5acd">(pywin32-212.win32-py2.6.txt)(对pyclewn)</span>下载安装<br>
+<span style="color:#a52a2a">486 </span><span style="color:#0000ff"><span style="text-decoration:underline"><a target="_blank" target="_blank" href="http://sourceforge.net/project/platformdownload.php?group_id=78018">http://sourceforge.net/project/platformdownload.php?group_id=78018</a></span></span><br>
+<span style="color:#a52a2a">487 </span><br>
+<span style="color:#a52a2a">488 </span>下载安装MimGW或Cywin<br>
+<span style="color:#a52a2a">489 </span><br>
+<span style="color:#a52a2a">490 </span>下载安装pyclewn<br>
+<span style="color:#a52a2a">491 </span><span style="color:#0000ff"><span style="text-decoration:underline"><a target="_blank" target="_blank" href="http://sourceforge.net/project/showfiles.php?group_id=212808">http://sourceforge.net/project/showfiles.php?group_id=212808</a></span></span><br>
+<span style="color:#a52a2a">492 </span><br>
+<span style="color:#a52a2a">493 </span><span style="color:#6a5acd">(1)</span>. 帮助手册查看<br>
+<span style="color:#a52a2a">494 </span><span style="color:#6a5acd">(2)</span>. 功能<br>
+<span style="color:#a52a2a">495 </span><span style="color:#6a5acd">(3)</span>. 安装<br>
+<span style="color:#a52a2a">496 </span><span style="color:#6a5acd">(4)</span>. 使用方法<br>
+<span style="color:#a52a2a">497 </span><span style="color:#6a5acd">(5)</span>. 使用例子<br>
+<span style="color:#a52a2a">498 </span><br>
+<span style="color:#a52a2a">499 </span><br>
+<span style="color:#a52a2a">500 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">501 </span><span style="color:#ff00ff"><strong>13. project.vim</strong></span><br>
+<span style="color:#a52a2a">502 </span><span style="color:#6a5acd">(1)</span>. 帮助手册查看<br>
+<span style="color:#a52a2a">503 </span>&nbsp;&nbsp;&nbsp;&nbsp;:help project.txt<br>
+<span style="color:#a52a2a">504 </span><br>
+<span style="color:#a52a2a">505 </span><span style="color:#6a5acd">(2)</span>. 功能<br>
+<span style="color:#a52a2a">506 </span>&nbsp;&nbsp;&nbsp;&nbsp;组织管理工程, 方便于浏览, 打开, 查找文件等.<br>
+<span style="color:#a52a2a">507 </span><br>
+<span style="color:#a52a2a">508 </span><span style="color:#6a5acd">(3)</span>. 安装<br>
+<span style="color:#a52a2a">509 </span>&nbsp;&nbsp;&nbsp;&nbsp;下载project.vim压缩包<span style="color:#6a5acd">(如: project.gz)</span>, 然后把解压的两个文件project.vim 和<br>
+<span style="color:#a52a2a">510 </span>&nbsp;&nbsp;&nbsp;&nbsp;project.txt 分别放到 $HOME/.vim/plugin 和 $HOME/.vim/doc 目录中.<br>
+<span style="color:#a52a2a">511 </span><br>
+<span style="color:#a52a2a">512 </span><span style="color:#6a5acd">(4)</span>. 使用方法<br>
+<span style="color:#a52a2a">513 </span>&nbsp;&nbsp;&nbsp;&nbsp;在.vimrc中加入以下设置:<br>
+<span style="color:#a52a2a">514 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 切换打开和关闭project窗口<br>
+<span style="color:#a52a2a">515 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;<span style="color:#6a5acd">silent</span>&gt; &lt;<span style="color:#6a5acd">Leader</span>&gt;P &lt;<span style="color:#6a5acd">Plug</span>&gt;ToggleProject<br>
+<span style="color:#a52a2a">516 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//插件项目窗口宽度.&nbsp;&nbsp;&nbsp;&nbsp;默认&#20540;: 24<br>
+<span style="color:#a52a2a">517 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:proj_window_width=20 //当按空&#26684;键 &lt;<span style="color:#6a5acd">space</span>&gt; 或者单击鼠标左键/<br>
+<span style="color:#a52a2a">518 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:#6a5acd">LeftMouse</span>&gt;时项目窗口宽度增加量,默认&#20540;:100<br>
+<span style="color:#a52a2a">519 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:proj_window_increment=90<br>
+<span style="color:#a52a2a">520 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:proj_flags='<span style="color:#2e8b57"><strong>i</strong></span>'&nbsp;&nbsp;&nbsp;&nbsp;//当选择打开一个文件时会在命令行显示文件名和当<br>
+<span style="color:#a52a2a">521 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;前工作路径.<br>
+<span style="color:#a52a2a">522 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:proj_flags='<span style="color:#2e8b57"><strong>m</strong></span>'&nbsp;&nbsp;&nbsp;&nbsp;//在常规模式下开启 |CTRL-W_o| 和<br>
+<span style="color:#a52a2a">523 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|CTRL-W_CTRL_O| 映射, 使得当前缓冲区成为唯一可<br>
+<span style="color:#a52a2a">524 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;见的缓冲区, 但是项目窗口仍然可见.<br>
+<span style="color:#a52a2a">525 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:proj_flags='<span style="color:#2e8b57"><strong>s</strong></span>'&nbsp;&nbsp;&nbsp;&nbsp;//开启语法高亮.<br>
+<span style="color:#a52a2a">526 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:proj_flags='<span style="color:#2e8b57"><strong>t</strong></span>'&nbsp;&nbsp;&nbsp;&nbsp;//用按 &lt;<span style="color:#6a5acd">space</span>&gt; 进行窗口加宽.<br>
+<span style="color:#a52a2a">527 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:proj_flags='<span style="color:#2e8b57"><strong>c</strong></span>'&nbsp;&nbsp;&nbsp;&nbsp;//设置后, 在项目窗口中打开文件后会自动关闭项目<br>
+<span style="color:#a52a2a">528 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;窗口.<br>
+<span style="color:#a52a2a">529 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//let g:proj_flags='<span style="color:#2e8b57"><strong>F</strong></span>'&nbsp;&nbsp; //显示浮动项目窗口. 关闭窗口的自动调整大小和窗<br>
+<span style="color:#a52a2a">530 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;口替换.<br>
+<span style="color:#a52a2a">531 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:proj_flags='<span style="color:#2e8b57"><strong>L</strong></span>'&nbsp;&nbsp;&nbsp;&nbsp;//自动根据CD设置切换目录.<br>
+<span style="color:#a52a2a">532 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//let g:proj_flags='<span style="color:#2e8b57"><strong>n</strong></span>'&nbsp;&nbsp;&nbsp;&nbsp;//显示行号.<br>
+<span style="color:#a52a2a">533 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:proj_flags='<span style="color:#2e8b57"><strong>S</strong></span>'&nbsp;&nbsp;&nbsp;&nbsp;//启用排序.<br>
+<span style="color:#a52a2a">534 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:proj_flags='<span style="color:#2e8b57"><strong>T</strong></span>'&nbsp;&nbsp;&nbsp;&nbsp;//子项目的折叠在更新时会紧跟在当前折叠下方显示(<br>
+<span style="color:#a52a2a">535 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;而不是其底部).<br>
+<span style="color:#a52a2a">536 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:proj_flags='<span style="color:#2e8b57"><strong>v</strong></span>'&nbsp;&nbsp;&nbsp;&nbsp;//设置后将, 按 /G 搜索时用 :vimgrep 取代 :grep.<br>
+<span style="color:#a52a2a">537 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//let g:proj_run1='<span style="color:#2e8b57"><strong>!p4 edit %f</strong></span>'&nbsp;&nbsp;&nbsp;&nbsp;//g:proj_run1 ...&nbsp;&nbsp;g:proj_run9 用法.<br>
+<span style="color:#a52a2a">538 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:proj_run3='<span style="color:#2e8b57"><strong>silent !gvim %f</strong></span>'<br>
+<span style="color:#a52a2a">539 </span><br>
+<span style="color:#a52a2a">540 </span><span style="color:#6a5acd">(5)</span>. 使用例子<br>
+<span style="color:#a52a2a">541 </span><span style="background-color:rgb(190,190,190)"><span style="color:#00008b">&nbsp;&nbsp;&nbsp;&nbsp;1.</span></span>&nbsp;在源码目录下建立一个工程文件: exampleProject<br>
+<span style="color:#a52a2a">542 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ gvim exampleProject<br>
+<span style="color:#a52a2a">543 </span><br>
+<span style="color:#a52a2a">544 </span><span style="background-color:rgb(190,190,190)"><span style="color:#00008b">&nbsp;&nbsp;&nbsp;&nbsp;2.</span></span>&nbsp;在exampleProject文件中定入:<br>
+<span style="color:#a52a2a">545 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyProject=&quot;<span style="color:#2e8b57"><strong>E:/desktop_item/tmp/0virtual/nehe2/LVHM/test</strong></span>&quot; CD=. flag=r<br>
+<span style="color:#a52a2a">546 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; filter=&quot;<span style="color:#2e8b57"><strong>*akefile*</strong></span>&quot; {<br>
+<span style="color:#a52a2a">547 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Header file=. CD=. flag=r filter=&quot;*.h&quot; {</span><br>
+<span style="color:#a52a2a">548 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}<br>
+<span style="color:#a52a2a">549 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Source file=. CD=. flag=r filter=&quot;<span style="color:#2e8b57"><strong>*.cpp</strong></span>&quot; {<br>
+<span style="color:#a52a2a">550 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}<br>
+<span style="color:#a52a2a">551 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+<span style="color:#a52a2a">552 </span><br>
+<span style="color:#a52a2a">553 </span><span style="background-color:rgb(190,190,190)"><span style="color:#00008b">&nbsp;&nbsp;&nbsp;&nbsp;3.</span></span>&nbsp;在光标定位到第一行, 敲入:<br>
+<span style="color:#a52a2a">554 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/R<br>
+<span style="color:#a52a2a">555 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exampleProject文件改变, 如下:<br>
+<span style="color:#a52a2a">556 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyProject=&quot;<span style="color:#2e8b57"><strong>E:/desktop_item/tmp/0virtual/nehe2/LVHM/test</strong></span>&quot; CD=./<br>
+<span style="color:#a52a2a">557 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; flag=r filter=&quot;<span style="color:#2e8b57"><strong>*akefile*</strong></span>&quot; {<br>
+<span style="color:#a52a2a">558 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;makefile</span><br>
+<span style="color:#a52a2a">559 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Header file=. CD=. flag=r filter=&quot;*.h&quot; {</span><br>
+<span style="color:#a52a2a">560 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MainFrm.h</span><br>
+<span style="color:#a52a2a">561 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resource.h</span><br>
+<span style="color:#a52a2a">562 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; StdAfx.h</span><br>
+<span style="color:#a52a2a">563 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; test.h</span><br>
+<span style="color:#a52a2a">564 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; testDoc.h</span><br>
+<span style="color:#a52a2a">565 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; testView.h</span><br>
+<span style="color:#a52a2a">566 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}<br>
+<span style="color:#a52a2a">567 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Source file=. CD=. flag=r filter=&quot;<span style="color:#2e8b57"><strong>*.cpp</strong></span>&quot; {<br>
+<span style="color:#a52a2a">568 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MainFrm.cpp</span><br>
+<span style="color:#a52a2a">569 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; StdAfx.cpp</span><br>
+<span style="color:#a52a2a">570 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; test.cpp</span><br>
+<span style="color:#a52a2a">571 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; testDoc.cpp</span><br>
+<span style="color:#a52a2a">572 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; testView.cpp</span><br>
+<span style="color:#a52a2a">573 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}<br>
+<span style="color:#a52a2a">574 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+<span style="color:#a52a2a">575 </span><br>
+<span style="color:#a52a2a">576 </span><span style="background-color:rgb(190,190,190)"><span style="color:#00008b">&nbsp;&nbsp;&nbsp;&nbsp;4.</span></span>&nbsp;小测一下:<br>
+<span style="color:#a52a2a">577 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;把光标某个文件名上, 敲下 Enter 可以看到, 对应的文件在左边的窗口显示出<br>
+<span style="color:#a52a2a">578 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来.<br>
+<span style="color:#a52a2a">579 </span><br>
+<span style="color:#a52a2a">580 </span><span style="background-color:rgb(190,190,190)"><span style="color:#00008b">&nbsp;&nbsp;&nbsp;&nbsp;5.</span></span>&nbsp;更多用法参考.vimrc的相关设置的说明或 help project.txt 查找帮助.<br>
+<span style="color:#a52a2a">581 </span><br>
+<span style="color:#a52a2a">582 </span><br>
+<span style="color:#a52a2a">583 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">584 </span><span style="color:#ff00ff"><strong>14. NERD_tree.vim</strong></span><br>
+<span style="color:#a52a2a">585 </span><span style="color:#6a5acd">(1)</span>. 帮助手册查看<br>
+<span style="color:#a52a2a">586 </span>&nbsp;&nbsp;&nbsp;&nbsp;help NERD_tree<br>
+<span style="color:#a52a2a">587 </span><br>
+<span style="color:#a52a2a">588 </span><span style="color:#6a5acd">(2)</span>. 功能<br>
+<span style="color:#a52a2a">589 </span>&nbsp;&nbsp;&nbsp;&nbsp;目录树, 同时还可以对文件进行打开操作等.<br>
+<span style="color:#a52a2a">590 </span><br>
+<span style="color:#a52a2a">591 </span><span style="color:#6a5acd">(3)</span>. 安装<br>
+<span style="color:#a52a2a">592 </span>&nbsp;&nbsp;&nbsp;&nbsp;下载NERD_tree压缩包, 然后把解压的两个文件NERD_tree.vim 和 NERD_tree.txt 分<br>
+<span style="color:#a52a2a">593 </span>&nbsp;&nbsp;&nbsp;&nbsp;别放到$HOME/.vim/plugin 和 $HOME/.vim/doc 目录中.<br>
+<span style="color:#a52a2a">594 </span><br>
+<span style="color:#a52a2a">595 </span><span style="color:#6a5acd">(4)</span>. 使用方法<br>
+<span style="color:#a52a2a">596 </span><br>
+<span style="color:#a52a2a">597 </span><span style="color:#6a5acd">(5)</span>. 使用例子<br>
+<span style="color:#a52a2a">598 </span>&nbsp;&nbsp;&nbsp;&nbsp;// let loaded_nerd_tree=1&nbsp;&nbsp;&nbsp;&nbsp;// 禁用所有与NERD_tree有关的命令<br>
+<span style="color:#a52a2a">599 </span>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;<span style="color:#6a5acd">silent</span>&gt; &lt;<span style="color:#6a5acd">leader</span>&gt;tto :NERDTreeToggle&lt;<span style="color:#6a5acd">cr</span>&gt;<br>
+<span style="color:#a52a2a">600 </span>&nbsp;&nbsp;&nbsp;&nbsp;let NERDTreeIgnore=['/.vim$'<span style="color:#2e8b57"><strong>,</strong></span>'/~$']&nbsp;&nbsp;&nbsp;&nbsp;// 不显示指定的类型的文件<br>
+<span style="color:#a52a2a">601 </span>&nbsp;&nbsp;&nbsp;&nbsp;let NERDTreeShowHidden=0&nbsp;&nbsp;&nbsp;&nbsp;// 不显示隐藏文件<span style="color:#6a5acd">(好像只在linux环境中有效)</span><br>
+<span style="color:#a52a2a">602 </span>&nbsp;&nbsp;&nbsp;&nbsp;let NERDTreeSortOrder=['//$'<span style="color:#2e8b57"><strong>,</strong></span>'/.cpp$'<span style="color:#2e8b57"><strong>,</strong></span>'/.c$'<span style="color:#2e8b57"><strong>,</strong></span>'/.h$'<span style="color:#2e8b57"><strong>,</strong></span>'*']&nbsp;&nbsp;&nbsp;&nbsp;//
+ 排序<br>
+<span style="color:#a52a2a">603 </span>&nbsp;&nbsp;&nbsp;&nbsp;let NERDTreeCaseSensitiveSort=0&nbsp;&nbsp;&nbsp;&nbsp; // 不分大小写排序<br>
+<span style="color:#a52a2a">604 </span>&nbsp;&nbsp;&nbsp;&nbsp;let NERDTreeWinSize=30<br>
+<span style="color:#a52a2a">605 </span>&nbsp;&nbsp;&nbsp;&nbsp;// let NERDTreeShowLineNumbers=1<br>
+<span style="color:#a52a2a">606 </span>&nbsp;&nbsp;&nbsp;&nbsp;let NERDTreeShowBookmarks=1<br>
+<span style="color:#a52a2a">607 </span>&nbsp;&nbsp;&nbsp;&nbsp;let NERDTreeQuitOnOpen=1&nbsp;&nbsp;&nbsp;&nbsp;// 打开文件后, 关闭NERDTrre窗口<br>
+<span style="color:#a52a2a">608 </span>&nbsp;&nbsp;&nbsp;&nbsp;// let NERDTreeHighlightCursorline=1&nbsp;&nbsp;&nbsp;&nbsp; // 高亮NERDTrre窗口的当前行<br>
+<span style="color:#a52a2a">609 </span>&nbsp;&nbsp;&nbsp;&nbsp;// nmap &lt;<span style="color:#6a5acd">silent</span>&gt; &lt;<span style="color:#6a5acd">leader</span>&gt;tmk :Bookmark expand<span style="color:#6a5acd">(/&quot;&lt;cword&gt;/&quot;)</span>&lt;<span style="color:#6a5acd">cr</span>&gt;<br>
+<span style="color:#a52a2a">610 </span><br>
+<span style="color:#a52a2a">611 </span><br>
+<span style="color:#a52a2a">612 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">613 </span><span style="color:#ff00ff"><strong>15. NERD_commenter.vim</strong></span><br>
+<span style="color:#a52a2a">614 </span><span style="color:#6a5acd">(1)</span>. 帮助手册查看<br>
+<span style="color:#a52a2a">615 </span>&nbsp;&nbsp;&nbsp;&nbsp;help NERD_commenter.<br>
+<span style="color:#a52a2a">616 </span><br>
+<span style="color:#a52a2a">617 </span><span style="color:#6a5acd">(2)</span>. 功能<br>
+<span style="color:#a52a2a">618 </span>&nbsp;&nbsp;&nbsp;&nbsp;源码文档注释.<br>
+<span style="color:#a52a2a">619 </span><br>
+<span style="color:#a52a2a">620 </span><span style="color:#6a5acd">(3)</span>. 安装<br>
+<span style="color:#a52a2a">621 </span>&nbsp;&nbsp;&nbsp;&nbsp;下载NERD_commenter压缩包, 然后把解压的两个文件NERD_commenter.vim 和<br>
+<span style="color:#a52a2a">622 </span>&nbsp;&nbsp;&nbsp;&nbsp;NERD_commenter.txt 分别放到$HOME/.vim/plugin 和 $HOME/.vim/doc 目录中.<br>
+<span style="color:#a52a2a">623 </span><br>
+<span style="color:#a52a2a">624 </span><span style="color:#6a5acd">(4)</span>. 使用方法<br>
+<span style="color:#a52a2a">625 </span><span style="color:#6a5acd">(5)</span>. 使用例子<br>
+<span style="color:#a52a2a">626 </span>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#2e8b57"><strong>&nbsp;let NERD_java_alt_style=1</strong></span><br>
+<span style="color:#a52a2a">627 </span><span style="color:#2e8b57"><strong>&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>&quot;<span style="color:#2e8b57"><strong>&nbsp;Default mapping: [count],cc&nbsp;&nbsp;</strong></span>&quot; 以行为单位进行注释.<br>
+<span style="color:#a52a2a">628 </span>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#2e8b57"><strong>&nbsp;,c&lt;space&gt;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>&quot;<span style="background-color:rgb(255,255,0)"><span style="color:#0000ff">comment</span></span>&nbsp;&lt;<span style="color:#6a5acd">--</span>&gt; uncomment.<br>
+<span style="color:#a52a2a">629 </span>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#2e8b57"><strong>&nbsp;,cm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>&quot; 以段作为单位进行注释.<br>
+<span style="color:#a52a2a">630 </span>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#2e8b57"><strong>&nbsp;,cs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>&quot; 简洁美观式注释.<br>
+<span style="color:#a52a2a">631 </span>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#2e8b57"><strong>&nbsp;,cy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>&quot; Same as ,cc except that the commented line<span style="color:#6a5acd">(s)</span>&nbsp;are yanked first.<br>
+<span style="color:#a52a2a">632 </span>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#2e8b57"><strong>&nbsp;,c$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>&quot; 注释当前光标到行未的内容.<br>
+<span style="color:#a52a2a">633 </span>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#2e8b57"><strong>&nbsp;,cA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>&quot; 在行尾进行手动输入注释内容.<br>
+<span style="color:#a52a2a">634 </span>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#2e8b57"><strong>&nbsp;,ca&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>&quot; 切换注释方式<span style="color:#6a5acd">(/**/ &lt;--&gt; //)</span>.<br>
+<span style="color:#a52a2a">635 </span>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#2e8b57"><strong>&nbsp;,cl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>&quot; Same cc, 并且左对齐.<br>
+<span style="color:#a52a2a">636 </span>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#2e8b57"><strong>&nbsp;,cb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>&quot; Same cc, 并且两端对齐.<br>
+<span style="color:#a52a2a">637 </span>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#2e8b57"><strong>&nbsp;,cu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>&quot; Uncomments the selected line<span style="color:#6a5acd">(s)</span>.<br>
+<span style="color:#a52a2a">638 </span><br>
+<span style="color:#a52a2a">639 </span><br>
+<span style="color:#a52a2a">640 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">641 </span><span style="color:#ff00ff"><strong>16. sketch.vim&nbsp;&nbsp; 用鼠标作画</strong></span><br>
+<span style="color:#a52a2a">642 </span>map &lt;<span style="color:#6a5acd">silent</span>&gt; &lt;<span style="color:#6a5acd">leader</span>&gt;ske :call ToggleSketch()&lt;<span style="color:#6a5acd">CR</span>&gt;<br>
+<span style="color:#a52a2a">643 </span><br>
+<span style="color:#a52a2a">644 </span><br>
+<span style="color:#a52a2a">645 </span><br>
+<span style="color:#a52a2a">646 </span><br>
+<span style="color:#a52a2a">647 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">648 </span><span style="color:#ff00ff"><strong>17. Calendar.vim</strong></span><br>
+<span style="color:#a52a2a">649 </span>map &lt;<span style="color:#6a5acd">silent</span>&gt; &lt;<span style="color:#6a5acd">leader</span>&gt;cal :Calendar&lt;<span style="color:#6a5acd">cr</span>&gt;<br>
+<span style="color:#a52a2a">650 </span>map &lt;<span style="color:#6a5acd">silent</span>&gt; &lt;<span style="color:#6a5acd">leader</span>&gt;cah :CalendarH&lt;<span style="color:#6a5acd">cr</span>&gt;<br>
+<span style="color:#a52a2a">651 </span><br>
+<span style="color:#a52a2a">652 </span><br>
+<span style="color:#a52a2a">653 </span><br>
+<span style="color:#a52a2a">654 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">655 </span><span style="color:#ff00ff"><strong>18. DoxygenToolkit.vim</strong></span><br>
+<span style="color:#a52a2a">656 </span><span style="color:#6a5acd">(1)</span>. 代码文档工具<br>
+<span style="color:#a52a2a">657 </span>let g:DoxygenToolkit_commentType = &quot;<span style="color:#2e8b57"><strong>C</strong></span>&quot;<br>
+<span style="color:#a52a2a">658 </span>let g:DoxygenToolkit_briefTag_pre=&quot;<span style="color:#2e8b57"><strong>@Synopsis&nbsp;&nbsp;</strong></span>&quot;<br>
+<span style="color:#a52a2a">659 </span>let g:DoxygenToolkit_paramTag_pre=&quot;<span style="color:#2e8b57"><strong>@Param</strong></span>&quot;<br>
+<span style="color:#a52a2a">660 </span>let g:DoxygenToolkit_returnTag=&quot;<span style="color:#2e8b57"><strong>@Returns&nbsp;&nbsp;</strong></span>&quot;<br>
+<span style="color:#a52a2a">661 </span>let g:DoxygenToolkit_blockHeader=&quot;<span style="color:#2e8b57"><strong>--------------------------------------------------------------------------</strong></span>&quot;<br>
+<span style="color:#a52a2a">662 </span>let g:DoxygenToolkit_blockFooter=&quot;<span style="color:#2e8b57"><strong>----------------------------------------------------------------------------</strong></span>&quot;<br>
+<span style="color:#a52a2a">663 </span>let g:DoxygenToolkit_authorName=&quot;<span style="color:#2e8b57"><strong>Mathias Lorente</strong></span>&quot;<br>
+<span style="color:#a52a2a">664 </span>let g:DoxygenToolkit_licenseTag=&quot;<span style="color:#2e8b57"><strong>My own license</strong></span>&quot;<br>
+<span style="color:#a52a2a">665 </span><br>
+<span style="color:#a52a2a">666 </span><br>
+<span style="color:#a52a2a">667 </span><br>
+<span style="color:#a52a2a">668 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">669 </span><span style="color:#ff00ff"><strong>19. cpp.vim</strong></span><br>
+<span style="color:#a52a2a">670 </span><span style="color:#6a5acd">(1)</span>. c/c&#43;&#43;类名, 函数等高亮<br>
+<span style="color:#a52a2a">671 </span>install details<br>
+<span style="color:#a52a2a">672 </span>Make a backup copy of syntax/vim.cpp and overwrite syntax/vim.cpp with this file.<br>
+<span style="color:#a52a2a">673 </span><br>
+<span style="color:#a52a2a">674 </span><br>
+<span style="color:#a52a2a">675 </span><br>
+<span style="color:#a52a2a">676 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">677 </span><span style="color:#ff00ff"><strong>20. javacomplete.vim</strong></span><br>
+<span style="color:#a52a2a">678 </span><span style="color:#6a5acd">(1)</span>. 帮助手册查看<br>
+<span style="color:#a52a2a">679 </span>&nbsp;&nbsp;&nbsp;&nbsp;:help javacomplete.txt<br>
+<span style="color:#a52a2a">680 </span><span style="color:#6a5acd">(2)</span>. 功能<br>
+<span style="color:#a52a2a">681 </span>&nbsp;&nbsp;&nbsp;&nbsp;进行java类, 包, 方法等补全.<br>
+<span style="color:#a52a2a">682 </span><span style="color:#6a5acd">(3)</span>. 安装<br>
+<span style="color:#a52a2a">683 </span><span style="background-color:rgb(190,190,190)"><span style="color:#00008b">&nbsp;&nbsp;&nbsp;&nbsp;1.</span></span>&nbsp;下载, 解压, 把相应的文件copy到相应的目录下.<br>
+<span style="color:#a52a2a">684 </span><span style="background-color:rgb(190,190,190)"><span style="color:#00008b">&nbsp;&nbsp;&nbsp;&nbsp;2.</span></span>&nbsp;对Reflection.java进行编译, 编译命令为:<br>
+<span style="color:#a52a2a">685 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;javac -source 1.4 Reflection.java<br>
+<span style="color:#a52a2a">686 </span><span style="background-color:rgb(190,190,190)"><span style="color:#00008b">&nbsp;&nbsp;&nbsp;&nbsp;3.</span></span>&nbsp;把编译生成的Reflection.class文件移动到vim的$HOME目录下.(注意是移动, 而<br>
+<span style="color:#a52a2a">687 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;不是复制, 最好保证系统中只有一个Reflection.class文件, 且在vim的<br>
+<span style="color:#a52a2a">688 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$HOME目录下.)<br>
+<span style="color:#a52a2a">689 </span><span style="background-color:rgb(190,190,190)"><span style="color:#00008b">&nbsp;&nbsp;&nbsp;&nbsp;4.</span></span>&nbsp;在.vimrc中加入:<br>
+<span style="color:#a52a2a">690 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setlocal completefunc=javacomplete#CompleteParamsInfo<br>
+<span style="color:#a52a2a">691 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;autocmd FileType c set omnifunc=ccomplete#Complete<br>
+<span style="color:#a52a2a">692 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;autocmd FileType css set omnifunc=csscomplete#CompleteCSS<br>
+<span style="color:#a52a2a">693 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;autocmd FileType html set omnifunc=htmlcomplete#CompleteTags<br>
+<span style="color:#a52a2a">694 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;autocmd FileType java set omnifunc=javacomplete#Complete<br>
+<span style="color:#a52a2a">695 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS<br>
+<span style="color:#a52a2a">696 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;autocmd FileType php set omnifunc=phpcomplete#CompletePHP<br>
+<span style="color:#a52a2a">697 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;autocmd FileType python set omnifunc=pythoncomplete#Complete<br>
+<span style="color:#a52a2a">698 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags<br>
+<span style="color:#a52a2a">699 </span><span style="color:#6a5acd">(4)</span>. 使用方法<br>
+<span style="color:#a52a2a">700 </span><span style="color:#6a5acd">(5)</span>. 使用例子<br>
+<span style="color:#a52a2a">701 </span>&nbsp;&nbsp;&nbsp;&nbsp; Math.&lt;<span style="color:#6a5acd">C-X</span>&gt;&lt;<span style="color:#6a5acd">C-O</span>&gt;<br>
+<span style="color:#a52a2a">702 </span><br>
+<span style="color:#a52a2a">703 </span><br>
+<span style="color:#a52a2a">704 </span><br>
+<span style="color:#a52a2a">705 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">706 </span><span style="color:#ff00ff"><strong>21. JumpInCode_Plus.vim</strong></span><br>
+<span style="color:#a52a2a">707 </span><span style="color:#6a5acd">(1)</span>. 帮助手册查看<br>
+<span style="color:#a52a2a">708 </span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff"><span style="text-decoration:underline"><a target="_blank" target="_blank" href="http://www.vim.org/scripts/script.php?script_id=2862">http://www.vim.org/scripts/script.php?script_id=2862</a></span></span><br>
+<span style="color:#a52a2a">709 </span><br>
+<span style="color:#a52a2a">710 </span><span style="color:#6a5acd">(2)</span>. 功能<br>
+<span style="color:#a52a2a">711 </span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:#6a5acd">leader</span>&gt;jc&nbsp;&nbsp;Generate tags and cscope database from current directory to :<br>
+<span style="color:#a52a2a">712 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CurrentDirectory/OutDB/cscope.out,tags<br>
+<span style="color:#a52a2a">713 </span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:#6a5acd">leader</span>&gt;jst&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; list existed tags full name and choose tags<br>
+<span style="color:#a52a2a">714 </span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:#6a5acd">leader</span>&gt;jsc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list existed cscope database full name and choose cscope.out<br>
+<span style="color:#a52a2a">715 </span><br>
+<span style="color:#a52a2a">716 </span><span style="color:#6a5acd">(3)</span>. 安装<br>
+<span style="color:#a52a2a">717 </span>&nbsp;&nbsp;&nbsp;&nbsp;把JumpInCode_Plus.vim 放到 $VIM/vimfiles/plugin<br>
+<span style="color:#a52a2a">718 </span><br>
+<span style="color:#a52a2a">719 </span><span style="color:#6a5acd">(4)</span>. 使用方法<br>
+<span style="color:#a52a2a">720 </span><span style="color:#6a5acd">(5)</span>. 使用例子<br>
+<span style="color:#a52a2a">721 </span><br>
+<span style="color:#a52a2a">722 </span><br>
+<span style="color:#a52a2a">723 </span><br>
+<span style="color:#a52a2a">724 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">725 </span><span style="color:#ff00ff"><strong>22. txtbrowser.zip</strong></span><br>
+<span style="color:#a52a2a">726 </span><span style="color:#6a5acd">(1)</span>. 帮助手册查看<br>
+<span style="color:#a52a2a">727 </span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff"><span style="text-decoration:underline"><a target="_blank" target="_blank" href="http://www.vim.org/scripts/script.php?script_id=2899">http://www.vim.org/scripts/script.php?script_id=2899</a></span></span><br>
+<span style="color:#a52a2a">728 </span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff"><span style="text-decoration:underline"><a target="_blank" target="_blank" href="http://guoyoooping.blog.163.com/blog/static/1357051832009112910162389/">http://guoyoooping.blog.163.com/blog/static/1357051832009112910162389/</a></span></span><br>
+<span style="color:#a52a2a">729 </span>&nbsp;&nbsp;&nbsp;&nbsp;:help txtbrowser<br>
+<span style="color:#a52a2a">730 </span><br>
+<span style="color:#a52a2a">731 </span><span style="color:#6a5acd">(2)</span>. 功能<br>
+<span style="color:#a52a2a">732 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; show the document map and syntax highlight in plain text.<br>
+<span style="color:#a52a2a">733 </span><br>
+<span style="color:#a52a2a">734 </span><span style="color:#6a5acd">(3)</span>. 安装<br>
+<span style="color:#a52a2a">735 </span>&nbsp;&nbsp;&nbsp;&nbsp;:help txtbrowser<br>
+<span style="color:#a52a2a">736 </span><span style="background-color:rgb(190,190,190)"><span style="color:#00008b">&nbsp;&nbsp;&nbsp;&nbsp;1.</span></span>&nbsp;请首先安装taglist插件<span style="color:#6a5acd">(</span><span style="color:#0000ff"><span style="text-decoration:underline"><a target="_blank" target="_blank" href="http://www.vim.org/scripts/script.php?script_id=273">http://www.vim.org/scripts/script.php?script_id=273</a></span></span><span style="color:#6a5acd">)</span>,<br>
+<span style="color:#a52a2a">737 </span>&nbsp;&nbsp;&nbsp;&nbsp;我相信玩Vim的没有几个人没有安装这个插件吧.<br>
+<span style="color:#a52a2a">738 </span><br>
+<span style="color:#a52a2a">739 </span><span style="background-color:rgb(190,190,190)"><span style="color:#00008b">&nbsp;&nbsp;&nbsp;&nbsp;2.</span></span>&nbsp;下载插件后解压缩到目录$HOME/.vim<span style="color:#6a5acd">(或$HOME/vimfiles, $VIM/vimfiles)</span>. 然后将解压后<br>
+<span style="color:#a52a2a">740 </span>&nbsp;&nbsp;&nbsp;&nbsp;的.ctag, 剪切到$HOME目录下即可, 安装完成后你的文件夹下应该有下面的几个文件<span style="color:#6a5acd">(请</span><br>
+<span style="color:#a52a2a">741 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;注意目录结构)</span>:<br>
+<span style="color:#a52a2a">742 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$HOME/.ctags - 用于标题标签的生成.<br>
+<span style="color:#a52a2a">743 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$HOME/.vim/syntax/txt.vim - .txt文件的语法高亮文件.<br>
+<span style="color:#a52a2a">744 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$HOME/.vim/plugin/txtbrowser.vim - 浏览工具.<br>
+<span style="color:#a52a2a">745 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$HOME/.vim/doc/txtbrowser.txt - 英文帮助文档.<br>
+<span style="color:#a52a2a">746 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$HOME/.vim/doc/txtbrowser.cnx - 中文帮助文档.<span style="color:#6a5acd">(别忘了打开然后执行</span><br>
+<span style="color:#a52a2a">747 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;:helptags .&quot;生成标签)</span><br>
+<span style="color:#a52a2a">748 </span>&nbsp;&nbsp;&nbsp;&nbsp;由于版本1.1.1之前采用老的插件名, 请在安装前先删除低版本插件<span style="color:#6a5acd">(主要是帮助文件, 原来的</span><br>
+<span style="color:#a52a2a">749 </span><span style="color:#6a5acd">&nbsp;&nbsp;&nbsp;&nbsp;名字叫txt.txt和txt_cn.txt)</span>, 否则在安装新的帮助文档时会提示标签已经存在..<br>
+<span style="color:#a52a2a">750 </span><br>
+<span style="color:#a52a2a">751 </span><span style="background-color:rgb(190,190,190)"><span style="color:#00008b">&nbsp;&nbsp;&nbsp;&nbsp;3.</span></span>&nbsp;在你的.vimrc文件里加入下面三行, 然后重启你的Vim:<br>
+<span style="color:#a52a2a">752 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;syntax on<br>
+<span style="color:#a52a2a">753 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let tlist_txt_settings = '<span style="color:#2e8b57"><strong>txt;c:content;f:figures;t:tables</strong></span>'<br>
+<span style="color:#a52a2a">754 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;au BufRead,BufNewFile *.txt setlocal ft=txt<br>
+<span style="color:#a52a2a">755 </span><br>
+<span style="color:#a52a2a">756 </span><span style="background-color:rgb(190,190,190)"><span style="color:#00008b">&nbsp;&nbsp;&nbsp;&nbsp;4.</span></span>&nbsp;本插件所有文件以fenc=utf8发布. 签于taglist对中文的支持有限, 你需要保证你的文<br>
+<span style="color:#a52a2a">757 </span>&nbsp;&nbsp;&nbsp;&nbsp;档的enc&#20540;和fenc的&#20540;相等<span style="color:#6a5acd">(例如, enc=cp936, fenc=cp936)</span>. 如果不等请将fenc的&#20540;设为<br>
+<span style="color:#a52a2a">758 </span>&nbsp;&nbsp;&nbsp;&nbsp;相应的enc的&#20540;保<span style="color:#6a5acd">(如:set fenc=cp936)</span>存后并刷新<span style="color:#6a5acd">(:TlistUpdate)</span>.<br>
+<span style="color:#a52a2a">759 </span><br>
+<span style="color:#a52a2a">760 </span><span style="color:#6a5acd">(4)</span>. 使用方法<br>
+<span style="color:#a52a2a">761 </span>&nbsp;&nbsp;&nbsp;&nbsp;:help txtbrowser<br>
+<span style="color:#a52a2a">762 </span><span style="color:#6a5acd">(5)</span>. 使用例子<br>
+<span style="color:#a52a2a">763 </span><br>
+<span style="color:#a52a2a">764 </span><br>
+<span style="color:#a52a2a">765 </span><br>
+<span style="color:#a52a2a">766 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">767 </span><span style="color:#ff00ff"><strong>23.&nbsp;&nbsp;FindMate.vim</strong></span><br>
+<span style="color:#a52a2a">768 </span><span style="color:#6a5acd">(1)</span>. 帮助手册查看<br>
+<span style="color:#a52a2a">769 </span>&nbsp;&nbsp;&nbsp;&nbsp;help FindMate<br>
+<span style="color:#a52a2a">770 </span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff"><span style="text-decoration:underline"><a target="_blank" target="_blank" href="http://www.vim.org/scripts/script.php?script_id=2871">http://www.vim.org/scripts/script.php?script_id=2871</a></span></span><br>
+<span style="color:#a52a2a">771 </span><br>
+<span style="color:#a52a2a">772 </span><span style="color:#6a5acd">(2)</span>. 功能<br>
+<span style="color:#a52a2a">773 </span>&nbsp;&nbsp;&nbsp;&nbsp;快速查找文件<br>
+<span style="color:#a52a2a">774 </span><br>
+<span style="color:#a52a2a">775 </span><span style="color:#6a5acd">(3)</span>. 安装<br>
+<span style="color:#a52a2a">776 </span>&nbsp;&nbsp;&nbsp;&nbsp;下载FindMate压缩包, 然后把解压的两个文件FindMate.vim 和 FindMate.txt 分别放到<br>
+<span style="color:#a52a2a">777 </span>&nbsp;&nbsp;&nbsp;&nbsp;$HOME/.vim/plugin 和 $HOME/.vim/doc 目录中.<br>
+<span style="color:#a52a2a">778 </span><br>
+<span style="color:#a52a2a">779 </span><span style="color:#6a5acd">(4)</span>. 使用方法<br>
+<span style="color:#a52a2a">780 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can launch FindMate by typing:<br>
+<span style="color:#a52a2a">781 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,, File_name<br>
+<span style="color:#a52a2a">782 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Or<br>
+<span style="color:#a52a2a">783 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:FindMate File_name<br>
+<span style="color:#a52a2a">784 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The shortcut can be redefined by using:<br>
+<span style="color:#a52a2a">785 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map your_shortcut&nbsp;&nbsp; &lt;<span style="color:#6a5acd">Plug</span>&gt;FindMate<br>
+<span style="color:#a52a2a">786 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In your .vimrc file<br>
+<span style="color:#a52a2a">787 </span><br>
+<span style="color:#a52a2a">788 </span><span style="color:#6a5acd">(5)</span>. 使用例子<br>
+<span style="color:#a52a2a">789 </span><br>
+<span style="color:#a52a2a">790 </span><br>
+<span style="color:#a52a2a">791 </span><br>
+<span style="color:#a52a2a">792 </span><br>
+<span style="color:#a52a2a">793 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">794 </span><span style="color:#ff00ff"><strong>24. ZoomWin.vim</strong></span><br>
+<span style="color:#a52a2a">795 </span><span style="color:#6a5acd">(1)</span>. 帮助手册查看<br>
+<span style="color:#a52a2a">796 </span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff"><span style="text-decoration:underline"><a target="_blank" target="_blank" href="http://www.vim.org/scripts/script.php?script_id=508">http://www.vim.org/scripts/script.php?script_id=508</a></span></span><br>
+<span style="color:#a52a2a">797 </span><br>
+<span style="color:#a52a2a">798 </span><span style="color:#6a5acd">(2)</span>. 功能<br>
+<span style="color:#a52a2a">799 </span>&nbsp;&nbsp;&nbsp;&nbsp;Press &lt;<span style="color:#6a5acd">c-w</span>&gt;o : the current window zooms into a full screen<br>
+<span style="color:#a52a2a">800 </span>&nbsp;&nbsp;&nbsp;&nbsp;Press &lt;<span style="color:#6a5acd">c-w</span>&gt;o again: the previous set of windows is restored<br>
+<span style="color:#a52a2a">801 </span><br>
+<span style="color:#a52a2a">802 </span><span style="color:#6a5acd">(3)</span>. 安装<br>
+<span style="color:#a52a2a">803 </span>&nbsp;&nbsp;&nbsp;&nbsp;Press &lt;<span style="color:#6a5acd">c-w</span>&gt;o : the current window zooms into a full screen<br>
+<span style="color:#a52a2a">804 </span>&nbsp;&nbsp;&nbsp;&nbsp;Press &lt;<span style="color:#6a5acd">c-w</span>&gt;o again: the previous set of windows is restored<br>
+<span style="color:#a52a2a">805 </span><br>
+<span style="color:#a52a2a">806 </span><span style="color:#6a5acd">(4)</span>. 使用方法<br>
+<span style="color:#a52a2a">807 </span><span style="color:#6a5acd">(5)</span>. 使用例子<br>
+<span style="color:#a52a2a">808 </span><br>
+<span style="color:#a52a2a">809 </span><br>
+<span style="color:#a52a2a">810 </span><br>
+<span style="color:#a52a2a">811 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">812 </span><span style="color:#ff00ff"><strong>25. cpp_src.tar.bz2</strong></span><br>
+<span style="color:#a52a2a">813 </span>&nbsp;&nbsp;&nbsp;&nbsp;tags for std c&#43;&#43; <span style="color:#6a5acd">
+(STL, streams, ...)</span>&nbsp;: Modified libstdc&#43;&#43; headers for use with ctags<br>
+<span style="color:#a52a2a">814 </span><span style="color:#6a5acd">(1)</span>. 帮助手册查看<br>
+<span style="color:#a52a2a">815 </span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff"><span style="text-decoration:underline"><a target="_blank" target="_blank" href="http://www.vim.org/scripts/script.php?script_id=2358">http://www.vim.org/scripts/script.php?script_id=2358</a></span></span><br>
+<span style="color:#a52a2a">816 </span><br>
+<span style="color:#a52a2a">817 </span><span style="color:#6a5acd">(2)</span>. 功能<br>
+<span style="color:#a52a2a">818 </span><span style="color:#6a5acd">(3)</span>. 安装<br>
+<span style="color:#a52a2a">819 </span>&nbsp;&nbsp;&nbsp;&nbsp;install details:<br>
+<span style="color:#a52a2a">820 </span><span style="background-color:rgb(190,190,190)"><span style="color:#00008b">&nbsp;&nbsp;&nbsp;&nbsp;1.</span></span>&nbsp;unpack<br>
+<span style="color:#a52a2a">821 </span><span style="background-color:rgb(190,190,190)"><span style="color:#00008b">&nbsp;&nbsp;&nbsp;&nbsp;2.</span></span>&nbsp;run<br>
+<span style="color:#a52a2a">822 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ ctags -R --c&#43;&#43;-kinds=&#43;p --fields=&#43;iaS --extra=&#43;q --language-force=C&#43;&#43; cpp_src<br>
+<span style="color:#a52a2a">823 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ mv tags cpp # or whatever<br>
+<span style="color:#a52a2a">824 </span><span style="background-color:rgb(190,190,190)"><span style="color:#00008b">&nbsp;&nbsp;&nbsp;&nbsp;3.</span></span>&nbsp;In Vim:<br>
+<span style="color:#a52a2a">825 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set tags&#43;=/my/path/to/tags/cpp <br>
+<span style="color:#a52a2a">826 </span><br>
+<span style="color:#a52a2a">827 </span><span style="color:#6a5acd">(4)</span>. 使用方法<br>
+<span style="color:#a52a2a">828 </span><span style="color:#6a5acd">(5)</span>. 使用例子<br>
+<span style="color:#a52a2a">829 </span><br>
+<span style="color:#a52a2a">830 </span><br>
+<span style="color:#a52a2a">831 </span><br>
+<span style="color:#a52a2a">832 </span><br>
+<span style="color:#a52a2a">833 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">834 </span><span style="color:#ff00ff"><strong>26. grep.vim</strong></span><br>
+<span style="color:#a52a2a">835 </span><span style="color:#6a5acd">(1)</span>. 帮助手册查看<br>
+<span style="color:#a52a2a">836 </span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff"><span style="text-decoration:underline"><a target="_blank" target="_blank" href="http://www.vim.org/scripts/script.php?script_id=311">http://www.vim.org/scripts/script.php?script_id=311</a></span></span><br>
+<span style="color:#a52a2a">837 </span><br>
+<span style="color:#a52a2a">838 </span><span style="color:#6a5acd">(2)</span>. 功能<br>
+<span style="color:#a52a2a">839 </span>&nbsp;&nbsp;&nbsp;&nbsp;The grep plugin integrates the grep, fgrep, egrep, and agrep tools with<br>
+<span style="color:#a52a2a">840 </span>&nbsp;&nbsp;&nbsp;&nbsp;Vim and allows you to search for a pattern in one or more files and jump<br>
+<span style="color:#a52a2a">841 </span>&nbsp;&nbsp;&nbsp;&nbsp;to them.<br>
+<span style="color:#a52a2a">842 </span><br>
+<span style="color:#a52a2a">843 </span><span style="color:#6a5acd">(3)</span>. 安装<br>
+<span style="color:#a52a2a">844 </span><span style="background-color:rgb(190,190,190)"><span style="color:#00008b">&nbsp;&nbsp;&nbsp;&nbsp;1)</span></span>.<br>
+<span style="color:#a52a2a">845 </span>&nbsp;&nbsp;&nbsp;&nbsp;To use this plugin, you need the grep, fgrep, egrep, agrep, find and<br>
+<span style="color:#a52a2a">846 </span>&nbsp;&nbsp;&nbsp;&nbsp;xargs utilities. These tools are present in most of the Unix installations.<br>
+<span style="color:#a52a2a">847 </span>&nbsp;&nbsp;&nbsp;&nbsp;For MS-Windows systems, you can download the GNU grep and find utilities<br>
+<span style="color:#a52a2a">848 </span>&nbsp;&nbsp;&nbsp;&nbsp;from the following sites:<br>
+<span style="color:#a52a2a">849 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#0000ff"><span style="text-decoration:underline"><a target="_blank" target="_blank" href="http://gnuwin32.sourceforge.net/packages/grep.htm">http://gnuwin32.sourceforge.net/packages/grep.htm</a></span></span><br>
+<span style="color:#a52a2a">850 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#0000ff"><span style="text-decoration:underline"><a target="_blank" target="_blank" href="http://gnuwin32.sourceforge.net/packages/findutils.htm">http://gnuwin32.sourceforge.net/packages/findutils.htm</a></span></span>&nbsp;<br>
+<span style="color:#a52a2a">851 </span><span style="background-color:rgb(190,190,190)"><span style="color:#00008b">&nbsp;&nbsp;&nbsp;&nbsp;2)</span></span>.<br>
+<span style="color:#a52a2a">852 </span>&nbsp;&nbsp;&nbsp;&nbsp;把下载得到的grep.vim复制到 $HOME/plugin 目录中.<br>
+<span style="color:#a52a2a">853 </span><br>
+<span style="color:#a52a2a">854 </span><span style="color:#6a5acd">(4)</span>. 使用方法<br>
+<span style="color:#a52a2a">855 </span>&nbsp;&nbsp;&nbsp;&nbsp;:Grep<br>
+<span style="color:#a52a2a">856 </span><br>
+<span style="color:#a52a2a">857 </span><span style="color:#6a5acd">(5)</span>. 使用例子<br>
+<span style="color:#a52a2a">858 </span><br>
+<span style="color:#a52a2a">859 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">860 </span><span style="color:#ff00ff"><strong>27. autocomplpop.zip</strong></span><br>
+<span style="color:#a52a2a">861 </span><span style="color:#6a5acd">(1)</span>. 帮助手册查看<br>
+<span style="color:#a52a2a">862 </span>&nbsp;&nbsp;&nbsp;&nbsp;:help acp<br>
+<span style="color:#a52a2a">863 </span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff"><span style="text-decoration:underline"><a target="_blank" target="_blank" href="http://www.vim.org/scripts/script.php?script_id=1879">http://www.vim.org/scripts/script.php?script_id=1879</a></span></span><br>
+<span style="color:#a52a2a">864 </span><br>
+<span style="color:#a52a2a">865 </span><span style="color:#6a5acd">(2)</span>. 功能<br>
+<span style="color:#a52a2a">866 </span>&nbsp;&nbsp;&nbsp;&nbsp;With this plugin, your vim comes to automatically opens popup menu for<br>
+<span style="color:#a52a2a">867 </span>&nbsp;&nbsp;&nbsp;&nbsp;completions when you enter characters or move the cursor in Insert mode. It<br>
+<span style="color:#a52a2a">868 </span>&nbsp;&nbsp;&nbsp;&nbsp;won't prevent you continuing entering characters.<br>
+<span style="color:#a52a2a">869 </span><br>
+<span style="color:#a52a2a">870 </span><span style="color:#6a5acd">(3)</span>. 安装<br>
+<span style="color:#a52a2a">871 </span>&nbsp;&nbsp;&nbsp;&nbsp;autocomplpop.zip<br>
+<span style="color:#a52a2a">872 </span>&nbsp;&nbsp;&nbsp;&nbsp;mv plugin/acp.vim $HOME/.vim/plugin/acp.vim<br>
+<span style="color:#a52a2a">873 </span>&nbsp;&nbsp;&nbsp;&nbsp;mv autoload/acp.vim $HOME/.vim/autoload/acp.vim<br>
+<span style="color:#a52a2a">874 </span>&nbsp;&nbsp;&nbsp;&nbsp;mv doc/acp.jax $HOME/.vim/doc/acp.jax <br>
+<span style="color:#a52a2a">875 </span>&nbsp;&nbsp;&nbsp;&nbsp;mv doc/acp.txt $HOME/.vim/doc/acp.txt <br>
+<span style="color:#a52a2a">876 </span>&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<span style="color:#a52a2a">877 </span><span style="color:#6a5acd">(4)</span>. 使用方法<br>
+<span style="color:#a52a2a">878 </span>&nbsp;&nbsp;&nbsp;&nbsp;Once this plugin is installed, auto-popup is enabled at startup by default.<br>
+<span style="color:#a52a2a">879 </span>&nbsp;&nbsp;&nbsp;&nbsp;Which completion method is used depends on the text before the cursor. The<br>
+<span style="color:#a52a2a">880 </span>&nbsp;&nbsp;&nbsp;&nbsp;default behavior is as follows:<br>
+<span style="color:#a52a2a">881 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kind&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;filetype&nbsp;&nbsp;&nbsp;&nbsp;text before the cursor ~<br>
+<span style="color:#a52a2a">882 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Keyword&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; two keyword characters<br>
+<span style="color:#a52a2a">883 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Filename&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a filename character &#43; a path separator<br>
+<span style="color:#a52a2a">884 </span><span style="background-color:rgb(190,190,190)"><span style="color:#00008b">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#43;</span></span>0 or more filename character<br>
+<span style="color:#a52a2a">885 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Omni&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ruby&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#2e8b57"><strong>.</strong></span>&quot;, &quot;<span style="color:#2e8b57"><strong>::</strong></span>&quot; or non-word character &#43; &quot;<span style="color:#2e8b57"><strong>:</strong></span>&quot;<br>
+<span style="color:#a52a2a">886 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a5acd">(|&#43;ruby| required.)</span><br>
+<span style="color:#a52a2a">887 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Omni&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;python&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#2e8b57"><strong>.</strong></span>&quot;<span style="color:#6a5acd">(|&#43;python| required.)</span><br>
+<span style="color:#a52a2a">888 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Omni&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xml&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;<span style="color:#2e8b57"><strong>&lt;</strong></span>&quot;, &quot;<span style="color:#2e8b57"><strong>&lt;/</strong></span>&quot; or<span style="color:#6a5acd">(&quot;&lt;&quot; &#43; non-&quot;&gt;&quot; characters &#43; &quot; &quot;)</span><br>
+<span style="color:#a52a2a">889 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Omni&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;html/xhtml&nbsp;&nbsp;&quot;<span style="color:#2e8b57"><strong>&lt;</strong></span>&quot;, &quot;<span style="color:#2e8b57"><strong>&lt;/</strong></span>&quot; or<span style="color:#6a5acd">(&quot;&lt;&quot; &#43; non-&quot;&gt;&quot; characters &#43; &quot; &quot;)</span><br>
+<span style="color:#a52a2a">890 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Omni&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;css&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#6a5acd">
+(&quot;:&quot;, &quot;;&quot;, &quot;{&quot;, &quot;^&quot;, &quot;@&quot;, or &quot;!&quot;)</span><br>
+<span style="color:#a52a2a">891 </span><span style="background-color:rgb(190,190,190)"><span style="color:#00008b">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#43;</span></span>0 or 1 space<br>
+<span style="color:#a52a2a">892 </span><br>
+<span style="color:#a52a2a">893 </span><span style="color:#6a5acd">(5)</span>. 使用例子<br>
+<span style="color:#a52a2a">894 </span><br>
+<span style="color:#a52a2a">895 </span><br>
+<span style="color:#a52a2a">896 </span><br>
+<span style="color:#a52a2a">897 </span><br>
+<span style="color:#a52a2a">898 </span><br>
+<span style="color:#a52a2a">899 </span><br>
+<span style="color:#a52a2a">900 </span><br>
+<span style="color:#a52a2a">901 </span><br>
+<span style="color:#a52a2a">902 </span><br>
+<span style="color:#a52a2a">903 </span><br>
+<span style="color:#a52a2a">904 </span><br>
+<span style="color:#a52a2a">905 </span><br>
+<span style="color:#a52a2a">906 </span><br>
+<span style="color:#a52a2a">907 </span><br>
+<span style="color:#a52a2a">908 </span><br>
+<span style="color:#a52a2a">909 </span><br>
+<span style="color:#a52a2a">910 </span><br>
+<span style="color:#a52a2a">911 </span><span style="color:#6a5acd">#=============================================================================</span><br>
+<span style="color:#a52a2a">912 </span>&quot;<span style="color:#2e8b57"><strong>&nbsp;</strong></span><span style="color:#0000ff"><span style="text-decoration:underline"><a target="_blank" target="_blank" href="http://www.vim.org/scripts/script.php?script_id=1638">http://www.vim.org/scripts/script.php?script_id=1638</a></span></span><span style="color:#2e8b57"><strong>&nbsp;&nbsp;</strong></span>&quot;
+ SourceCodeObedience<br>
+<span style="color:#a52a2a">913 </span>&quot;<span style="color:#2e8b57"><strong>&nbsp;</strong></span><span style="color:#0000ff"><span style="text-decoration:underline"><a target="_blank" target="_blank" href="http://www.vim.org/scripts/script.php?script_id=1581">http://www.vim.org/scripts/script.php?script_id=1581</a></span></span><span style="color:#2e8b57"><strong>&nbsp;&nbsp;</strong></span>&quot;
+ lookupfile<br>
+<span style="color:#a52a2a">914 </span>&quot;<span style="color:#2e8b57"><strong>&nbsp;</strong></span><span style="color:#0000ff"><span style="text-decoration:underline"><a target="_blank" target="_blank" href="http://insenvim.sourceforge.net/index.php">http://insenvim.sourceforge.net/index.php</a></span></span><span style="color:#2e8b57"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>&quot;
+ Vim Intellisense<br>
+</span></p>
+
+</div>
+
+
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare" style="float: right;">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<!-- Baidu Button END -->
+
+
+<!--192.168.100.35-->
+<ul class="article_next_prev">
+            <li class="prev_article"><span  onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_shangyipian']);location.href='/tge7618291/article/details/4189016';">上一篇</span><a href="/tge7618291/article/details/4189016" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_shangyipian'])">linux忘记密码的解救方法</a></li>
+            <li class="next_article"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_xiayipian']);location.href='/tge7618291/article/details/4753126';">下一篇</span><a href="/tge7618291/article/details/4753126" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_xiayipian'])">最近点对问题的分治算法分析与实现</a></li>
+</ul>
+
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=1536434" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+</div>
+      <dl class="blog-associat-tag">
+        <dt>主题推荐</dt>
+        <dd>
+                <a href="http://www.csdn.net/tag/插件" target="_blank" class="blog-tage-red" >插件</a> 
+                <a href="http://www.csdn.net/tag/vim" target="_blank" class="blog-tage-red" >vim</a> 
+                <a href="http://www.csdn.net/tag/正则表达式" target="_blank" class="blog-tage-red" >正则表达式</a> 
+                <a href="http://www.csdn.net/tag/全局变量" target="_blank" class="blog-tage-red" >全局变量</a> 
+                <a href="http://www.csdn.net/tag/数据库" target="_blank" class="blog-tage-red" >数据库</a> 
+        </dd>
+    </dl> 
+
+
+<dl class="blog-ass-articl tracking-ad"  data-mod="popu_36" id="res-relatived"> 
+     <dt><span>猜你在找</span></dt>    
+</dl>
+
+<script type="text/javascript">
+    var searchtitletags = '经典vim插件功能说明、安装方法和使用方法介绍（已更新）' + ',' + '插件,vim,正则表达式,全局变量,数据库';
+    searchService({
+        index: 'blog',
+        query: searchtitletags,
+        from: 10,
+        size: 10,
+        appendTo: '#res-relatived',
+        url: 'recommend',
+        his: 2,
+        client: "blog_cf_enhance",
+        tmpl: '<dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px;"><a href="#{ url }" title="#{ title }" strategy="#{ strategy }">#{ title }</a></dd>'
+    });
+
+ </script>   
+
+    <div id="ad_cen">
+        <script type="text/javascript">            BAIDU_CLB_SLOT_ID = "117306";</script>
+        <script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script>
+    </div>
+    <script type="text/javascript">
+        //new Ad(4, 'ad_cen');
+    </script>
+<div id="comment_title" class="panel_head">
+    查看评论<a name="comments"></a></div>
+<div id="comment_list">
+</div>
+<div id="comment_bar">
+</div>
+<div id="comment_form">
+</div>
+<div class="announce">
+    * 以上用户言论只代表其个人观点，不代表CSDN网站的观点或立场<a name="reply"></a><a name="quote"></a></div>
+<script type="text/javascript">
+    var fileName = '4216977';
+    var commentscount = 28;
+    var islock = false
+</script>
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/comment.js"></script>
+    <div id="ad_bot">
+    </div>
+    <script type="text/javascript">
+    new Ad(5, 'ad_bot');
+    </script>
+<div id="report_dialog">
+</div>
+
+<div id="d-top"  style="bottom:60px;">
+      
+
+       <a id="quick-reply" class="btn btn-top q-reply" title="快速回复" style="display:none;">
+            <img src="http://static.blog.csdn.net/images/blog-icon-reply.png" alt="快速回复">
+        </a>    
+
+    <a id="d-top-a" class="btn btn-top backtop"  style="display: none;" title="返回顶部" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_huidaodingbu'])" style="">         
+         <img src="http://static.blog.csdn.net/images/top.png" alt="TOP">
+    </a>
+</div>
+<script type="text/javascript">
+    $(function ()
+    {
+        if($("#comment_content").length>0)
+        {
+            $("#quick-reply").show();
+
+            $("#quick-reply").click(function(){
+                setEditorFocus();
+            });
+        }       
+     
+        var d_top = $('#d-top-a');
+        document.onscroll = function ()
+        {
+            var scrTop = (document.body.scrollTop || document.documentElement.scrollTop);
+            if (scrTop > 500)
+            {
+                d_top.show();
+            } else
+            {
+                d_top.hide();
+            }
+        }
+        $('#d-top-a').click(function ()
+        {
+            scrollTo(0, 0);
+            this.blur();
+            return false;
+        });
+    });
+  
+</script>
+<style type="text/css">
+    .tag_list
+    {
+        background: none repeat scroll 0 0 #FFFFFF;
+        border: 1px solid #D7CBC1;
+        color: #000000;
+        font-size: 12px;
+        line-height: 20px;
+        list-style: none outside none;
+        margin: 10px 2% 0 1%;
+        padding: 1px;
+    }
+    .tag_list h5
+    {
+        background: none repeat scroll 0 0 #E0DBD3;
+        color: #47381C;
+        font-size: 12px;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 5px;
+        margin: 0;
+    }
+    .tag_list h5 a
+    {
+        color: #47381C;
+    }
+    .classify
+    {
+        margin: 10px 0;
+        padding: 4px 12px 8px;
+    }
+    .classify a
+    {
+        margin-right: 20px;
+        white-space: nowrap;
+    }
+</style>
+<div class="tag_list">
+    <h5>
+        <a href="http://www.csdn.net/tag/" target="_blank">核心技术类目</a></h5>
+    <div class="classify">
+<a title="全部主题" href="http://www.csdn.net/tag" target="_blank" onclick="LogClickCount(this,336);">全部主题</a>
+<a title="Java" href="http://www.csdn.net/tag/Java" target="_blank" onclick="LogClickCount(this,336);">Java</a>
+<a title="VPN" href="http://www.csdn.net/tag/vpn" target="_blank" onclick="LogClickCount(this,336);">VPN</a>
+<a title="Android" href="http://www.csdn.net/tag/android" target="_blank" onclick="LogClickCount(this,336);">Android</a>
+<a title="iOS" href="http://www.csdn.net/tag/ios" target="_blank" onclick="LogClickCount(this,336);">iOS</a>
+<a title="ERP" href="http://www.csdn.net/tag/erp" target="_blank" onclick="LogClickCount(this,336);">ERP</a>
+<a title="IE10" href="http://www.csdn.net/tag/ie10" target="_blank" onclick="LogClickCount(this,336);">IE10</a>
+<a title="Eclipse" href="http://www.csdn.net/tag/eclipse" target="_blank" onclick="LogClickCount(this,336);">Eclipse</a>
+<a title="CRM" href="http://www.csdn.net/tag/crm" target="_blank" onclick="LogClickCount(this,336);">CRM</a>
+<a title="JavaScript" href="http://www.csdn.net/tag/javascript" target="_blank" onclick="LogClickCount(this,336);">JavaScript</a>
+<a title="Ubuntu" href="http://www.csdn.net/tag/ubuntu" target="_blank" onclick="LogClickCount(this,336);">Ubuntu</a>
+<a title="NFC" href="http://www.csdn.net/tag/nfc" target="_blank" onclick="LogClickCount(this,336);">NFC</a>
+<a title="WAP" href="http://www.csdn.net/tag/wap" target="_blank" onclick="LogClickCount(this,336);">WAP</a>
+<a title="jQuery" href="http://www.csdn.net/tag/jquery" target="_blank" onclick="LogClickCount(this,336);">jQuery</a>
+<a title="数据库" href="http://www.csdn.net/tag/数据库" target="_blank" onclick="LogClickCount(this,336);">数据库</a>
+<a title="BI" href="http://www.csdn.net/tag/bi" target="_blank" onclick="LogClickCount(this,336);">BI</a>
+<a title="HTML5" href="http://www.csdn.net/tag/html5" target="_blank" onclick="LogClickCount(this,336);">HTML5</a>
+<a title="Spring" href="http://www.csdn.net/tag/spring" target="_blank" onclick="LogClickCount(this,336);">Spring</a>
+<a title="Apache" href="http://www.csdn.net/tag/apache" target="_blank" onclick="LogClickCount(this,336);">Apache</a>
+<a title="Hadoop" href="http://www.csdn.net/tag/hadoop" target="_blank" onclick="LogClickCount(this,336);">Hadoop</a>
+<a title=".NET" href="http://www.csdn.net/tag/.net" target="_blank" onclick="LogClickCount(this,336);">.NET</a>
+<a title="API" href="http://www.csdn.net/tag/api" target="_blank" onclick="LogClickCount(this,336);">API</a>
+<a title="HTML" href="http://www.csdn.net/tag/html" target="_blank" onclick="LogClickCount(this,336);">HTML</a>
+<a title="SDK" href="http://www.csdn.net/tag/sdk" target="_blank" onclick="LogClickCount(this,336);">SDK</a>
+<a title="IIS" href="http://www.csdn.net/tag/iis" target="_blank" onclick="LogClickCount(this,336);">IIS</a>
+<a title="Fedora" href="http://www.csdn.net/tag/fedora" target="_blank" onclick="LogClickCount(this,336);">Fedora</a>
+<a title="XML" href="http://www.csdn.net/tag/xml" target="_blank" onclick="LogClickCount(this,336);">XML</a>
+<a title="LBS" href="http://www.csdn.net/tag/lbs" target="_blank" onclick="LogClickCount(this,336);">LBS</a>
+<a title="Unity" href="http://www.csdn.net/tag/unity" target="_blank" onclick="LogClickCount(this,336);">Unity</a>
+<a title="Splashtop" href="http://www.csdn.net/tag/splashtop" target="_blank" onclick="LogClickCount(this,336);">Splashtop</a>
+<a title="UML" href="http://www.csdn.net/tag/uml" target="_blank" onclick="LogClickCount(this,336);">UML</a>
+<a title="components" href="http://www.csdn.net/tag/components" target="_blank" onclick="LogClickCount(this,336);">components</a>
+<a title="Windows Mobile" href="http://www.csdn.net/tag/windowsmobile" target="_blank" onclick="LogClickCount(this,336);">Windows Mobile</a>
+<a title="Rails" href="http://www.csdn.net/tag/rails" target="_blank" onclick="LogClickCount(this,336);">Rails</a>
+<a title="QEMU" href="http://www.csdn.net/tag/qemu" target="_blank" onclick="LogClickCount(this,336);">QEMU</a>
+<a title="KDE" href="http://www.csdn.net/tag/kde" target="_blank" onclick="LogClickCount(this,336);">KDE</a>
+<a title="Cassandra" href="http://www.csdn.net/tag/cassandra" target="_blank" onclick="LogClickCount(this,336);">Cassandra</a>
+<a title="CloudStack" href="http://www.csdn.net/tag/cloudstack" target="_blank" onclick="LogClickCount(this,336);">CloudStack</a>
+<a title="FTC" href="http://www.csdn.net/tag/ftc" target="_blank" onclick="LogClickCount(this,336);">FTC</a>
+<a title="coremail" href="http://www.csdn.net/tag/coremail" target="_blank" onclick="LogClickCount(this,336);">coremail</a>
+<a title="OPhone " href="http://www.csdn.net/tag/ophone " target="_blank" onclick="LogClickCount(this,336);">OPhone </a>
+<a title="CouchBase" href="http://www.csdn.net/tag/couchbase" target="_blank" onclick="LogClickCount(this,336);">CouchBase</a>
+<a title="云计算" href="http://www.csdn.net/tag/云计算" target="_blank" onclick="LogClickCount(this,336);">云计算</a>
+<a title="iOS6" href="http://www.csdn.net/tag/iOS6" target="_blank" onclick="LogClickCount(this,336);">iOS6</a>
+<a title="Rackspace " href="http://www.csdn.net/tag/rackspace " target="_blank" onclick="LogClickCount(this,336);">Rackspace </a>
+<a title="Web App" href="http://www.csdn.net/tag/webapp" target="_blank" onclick="LogClickCount(this,336);">Web App</a>
+<a title="SpringSide" href="http://www.csdn.net/tag/springside" target="_blank" onclick="LogClickCount(this,336);">SpringSide</a>
+<a title="Maemo" href="http://www.csdn.net/tag/maemo" target="_blank" onclick="LogClickCount(this,336);">Maemo</a>
+<a title="Compuware" href="http://www.csdn.net/tag/compuware" target="_blank" onclick="LogClickCount(this,336);">Compuware</a>
+<a title="大数据" href="http://www.csdn.net/tag/大数据" target="_blank" onclick="LogClickCount(this,336);">大数据</a>
+<a title="aptech" href="http://www.csdn.net/tag/aptech" target="_blank" onclick="LogClickCount(this,336);">aptech</a>
+<a title="Perl" href="http://www.csdn.net/tag/perl" target="_blank" onclick="LogClickCount(this,336);">Perl</a>
+<a title="Tornado" href="http://www.csdn.net/tag/tornado" target="_blank" onclick="LogClickCount(this,336);">Tornado</a>
+<a title="Ruby" href="http://www.csdn.net/tag/ruby" target="_blank" onclick="LogClickCount(this,336);">Ruby</a>
+<a title="Hibernate" href="http://www.csdn.net/hibernate" target="_blank" onclick="LogClickCount(this,336);">Hibernate</a>
+<a title="ThinkPHP" href="http://www.csdn.net/tag/thinkphp" target="_blank" onclick="LogClickCount(this,336);">ThinkPHP</a>
+<a title="Spark" href="http://www.csdn.net/tag/spark" target="_blank" onclick="LogClickCount(this,336);">Spark</a>
+<a title="HBase" href="http://www.csdn.net/tag/hbase" target="_blank" onclick="LogClickCount(this,336);">HBase</a>
+<a title="Pure" href="http://www.csdn.net/tag/pure" target="_blank" onclick="LogClickCount(this,336);">Pure</a>
+<a title="Solr" href="http://www.csdn.net/tag/solr" target="_blank" onclick="LogClickCount(this,336);">Solr</a>
+<a title="Angular" href="http://www.csdn.net/tag/angular" target="_blank" onclick="LogClickCount(this,336);">Angular</a>
+<a title="Cloud Foundry" href="http://www.csdn.net/tag/cloudfoundry" target="_blank" onclick="LogClickCount(this,336);">Cloud Foundry</a>
+<a title="Redis" href="http://www.csdn.net/tag/redis" target="_blank" onclick="LogClickCount(this,336);">Redis</a>
+<a title="Scala" href="http://www.csdn.net/tag/scala" target="_blank" onclick="LogClickCount(this,336);">Scala</a>
+<a title="Django" href="http://www.csdn.net/tag/django" target="_blank" onclick="LogClickCount(this,336);">Django</a>
+<a title="Bootstrap" href="http://www.csdn.net/tag/bootstrap" target="_blank" onclick="LogClickCount(this,336);">Bootstrap</a>
+    </div>
+</div>
+
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+            <div id="side">
+    <div class="side">
+<div id="panel_Profile" class="panel">
+<ul class="panel_head"><span>个人资料</span></ul>
+<ul class="panel_body profile">
+<div id="blog_userface">
+    <a href="http://my.csdn.net/tge7618291" target="_blank">
+    <img src="http://avatar.csdn.net/0/D/2/1_tge7618291.jpg" title="访问我的空间" style="max-width:90%"/>
+    </a>
+    <br />
+    <span><a href="http://my.csdn.net/tge7618291" class="user_name" target="_blank">tge7618291</a></span>
+</div>
+<div class="interact">
+<a href="javascript:void(0);" class="attent" id="span_add_follow" title="[加关注]" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_guanzhu'])"></a>
+<a href="javascript:void(0);" class="letter" onclick="loginto(1)" title="[发私信]" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_sixin'])"></a>
+</div>
+<div id="blog_medal">
+</div>
+<ul id="blog_rank">
+    <li>访问：<span>139906次</span></li>
+    <li>积分：<span>1071分</span></li>
+    <li>排名：<span>第14469名</span></li>
+</ul>
+<ul id="blog_statistics">
+    <li>原创：<span>37篇</span></li>
+    <li>转载：<span>2篇</span></li>
+    <li>译文：<span>0篇</span></li>
+    <li>评论：<span>42条</span></li>
+</ul>
+</ul>
+</div>
+
+
+<div class="panel" id="panel_Search">
+    <ul class="panel_head"><span>文章搜索</span></ul>
+    <ul class="panel_body">
+        <form id="frmSearch" action="http://so.csdn.net/search" class="form_search" target="_blank">
+        <span><input id="inputSearch" type="text" class="blogsearch" title="请输入关键字" /></span>
+        <input id="btnSubmit" type="submit" value="搜索" title="search in blog" />
+        <input type="hidden" name="q" id="inputQ" />
+        <input type="hidden" name="t" value="blog" />
+        <a id="btnSearchBlog" target="_blank"></a>
+        </form>
+    </ul>
+</div><div id="panel_Category" class="panel">
+<ul class="panel_head"><span>文章分类</span></ul>
+<ul class="panel_body">
+             <li>
+                <a href="http://blog.csdn.net/tge7618291/article/category/536024" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">linux</a><span>(24)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/tge7618291/article/category/616469" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">tcp-ip</a><span>(5)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/tge7618291/article/category/621392" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">tcp/ip</a><span>(3)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/tge7618291/article/category/536025" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">vc</a><span>(0)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/tge7618291/article/category/539385" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">生活小记</a><span>(0)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/tge7618291/article/category/612893" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">算法</a><span>(6)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/tge7618291/article/category/621862" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">设计</a><span>(2)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/tge7618291/article/category/1125076" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">opengl</a><span>(2)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/tge7618291/article/category/1125296" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">asm</a><span>(1)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/tge7618291/article/category/1125607" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">linux-tool</a><span>(15)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/tge7618291/article/category/1125629" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">devel</a><span>(10)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/tge7618291/article/category/1125638" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">gdb</a><span>(2)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/tge7618291/article/category/1125644" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">git</a><span>(2)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/tge7618291/article/category/1125649" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">svn</a><span>(2)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/tge7618291/article/category/1127555" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">mail</a><span>(1)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/tge7618291/article/category/1127557" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">mutt</a><span>(1)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/tge7618291/article/category/1127865" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">getmail</a><span>(1)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/tge7618291/article/category/1127866" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">msmtp</a><span>(1)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/tge7618291/article/category/1127867" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">procmail</a><span>(1)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/tge7618291/article/category/1148142" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">v</a><span>(0)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/tge7618291/article/category/1148143" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">vim</a><span>(1)</span>
+            </li>
+             <li>
+                <a href="http://blog.csdn.net/tge7618291/article/category/1154346" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">encoding</a><span>(2)</span>
+            </li>
+</ul>
+</div><div id="panel_Archive" class="panel">
+<ul class="panel_head"><span>文章存档</span></ul>
+<ul class="panel_body">
+<div id="archive_list">
+<!--归档统计-->
+<li><a href="http://blog.csdn.net/tge7618291/article/month/2012/06">2012年06月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/tge7618291/article/month/2012/05">2012年05月</a><span>(11)</span></li><li><a href="http://blog.csdn.net/tge7618291/article/month/2012/04">2012年04月</a><span>(10)</span></li><li><a href="http://blog.csdn.net/tge7618291/article/month/2010/05">2010年05月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/tge7618291/article/month/2009/12">2009年12月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/tge7618291/article/month/2009/11">2009年11月</a><span>(12)</span></li><li><a href="http://blog.csdn.net/tge7618291/article/month/2009/05">2009年05月</a><span>(2)</span></li><li><a href="http://blog.csdn.net/tge7618291/article/month/2009/04">2009年04月</a><span>(1)</span></li>
+</div>
+</ul>
+</div>
+<div id="hotarticls" class="panel">
+<ul class="panel_head">
+    <span>       
+阅读排行    </span>
+</ul>
+
+<ul class="panel_body itemlist">
+<li>
+<a href="/tge7618291/article/details/4216977" title="经典vim插件功能说明、安装方法和使用方法介绍（已更新）">经典vim插件功能说明、安装方法和使用方法介绍（已更新）</a><span>(79909)</span>
+</li>
+<li>
+<a href="/tge7618291/article/details/7599902" title="Unicode与UTF-8互转(C语言实现)">Unicode与UTF-8互转(C语言实现)</a><span>(13534)</span>
+</li>
+<li>
+<a href="/tge7618291/article/details/7608510" title="Unicode与GBK互转">Unicode与GBK互转</a><span>(6581)</span>
+</li>
+<li>
+<a href="/tge7618291/article/details/7466236" title="&lt;&lt;linux下无线上网&gt;&gt;">&lt;&lt;linux下无线上网&gt;&gt;</a><span>(4768)</span>
+</li>
+<li>
+<a href="/tge7618291/article/details/4801934" title="rlogin服务的安装和rlogin的使用">rlogin服务的安装和rlogin的使用</a><span>(4512)</span>
+</li>
+<li>
+<a href="/tge7618291/article/details/7698813" title="&lt;&lt;libevent学习资料&gt;&gt;">&lt;&lt;libevent学习资料&gt;&gt;</a><span>(2265)</span>
+</li>
+<li>
+<a href="/tge7618291/article/details/7587482" title="常用linux网络相关命令使用和输出详解">常用linux网络相关命令使用和输出详解</a><span>(1981)</span>
+</li>
+<li>
+<a href="/tge7618291/article/details/5616884" title="Linux下配置NAT服务器共享上网">Linux下配置NAT服务器共享上网</a><span>(1921)</span>
+</li>
+<li>
+<a href="/tge7618291/article/details/7553807" title="使用convert制制作gif图片动画">使用convert制制作gif图片动画</a><span>(1905)</span>
+</li>
+<li>
+<a href="/tge7618291/article/details/7466422" title="&lt;&lt;git使用快速教程&gt;&gt;">&lt;&lt;git使用快速教程&gt;&gt;</a><span>(1772)</span>
+</li>
+</ul>
+</div>
+<div id="hotarticls2" class="panel">
+<ul class="panel_head"><span>评论排行</span></ul>
+<ul class="panel_body itemlist">
+<li>
+<a href="/tge7618291/article/details/4216977" title="经典vim插件功能说明、安装方法和使用方法介绍（已更新）">经典vim插件功能说明、安装方法和使用方法介绍（已更新）</a><span>(28)</span>
+</li>
+<li>
+<a href="/tge7618291/article/details/7599902" title="Unicode与UTF-8互转(C语言实现)">Unicode与UTF-8互转(C语言实现)</a><span>(7)</span>
+</li>
+<li>
+<a href="/tge7618291/article/details/7608510" title="Unicode与GBK互转">Unicode与GBK互转</a><span>(2)</span>
+</li>
+<li>
+<a href="/tge7618291/article/details/4753126" title="最近点对问题的分治算法分析与实现">最近点对问题的分治算法分析与实现</a><span>(2)</span>
+</li>
+<li>
+<a href="/tge7618291/article/details/7698813" title="&lt;&lt;libevent学习资料&gt;&gt;">&lt;&lt;libevent学习资料&gt;&gt;</a><span>(1)</span>
+</li>
+<li>
+<a href="/tge7618291/article/details/7567345" title="用简单线性插值实现有趣的曲线与动画">用简单线性插值实现有趣的曲线与动画</a><span>(1)</span>
+</li>
+<li>
+<a href="/tge7618291/article/details/7466236" title="&lt;&lt;linux下无线上网&gt;&gt;">&lt;&lt;linux下无线上网&gt;&gt;</a><span>(1)</span>
+</li>
+<li>
+<a href="/tge7618291/article/details/4801934" title="rlogin服务的安装和rlogin的使用">rlogin服务的安装和rlogin的使用</a><span>(0)</span>
+</li>
+<li>
+<a href="/tge7618291/article/details/7466436" title="&lt;&lt;svn服务配置和维护常用命令&gt;&gt;">&lt;&lt;svn服务配置和维护常用命令&gt;&gt;</a><span>(0)</span>
+</li>
+<li>
+<a href="/tge7618291/article/details/7466450" title="&lt;&lt;我的 .gitignore 文件&gt;&gt;">&lt;&lt;我的 .gitignore 文件&gt;&gt;</a><span>(0)</span>
+</li>
+</ul>
+</div>
+<div id="homepageArticles" class="panel tracking-ad" data-mod="popu_4">
+<ul class="panel_head"><span>推荐文章</span></ul>
+<ul class="panel_body" id="ad_commend"></ul>
+</div>
+<script type="text/javascript">
+ new Ad(12, 'ad_commend');
+</script><div id="newcomments" class="panel">
+<ul class="panel_head"><span>最新评论</span></ul>
+<ul class="panel_body itemlist">
+    <li>
+   
+         <a href="/tge7618291/article/details/7599902#comments">Unicode与UTF-8互转(C语言实现)</a>
+    <p style="margin:0px;"><a href="/DLODJ" class="user_name">DLODJ</a>:
+拜读了，楼主写的非常好！
+    </p>
+    </li>
+    <li>
+   
+         <a href="/tge7618291/article/details/7599902#comments">Unicode与UTF-8互转(C语言实现)</a>
+    <p style="margin:0px;"><a href="/wangdali" class="user_name">wangdali</a>:
+int enc_get_utf8_size(const unsigned char pInput){...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/tge7618291/article/details/7466236#comments">&lt;&lt;linux下无线上网&gt;&gt;</a>
+    <p style="margin:0px;"><a href="/u012116216" class="user_name">u012116216</a>:
+谢谢博主，终于依葫芦画瓢搞定了
+    </p>
+    </li>
+    <li>
+   
+         <a href="/tge7618291/article/details/7608510#comments">Unicode与GBK互转</a>
+    <p style="margin:0px;"><a href="/c392715524" class="user_name">c392715524</a>:
+tge7618291 你好。 关于映射表的获得，这个地址http://www.gnu.org/dir...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/tge7618291/article/details/7608510#comments">Unicode与UTF-8互转(C语言实现)</a>
+    <p style="margin:0px;"><a href="/orends" class="user_name">orends</a>:
+学习了，非常感谢分享！
+    </p>
+    </li>
+    <li>
+   
+         <a href="/tge7618291/article/details/4216977#comments">经典vim插件功能说明、安装方法和使用方法介绍（已更新）</a>
+    <p style="margin:0px;"><a href="/xiaohui_hubei" class="user_name">xiaohui_hubei</a>:
+很详细，很好很强大！谢谢！
+    </p>
+    </li>
+    <li>
+   
+         <a href="/tge7618291/article/details/4216977#comments">经典vim插件功能说明、安装方法和使用方法介绍（已更新）</a>
+    <p style="margin:0px;"><a href="/weiqubo" class="user_name">weiqubo</a>:
+这真他妈多，也真他妈麻烦，全装了还不如直接装个ide更省事，或者来个一键式安装也方便，希望有人提供。
+    </p>
+    </li>
+    <li>
+   
+         <a href="/tge7618291/article/details/4216977#comments">Unicode与UTF-8互转(C语言实现)</a>
+    <p style="margin:0px;"><a href="/xiaolaoshu2009" class="user_name">xiaolaoshu2009</a>:
+楼主 写的很详细，理解起来容易，采纳应用，感谢
+    </p>
+    </li>
+    <li>
+   
+         <a href="/tge7618291/article/details/4216977#comments">经典vim插件功能说明、安装方法和使用方法介绍（已更新）</a>
+    <p style="margin:0px;"><a href="/kiter521" class="user_name">kiter521</a>:
+谢谢楼主，收藏了！
+    </p>
+    </li>
+    <li>
+   
+         <a href="/tge7618291/article/details/4216977#comments">Unicode与UTF-8互转(C语言实现)</a>
+    <p style="margin:0px;"><a href="/yyccz123" class="user_name">yyccz123</a>:
+请问楼主，有没有可以将一个字符串的UTF-8转换成UNICODE字符串的函数，大多数情况下应该是这种...
+    </p>
+    </li>
+</ul>
+</div>
+    </div>
+    <div class="clear">
+    </div>
+</div>
+
+            <div class="clear">
+            </div>
+        </div>
+        
+
+<script type="text/javascript" src="http://csdnimg.cn/rabbit/cnick/cnick.js"></script>
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/newblog.min.js"></script>
+
+
+<script type="text/javascript" src="http://medal.blog.csdn.net/showblogmedal.ashx?blogid=516226"></script>
+<script type="text/javascript">
+    document.write('<script type="text/javascript" src="http://csdnimg.cn/pubfooter/js/publib_footer.js?' + Math.floor(new Date() / 120000).toString(36) + '="></' + 'script>');
+</script>
+    <script type="text/javascript" src="http://passport.csdn.net/content/loginbox/login.js"></script>
+<script type="text/javascript">document.write("<img src=http://counter.csdn.net/pv.aspx?id=24 border=0 width=0 height=0>");</script>
+<script type="text/javascript" src="http://www.csdn.net/ui/scripts/Csdn/counter.js"></script>
+<script type="text/javascript" src="http://ad.csdn.net/scripts/ad-blog.js"></script>
+<script type="text/javascript" src="http://zz.csdn.net/js/count.js"></script>
+<script type="text/javascript">
+    $(function () {
+        function __get_code_toolbar(snippet_id) {
+            return $("<a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "' target='_blank' title='在CODE上查看代码片' style='text-indent:0;'><img src='https://code.csdn.net/assets/CODE_ico.png' width=12 height=12 alt='在CODE上查看代码片' style='position:relative;top:1px;left:2px;'/></a>"
+                    + "<a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "/fork' target='_blank' title='派生到我的代码片'  style='text-indent:0;'><img src='https://code.csdn.net/assets/ico_fork.svg' width=12 height=12 alt='派生到我的代码片' style='position:relative;top:2px;left:2px;'/></a>");
+        }
+        
+        $("[code_snippet_id]").each(function () {
+            __s_id = $(this).attr("code_snippet_id");
+            if (__s_id != null && __s_id != "" && __s_id != 0 && parseInt(__s_id) > 70020) {
+                __code_tool = __get_code_toolbar(__s_id);
+                $(this).prev().find(".tools").append(__code_tool);
+            }
+        });
+    });
+</script>
+
+    </div>
+      <!--new top-->
+    
+    <script id="csdn-toolbar-id" btnId="header_notice_num" wrapId="note1" count="5" subCount="5" type="text/javascript" src="http://static.csdn.net/public/common/toolbar/js/toolbar.js"></script>     <!--new top-->
+</body>
+</html>

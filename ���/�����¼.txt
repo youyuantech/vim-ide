@@ -1,0 +1,37 @@
+﻿文件名                      用途说明
+taglist.vim               实现了源代码结构和函数列表的展示，功能非常强大.有了tags就自动支持了
+omnicppcomplete.vim      实现写C/C++语言时自动补全
+NERD_commenter.vim       注释插件
+DoxygenToolkit.vim       由注释生成文档，并且能够快速生成函数标准注释
+a.vim                    实现.cpp和.h快速切换
+ autocomplpop            自动弹出补全提示的插件
+单词高亮工具推荐mark.vim  
+
+NERDTree是Vim最常用的插件之一，可以在Vim运行时显示目录和文件结构，类似TextMate左侧的文件浏览器，但操作起来更为方便，你可以在手不离开键盘的情况下快速浏览文件，并在文件和文件夹之间进行切换。
+
+文件浏览器和窗口管理器 -- 插件: WinManager
+
+Command-T是一个基于Ruby和C扩展实现的快速文件浏览的插件，类似TextMate的Go to File（Command+T呼出）功能，或Eclipse的Open Resource（Command+Shift+r）功能，可以通过模糊匹配快速定位并打开文件。
+
+Powerline是Vim的一个非常漂亮的状态栏插件，安装了Powerline之后，Vim底部将会出现一个增强型状态栏，当Vim处于NORMAL、INSERT、BLOCK等状态时，状态栏会呈现不同的颜色，同时状态栏还会显示当前编辑文件的格式（uft-8等）、文件类型（java、xml等）和光标位置等，喜欢的就装。
+
+快速浏览和操Buffer -- 插件: MiniBufExplorer
+
+在工程中查找 -- 插件: Grep
+
+高亮的书签 -- 插件: VisualMark
+
+提示函数原形--插件: echofunc
+
+
+c.vim : C/C++ IDE --  Write and run programs. Insert statements, idioms, comments etc.
+
+vcscommand.vim : CVS/SVN/SVK/git/hg/bzr integration plugin 
+
+matchit.zip : extended % matching for HTML, LaTeX, and many other languages 
+
+project.tar.gz : Organize/Navigate projects of files (like IDE/buffer explorer)
+
+gdbvim.tar.gz : Watch in vim what you debug in gdb. And more. 
+
+ 

@@ -1,0 +1,1310 @@
+<!--STATUS OK-->
+<html><head><meta http-equiv=content-type content="text/html; charset=gb2312"><title>普通人的编辑利器——VIM (for windows)_最cool最in的资讯      </title>
+<style type="text/css">
+.error{color:#FF0000;font-size:12px}
+
+
+	
+
+
+</style>
+<script type="text/javascript" src="/ui/scripts/global.js"></script>
+<script language="javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/ui/scripts/CommentEditor/BdEditor-mined.js?v=2.3"></script>
+<script LANGUAGE="JavaScript" src="/js/g_spjs.js"></script>
+<script language="javascript">
+<!--
+
+(function(){var A=109;function C(D){var F="nslog__"+(new Date()).getTime();var E=window[F]=new Image();E.onload=(E.onerror=function(){window[F]=null});E.src="http://nsclick.baidu.com/v.gif?pid="+A+"&url="+encodeURIComponent(D)+"&type=0&_t="+Math.random();E=null}function B(F){F=F||event;var E=F.srcElement||F.target;if(E.nodeType!=1){E=E.parentNode}while(E&&E.tagName&&E.tagName.toUpperCase()!="A"){E=E.parentNode}if(E&&E.tagName&&E.tagName.toUpperCase()=="A"){if(!/^([\w-]+\.)*?baidu\.com/i.test(E.host)){var D=E.href;setTimeout(function(){C(D)},1)}}E=null}if(document.attachEvent){document.attachEvent("onmousedown",B);window.attachEvent("onunload",function(){document.detachEvent("onmousedown",B)})}else{document.addEventListener("mousedown",B,false);window.addEventListener("unload",function(){document.removeEventListener("mousedown",B,false)},false)}})();
+
+
+var allkey="";
+var i=0;
+var flag=0;
+function setpv(allnum)
+{
+	var num = allnum.split('_');
+	document.getElementById("result").innerHTML=num[0];
+}
+
+function checkMail(s)
+{
+  	var pattern=/\w+@\w+\.[a-z]+/;
+  	if(pattern.test(s))
+    {
+       return true;
+    }
+  	else
+   {
+      return false;
+   }
+}
+
+
+function checkeandu(eanduid)
+{
+	var eanduvalue=G(eanduid).value;
+	var len=bytes(eanduvalue);
+	if(len>128)
+	{
+		showErr(2,"您输入的网址或邮箱太长，请保持在128字节以内。");
+		return false;
+	}
+	else
+	{
+		 return true;
+	}
+
+}
+
+function cmtdel(str)
+{
+	var pop=new Popup({ contentType:3,isReloadOnClose:false,width:340,height:80});
+	pop.setContent("title","删除评论");
+	pop.setContent("confirmCon","您确定要彻底删除这条评论吗？");
+	pop.setContent("callBack",delCallback2);
+	pop.setContent("parameter",{fid:str,popup:pop});
+	pop.build();
+	pop.show();
+	return false;
+}
+function delCallback2(para)
+{
+	var o_pop=para["popup"];
+	o_pop.config.contentType=1;
+	o_pop.setContent("contentUrl","");
+	o_pop.reBuild();
+	G(para["fid"]).target=o_pop.iframeIdName;
+	eval("document."+para["fid"]).submit();
+}
+
+String.prototype.byteLength = function() {
+    return this.replace(/[^\u0000-\u007f]/g,"\u0061\u0061").length;
+}
+
+function checkname(strid)
+{
+	var ele=document.getElementById(strid);
+	var len=bytes(ele.value);
+	if(len>49)
+	{
+		showErr(1,"您输入的姓名太长，请保持在49字节以内。");
+		return false;
+	}
+	else
+	{
+		if(len==0)
+		{
+			document.getElementById(strid).value="匿名网友";
+		}
+		 return true;
+	}
+
+}
+
+function checktext(textid)
+{
+        var tempStr='';
+        var isLightFont=false;
+		if(editor&&textid=="spBlogCmtText"){
+			//document.getElementById("spBlogCmtText").value=editor.getHtml();
+			tempStr=editor.getHtml();
+			tempStr=tempStr.replace(/<span style="filter:glow\(color=#([0-9a-z]{3,6}),strength=2\);height:0px;color:#([0-9a-z]{3,6})">/ig,'');
+			tempStr=tempStr.replace(/<\/span>/ig,'');
+			document.getElementById("spBlogCmtText").value=tempStr;
+            isLightFont=!(tempStr==editor.getHtml());
+        }
+		document.getElementById(textid).value=trimlr(textid);
+		var str=trimrn(textid);
+		len=str.length;
+		if(len==0 || ((/^[\s,　]+$/gi).test(str)) )
+		{
+			showErr(3,"您必须输入评论内容，请检查。");
+			return false;
+		}
+		else
+        {
+                len=str.byteLength();
+                var maxLength=isLightFont?916:1000;
+				if(len > maxLength)
+				{
+					showErr(3,"您输入的评论内容太长，请保持在500字以内。");
+					return false;
+				}
+				if(editor&&textid=="spBlogCmtText"){
+					document.getElementById("spBlogCmtText").value=editor.getHtml();
+					document.getElementById(textid).value=trimlr(textid);
+				}
+
+			return true;
+		}
+}
+
+function showErr(index,str)
+{
+	G(index+"_err").style.display="";
+	G(index+"_err_con").innerHTML=str;
+}
+function hidErr(index)
+{
+	G(index+"_err").style.display="none";
+	G(index+"_err_con").innerHTML="";
+}
+
+function alertPop(tit,con)
+{
+	var pop=new Popup({ contentType:4,isReloadOnClose:false,width:340,height:80});
+	pop.setContent("title",tit);
+	pop.setContent("alertCon",con);
+	pop.build();
+	pop.show();
+}
+
+function cmtfull()
+{
+	var cnum=7;
+	if(cnum>=50000)
+	{
+		alertPop("发表评论","单篇日志评论数最多为50000条.");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+function checkcmtform()
+{
+	if(checkname("spBlogCmtor")&&checkeandu("spBlogCmtURL")&&checktext("spBlogCmtText")&&cmtfull())
+	{
+		submitForm();
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+var g_pop=null;
+function submitForm()
+{
+	g_pop=new Popup({ contentType:1,isReloadOnClose:false,width:340,height:80});
+	g_pop.setContent("title","添加评论");
+	g_pop.setContent("contentUrl","");
+	g_pop.setContent("someDisabledBtn","btn_ok");
+	g_pop.build();
+	G("popFormSubmit").target=g_pop.iframeIdName;
+	g_pop.show();
+}
+
+function g_close_pop()
+{
+	g_pop.close();
+}
+
+function formatonlinpic()
+{
+var picobj=document.getElementsByName("onlinepic");
+var picnum=picobj.length;
+
+	for(var i=0;i<picnum;i++)
+	{
+		if(picobj[i].width>200)
+		{
+			picobj[i].width=200;
+		}
+		if(picobj[i].height>200)
+		{
+			picobj[i].height=200;
+		}
+	}
+    try{document.getElementById("btn_ok").disabled = "";}catch(e){}
+}
+
+function addToFavor(){
+var blogTitle='普通人的编辑利器——VIM (for windows)'.replace(/&#39;/g,'\'');
+window.open('http://cang.baidu.com/do/add?it='+encodeURIComponent(blogTitle+'_百度空间')+'&iu='+encodeURIComponent(location.href)+'&fr=sp#nw=1','_s','scrollbars=no,width=600,height=450,right=75,top=20,status=no,resizable=yes');
+return false;
+}
+
+var isIE = /*@cc_on!@*/false;
+function tracker(did,a){
+	return function(){
+		var t=new Date().getTime();
+		var href=a.href;
+        if(isIE){
+            var r = /href\s*=\s*("|')?([^\s]*)\1/gi;
+            if(r.test(a.outerHTML))
+                href = RegExp.$2;
+        }
+        new Image().src = "http://hi.baidu.com/sys/statlog/1.gif?m=" + did + "&v=" + encodeURIComponent(href) + "&c=" + encodeURIComponent(location.href) + "&t="+t;
+	}
+}
+
+function tracker_init(did){
+	var _s=document.getElementById(did);
+	var as = _s.getElementsByTagName('A');
+	for(var i = 0, j = as.length; i < j; i ++){
+		var a = as[i];
+		if(isIE){
+			a.attachEvent("onclick", tracker(did,a));
+		}else{
+			a.addEventListener("click", tracker(did,a), false);
+		}
+	}
+}
+
+
+/* some functions for cmt-reply */
+		function cmtreply(cmtName,cmtPorID)
+		{
+			cmtName=cmtName.replace(/<|>/g,"");
+			window.location.hash="#send";
+			var cmtForm=document.form1;
+			cmtForm.cm.value="3";
+			if(!cmtForm.spReferTarget)
+			{
+				var ipt=document.createElement("input");
+				ipt.type="hidden";
+				ipt.name="spReferTarget";
+				ipt.value=cmtPorID;
+				cmtForm.appendChild(ipt);
+			}else cmtForm.spReferTarget.value=cmtPorID;
+
+
+			 //G("reTitle").innerHTML="回复"+cmtName+"：";
+			 G("cancleReLink").style.display="";
+			 cmtForm.btn_ok.value="回复评论";
+
+
+			 try{
+				editor.window.focus();
+                editor.window.document.body.innerHTML="回复"+cmtName+"：";
+
+                var w = editor.window;
+				if(w.getSelection){
+					var d = w.document;
+					var s = w.getSelection();
+					var r = d.createRange();
+					r.setStartAfter(d.body.firstChild);
+					r.setEndAfter(d.body.lastChild);
+					s.removeAllRanges();
+					s.addRange(r);
+				}
+			}catch(e){
+			 		try{
+				 		cmtForm.getElementsByTagName("textarea")[0].focus();
+				 		cmtForm.getElementsByTagName("textarea")[0].value="回复"+cmtName+"：";
+				 	}catch(e){}
+			}
+		}
+
+		function canclereply()
+		{
+			var cmtForm=document.form1;
+			cmtForm.cm.value="1";
+			try{cmtForm.removeChild(cmtForm.spReferTarget);}catch(e){}
+			/*
+			try{
+					var cmt=cmtForm.getElementsByTagName("textarea")[0]
+					cmt.value="";
+					cmt.focus();
+			}catch(e){}
+			*/
+
+			try{
+					var ed=editor.window.document.body;
+					ed.innerHTML="";
+					editor.window.focus();
+				}catch(e){
+					var cmt=cmtForm.getElementsByTagName("textarea")[0];
+					cmt.value="";
+					cmt.focus();
+			}
+
+			G("cancleReLink").style.display="none";
+			cmtForm.btn_ok.value="发表评论";
+		}
+
+		function gotoreply()
+		{//to checking whether reply cmt
+			if( window.location.hash.indexOf("&re=1")<0) return;
+			var cmtID=window.location.hash.split("&")[0].replace("#","");
+			var cmtlinks=document.getElementsByTagName("a");
+			for(var i=0,n=cmtlinks.length;i<n;i++)
+			{
+				if(cmtlinks[i].name==cmtID){ var rename=cmtlinks[i].getAttribute("rename");  repid=cmtlinks[i].getAttribute("repid"); break;}
+			}
+			if(typeof(rename)!="undefined"){
+				cmtreply(rename, repid);
+			}
+		}
+
+//-->
+</script>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+
+window.onerror=function(){return true;}
+
+var RelatedDocData = null, GetAndEval = false;
+(function(){
+	var xhr = BdAjax.getXHR();
+	if(xhr == null){
+		RelatedDocData = -1;
+		return;
+	}
+
+	xhr.open("GET", "/sys/search?type=8&word=%C6%D5%CD%A8%C8%CB%B5%C4%B1%E0%BC%AD%C0%FB%C6%F7%A1%AA%A1%AAVIM%20%28for%20windows%29&item=9c28a94b43bc67f183025c7f&t=" + new Date().getTime(), true);
+	xhr.onreadystatechange = function(){
+		if(xhr.readyState == 4){
+			if(xhr.status == 0 || xhr.status == 200){
+				if(GetAndEval){
+					eval(xhr.responseText);
+				}else{
+					RelatedDocData = xhr.responseText;
+				}
+			}
+		}
+	}
+	xhr.send(null);
+})();
+/*]]>*/
+</script>
+
+</head>
+<body onLoad="formatonlinpic();">
+<center>
+<script type="text/javascript">
+/*<![CDATA[*/
+if(top.location != self.location){
+	top.location = self.location;
+}
+var myref = encodeURIComponent("http://hi.baidu.com/adown/blog/item/9c28a94b43bc67f183025c7f%2Ehtml/cmtid/359bf336ea2a153b0b55a93b");
+/*]]>*/
+</script>
+<link rel="stylesheet" type="text/css" href="/ui/css/mods.css" />
+
+<link rel="stylesheet" type="text/css" href="/adown/css/item/325563099bb555cf3bc76397.css" />
+
+<link rel="stylesheet" type="text/css" href="/space.css" />
+<style type="text/css">
+/*<![CDATA[*/
+
+#usrbar{padding:4px 10px 3px 0;font-size:12px;height:19px;line-height:19px;color:#000000;font-family:Arial;text-align:right;background:#ffffff;filter:alpha(opacity=65);-moz-opacity:0.5;width:auto !important;width:100%;letter-spacing:normal}
+#usrbar a,#usrbar a:link,#usrbar a:visited{color:#0000CC;text-decoration:underline}
+#ft{clear:both;height:20px;line-height:20px;color:#666666;font-size:12px;font-family:Arial;text-align:center}
+#ft a,#ft a:link,#ft a:visited{color:#7777CC;text-decoration:underline}
+#usrbar,#usrbar a,#usrbar a:link,#usrbar a:visited,#ft,#ft a,#ft a:link,#ft a:visited{letter-spacing:normal}
+/*]]>*/
+</style>
+
+
+
+<div id="usrbar"><nobr>
+
+			<a id="hi_index" href="http://hi.baidu.com" target="_blank">百度空间</a>&nbsp;|&nbsp;<a href="http://www.baidu.com/" target="_blank">百度首页</a>&nbsp;<script type="text/javascript">
+		document.write('| <a href="https://passport.baidu.com/?login&tpl=sp&tpl_reg=sp&u=http://hi.baidu.com' + encodeURIComponent('/adown/blog/item/9c28a94b43bc67f183025c7f%2Ehtml/cmtid/359bf336ea2a153b0b55a93b') + '">登录</a>');
+		</script>
+		
+</nobr></div>
+
+
+
+		<div id="newUserTip" style="text-align:right; width:225px; height:130px; position:absolute; top:26px; right:0; float:right; z-index:30000;" >
+	<a id="newUserTipShadow" onclick="newUserRegLog()" href="http://hi.baidu.com/st/reg.html" target="_blank" style="color:#4242F9 !important; background:transparent none !important;text-decoration:none !important;font-size:14px;width:55px; height:14px; position:absolute; top:108px; right:14px; z-index:30001; display:block; overflow:hidden;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+	<embed id="newUserTipSwf" allowScriptAcess="always" style="width:225px; height:130px;" src="http://hi.baidu.com/ui/flash/userReg/guide.swf" wmode="transparent">
+	</div>
+	<script language="javascript">
+	<!--
+		function newUserTipShow(f)
+		{
+			if(f=="0"){//close
+				G("newUserTipSwf").style.width="40px";
+				G("newUserTip").style.width="40px";
+				G("newUserTipShadow").style.display="none";
+			}else{//show
+				G("newUserTip").style.width="225px";
+				G("newUserTipSwf").style.width="225px";
+				G("newUserTipShadow").style.display="block";
+
+			}
+		}
+
+		function newUserRegLog(){
+			var now=new Date();
+			now.setTime(now.getTime()+5*60*1000);
+			document.cookie="BDSP_REGFLAG=1;expires="+now.toGMTString()+";path=/";
+			new Image().src="http://hi.baidu.com/sys/statlog/1.gif?m=blog_newer_pro2_click&v=/adown&t="+Math.random();
+		}
+	//-->
+	</script>
+	
+
+
+
+<script type="text/javascript">
+
+function set_cookie_4_bdtip(index/* start from one */, value){
+	var bdtip = document.cookie.match(/(^| )BDTIP=([^;]*)(;|$)/);
+	if(!bdtip){
+		bdtip=new Array(index);
+		for(var i=0,n=bdtip.length;i<n;i++)
+		{
+			if(bdtip[i]=="" || bdtip[i]==null)  bdtip[i]=0;
+			if(i == index - 1){
+				bdtip[i] = value;
+			}
+		}
+	}else{
+	bdtip = bdtip[2].split('-');
+	if(index > bdtip.length)  bdtip.length= index;
+	for(var i = 0, j = bdtip.length; i < j; i ++){
+		if(bdtip[i]=="" || bdtip[i]==null) bdtip[i]=0;
+		if(i == index - 1){
+			bdtip[i] = value;
+		}
+	}
+	}
+	bdtip = bdtip.join('-');
+	document.cookie = "BDTIP=" + bdtip+ ";expires=Wed, 28-Nov-37 01:45:46 GMT;path=/;";
+}
+</script>
+<div id="main" align="left">
+<!--[if IE]>
+<script>
+var objmain = document.getElementById("main");
+function updatesize(){ var bodyw = window.document.body.offsetWidth; if(bodyw <= 790) objmain.style.width="772px"; else if(bodyw >= 1016) objmain.style.width="996px"; else objmain.style.width="100%"; }
+updatesize(); window.onresize = updatesize;
+</script>
+<![endif]-->
+	<div id="header">
+	<div class="lc"><div class="rc"></div></div>
+<div class="tit"><a href="/adown" class="titlink" title="ADown_的空间 http://hi.baidu.com/adown">最cool最in的资讯</a></div>
+<div class="desc"></div>
+<div id="tabline">&nbsp;</div>
+	<div id="tab"><a href="/adown">主页</a><a href="/adown/blog" class="on">博客</a><a href="/adown/album">相册</a><span>|</span><a href="/adown/profile">个人档案</a>
+	<span>|</span><a href="/adown/friends">好友</a>
+
+
+
+	</div>
+</div>
+
+<div class="stage">
+<div class="stagepad">
+<div style="width:100%">
+
+
+	
+
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="modth">
+	<tr><td class="modtl" width="7">&nbsp;</td>
+	<td class="modtc" nowrap><div class="modhead"><span class="modtit">查看文章</span></div></td>
+	<td class="modtc" nowrap align="right"></td>
+	<td class="modtr" width="7">&nbsp;</td>
+	</tr></table>
+
+<div id="m_blog" class="modbox" style="overflow-x:hidden;">
+<div class="tit">普通人的编辑利器——VIM (for windows)</div>
+<div class="date">2007年03月21日 星期三  下午 04:43</div>
+<table style="table-layout:fixed;width:100%"><tr><td><div id="blog_text" class="cnt"  ><font color="#003300">FROM <a href="http://hi.baidu.com/adown/linxuelin" target="_blank">linxuelin</a><br>
+2005年5月，我开始用VIM。此后渐入佳境，原来因版权自律而放弃盗版UltraEdit的遗憾一扫而空。并且，从VIM我才体会到，什么才是真正的编辑利器。在</font><a href="http://blog.sina.com.cn/m/xbeta"><font color="#003300">善用佳软</font></a><font color="#003300">或其他论坛发文，我都是先在VIM中输入，并方便高效地编辑好格式，再贴到网上。而我的通讯录、记事、读书笔记、</font><a href="../../../../../../../lixuelin/blog/item/:;" target="_self"><u><strong><font color="#003300">工作</font></strong></u></a><font color="#003300">
+<div>记 录也是在VIM中完成的。包括一些文档、数据的处理，让VIM过一下，也会提高不少效率。一句话，自用VIM以来，对它迷恋日深，几乎要超过 Total Commander。但是，正如善用佳软及论坛发文所提，我大力推荐&ldquo;用IrfanView/XnView代替ACDSee、用7-zip代 替 WinRar/WinZip、用GIMP代替PhotoShop&rdquo;，但并未推荐VIM代替UltraEdit。这并不意味着VIM不能胜任，恰恰相 反，如果说IrfanView等替代品比原共享软件还有些差距的话，VIM则远胜UltraEdit。不推荐的唯一原因是，VIM对初学者有点难。</div>
+<br>
+但今天仍写了此文推荐给大家。原因有二：其一，编辑大人选定了题目，要向大众宣讲VIM和Emacs，这种勇气鼓舞了我。其二，已发两位高手的文章（</font><a href="http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/865628.html"><font color="#003300">王垠之《Emacs是一种信仰！世界最强编辑器介绍》</font></a><font color="#003300">，</font><a href="http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/877033.html"><font color="#003300">Dieken之《程序员的编辑器&mdash;&mdash;VIM》</font></a><font color="#003300">
+<div>）可能会吓住一些对它们产生了兴趣的人，对此我要做些修正。</div>
+<br>
+<div> 　　因此本文内容有二：一是帮新手体验VIM。这部分有些象实验教程，多用实例，且行文风格尽量傻瓜化，以便于新手（包括以前从未听说过VIM）可以照我的操作，一步步体验VIM。二是介绍我的应用，即VIM如何便利我的日常工作和生活，而非编程。</div>
+<br>
+<div> <strong>1 对VIM的基本介绍</strong></div>
+<br>
+<div> 　　一句话介绍就是：VIM是一个超级超级强大的文本编辑器。它和Emacs是一个数量级；而我认为，比UltraEdit、Editpad、  EmEditor要高一个（至少半个数量级）。如果你有兴趣，不妨一读《程序员的编辑器&mdash;&mdash;VIM》，以便于对VIM有更详尽全面的理论认识。</div>
+<br>
+<div> 　　要点1：VIM及前身VI，历史悠久（可能比多数读者的年龄更大），经历了几十年的考验和发展，值得信赖。</div>
+<br>
+<div> 　　要点2：VIM有模式。通俗地做一下对比。notepad无模式（或称为只有一种编辑模式），你按下j，就是在正文中输入j；要保存，就要ctrl+  s；要下移一行，就要&darr;或鼠标。而在VIM中，打开一个文件后，并不处在编辑模式，而是Normal模式，此时你按j，VIM并不认为你要在正文中输入  j，而是代表光标下移一行。此时按i表示进入insert模式，即编辑模式，即notepad的模式。编辑模式按Esc退回normal模式。  normal模式下按:进入命令行模式，用于输入较复杂的命令。比如:w代表保存文件，:e a.txt代表打开文件a.txt。即VIM可以不用鼠 标、方向键、菜单、Ctrl、alt&hellip;&hellip;发出命令。因此，以下的体验中切记进入正确的模式：Esc 到Normal；Normal下i到编辑； Normal下:到命令行。再说明一点是：文中:打头的是命令行模式，此外多数Normal模式。</div>
+<br>
+<div> 　　要点3：复杂对抗复杂。VIM有的命令行很吓人，长长一串字符恍若天书。这些貌似复杂，实际上无非是一些简单命令的组合而已。借助于此，VIM用户可以实现非常复杂的需求。如果你没有这样的需求，就无须理会它们。</div>
+<br>
+<div> 　　要点4：一能百能。这一点是Unix或命令行风格软件的显著长处，经过实用可以深刻体会。本文尽管有一些例子，但它运用之妙，存乎一心的感觉，仍未能 充分展示。这里先打个比方，如果windows下某软件号称能炒菜，那意味着你点一下菜单，菜就做好了&mdash;&mdash;这就是易用哲学。到底怎么做，你是没有多少发言 权的，而是由软件开发者固化。而如果VIM说能，那它就是有一个&ldquo;炒菜&rdquo;命令，你可以把这个命令与原有的&ldquo;原料&rdquo;&ldquo;数量&rdquo;&ldquo;火候&rdquo;&ldquo;风味&rdquo;&ldquo;灶具&rdquo;命令结 合在一起用，甚至在它前面加上&ldquo;买菜&rdquo;&ldquo;洗菜&rdquo;，后面加上&ldquo;装盘&rdquo;&ldquo;洗碗&rdquo;做成一个自动脚本，在合适的情况下自动执行。</div>
+<br>
+要点5：无限灵活，个性由我。你只要有具体需求，VIM几乎都能满足。因此不同人的VIM是不一样的，即，把</font><a href="../../../../../../../lixuelin/blog/item/:;" target="_self"><u><strong><font color="#003300">下载</font></strong></u></a><font color="#003300">来的VIM配置成自己的VIM。<br>
+<div> 　　就此打住，开始体验之旅吧！</div>
+<br>
+<strong>2 下载和安装</strong><br>
+VIM是跨平台的。在Windows下，我们用的是gVIM for windows版。最新的是7.0版，下载包约8MB，完全安装后约20MB。<br>
+注：体积太大？你如果是高手，完全可以把不用的文件删除（包括帮助文件，它是我见过的软件中最好的帮助），精简后的体积可以不到2MB。或反之，仅下 载一个gVIM.exe（1.5MB）就能运行。但对于这次体验，鉴于第一次使用，建议全部按默认项安装，这样才能达到文中预想的结果。<br>
+</font><a href="http://dl.pconline.com.cn/html_2/1/117/id=39977&amp;pn=0.html"><font color="#003300">PCOnline下载</font></a><font color="#003300">，</font><a href="ftp://ftp.vim.org/pub/vim/pc/gvim70.exe"><font color="#003300">官方下载</font></a><br>
+<font color="#003300">　　<br>
+安装，基本上，一直Agree、Next就行了。我通常是装在d:\program files\VIM下。<br>
+可参见<br>
+<img src="http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/pic/060928_v1.png"><br>
+<img src="http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/pic/060928_v2.png"><br>
+<img src="http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/pic/060928_v3.png"><br>
+<img src="http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/pic/060928_v4.png"><br>
+<img src="http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/pic/060928_v5.png"><br>
+<img src="http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/pic/060928_v6.png"><br>
+<img src="http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/pic/060928_v7.png"><br>
+<img src="http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/pic/060928_v8.png"><br>
+<br>
+</font><font color="#003300"><strong>3 体验之旅<br>
+3.1 初见界面</strong><br>
+安装完成后，按提示打开readme，你将看到<br>
+<img src="http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/pic/060928_v9.png"><br>
+或自行打开桌面的快捷方式，也可直接运行d:\program files\VIM\VIM70\gVIM.exe，你应该看到如此界面：<br>
+<img src="http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/pic/060928_v10.png"><br>
+什么？难看？土？我第一次见到它也是这种感觉，现在却只觉得亲切。<br>
+<div> 　　再一点，你有没有奇怪它是中文界面？难道我给你下载的是汉化版？会不会捆绑流氓插件啊？你如果真这样想，我只能叹息无语了。</div>
+<br>
+<strong>3.2 试读html</strong><br>
+请把此网页保存为htm，比如test.htm，然后用VIM打开它。暂时用菜单吧！结果可能是这样：<br>
+<img src="http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/pic/060928_v11.png"><br>
+平平无奇，是吧？因为它是一个标准的VIM，并且是性能优先，视效忽略的VIM。无妨，请进入命令行模式（就是按一下冒号，注意是英文冒号:），注意到最下面一行的变化了吧。再输入sy on再回车。是不是有颜色了？它应该看起来象这个样子<br>
+<img src="http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/pic/060928_v12.png"><br>
+重要提醒：为简化起见，下文将用<br>
+:sy on<br>
+表示（先确认在Normal模式，如不确认，请按几次Esc）你先按:进入命令行模式，再输入sy on，再回车。<br>
+<div> 　　补充说明：sy表示语法加亮，on当然是打开。:sy clear表示取消加亮。</div>
+<br>
+<strong>3.3 改头换面</strong><br>
+体验VIM就要按VIM的思路，所以我们要把gVIM改回VIM的本来面目。<br>
+对了，如果你认为它的界面很土，请更要多看一眼当前的样子，因为下面的操作后可能会更土！<br>
+执行如下命令<br>
+:set go=<br>
+这时的VIM应该是<br>
+<img src="http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/pic/060928_v13.png"><br>
+不要大惊小怪，不就是菜单和工具栏不见了嘛？VIM中是不应该用到它们的。<br>
+补充说明：set表示一般性设置；go是gui option的缩写，就是界面；等于空就是什么都没有<br>
+再输入半条命令（先不要回车）<br>
+:colo ev<br>
+然后，按一下tab键。是不是自动补全为evening了？VIM是非常聪明的（但是不会象MS Word那样自做聪明）。<br>
+然后你回车，看到了什么？<br>
+<img src="http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/pic/060928_v14.png"><br>
+天色全黑了？没错，现在是evening嘛。<br>
+<div> 　　补充说明：colo就是设置调色方案。VIM自带了近十种调色方案，当然你还可以在网上下载更多，或改编自己的调色方案。你可以直接在:colo （加一个空格）就连续tab，选择不同的配色方案来体验一下。当然，evening是比较经典的一种。我一直就用它。</div>
+<br>
+<strong>3.4 准备并打开范例文件</strong><br>
+简化起见，请</font><a href="http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/pic/test.txt"><font color="#003300">下载test.txt</font></a><font color="#003300">并保存为d:\test.txt。然后，在VIM中输入半条命令<br>
+:tabnew d:\t<br>
+输到这里后不要回车，按一下tab，VIM会自动补全为test.txt的。如果不对，再按几次tab，直到正确为止。然后回车。<br>
+<img src="http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/pic/060928_v15.png"><br>
+你会看到VIM打开了test.txt，并且是以多页签（tab page）的方式。你可以点击各页签在打开的文件中间切换（高手有更方便的</font><a href="../../../../../../../lixuelin/blog/item/:;" target="_self"><u><strong><font color="#003300">键盘</font></strong></u></a><font color="#003300">命令做法）。在VIM6.3中，还没有此功能。当然了，这并不意味着VIM 的用户没办法享受多页签的便利，下载一个插件后&mdash;&mdash;VIM有上千个插件&mdash;&mdash;就可以了。面对多页签风格的流行（IE6&rarr;Maxthon&rarr;IE7）， VIM7.0也新增了此功能。<br>
+我喜欢这种简单的页签。如果你认为此页签太难看，可试一下:set go=e<br>
+这时应如下效果<br>
+<img src="http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/pic/060928_v16.png"><br>
+<br>
+<strong>3.5 统一格式，下载vimrc</strong><br>
+上面所操作的各种命令，都是对VIM的设置。把它们写到一个_vimrc文件中就成了默认选项。每个VIM用户的_vimrc文件都不一样，因为每个人的需求不同。<br>
+为了保证下面的操作得到预期的效果，请下载我的_vimrc。依次执行下述操作：<br>
+① 关闭所有的VIM<br>
+② 找到你的d:\program files\vim\vim7\_vimrc，复制一份。<br>
+② </font><a href="http://www.pconline.com.cn/pcedu/soft/gj/photo/0610/acc/_vimrc_PConline" target="_blank"><font color="#003300">右键点击此处</font></a><font color="#003300">，&ldquo;另存为&rdquo;覆盖你的d:\program files\vim\vim7\_vimrc。<br>
+<div> 　　注：这并不是标准做法，但对windows用户是比较方便的做法。</div>
+<br>
+<strong>3.6 打开test.txt</strong><br>
+再次就模式进行提醒：Esc到Normal；Normal下i到编辑；Normal下:到命令行。<br>
+运行VIM，并在命令行执行<br>
+:e d:\test.txt<br>
+接下来，我们把此文章排一下版。如果你认为可以手工排版，请把此文件复制到10000行再发表意见。&nbsp;&nbsp;</font>
+<p><font color="#003300"><strong>3.7 分段并保存</strong><br>
+原文没有分段，观察一下，发现可以在&ldquo;以下是&hellip;&hellip;&rdquo;前面加回车，于是<br>
+:%s/以下是/\r&amp;/gc<br>
+输入后，界面如下<br>
+<img src="http://www.pconline.com.cn/pcedu/soft/gj/photo/0610/pic/061008_v1.gif"><br>
+并提示<img border="0" src="http://www.pconline.com.cn/pcedu/soft/gj/photo/0610/pic/061008_v2.gif">，请回答y或a。如果回答y，则替换当前一个；到了下一个，VIM还会再问你。所以，你回答几个y后不妨一a了之，全部替换。<br>
+补充说明：s表示替换；s/a/b 表示把a换为b；上一命令是把&ldquo;以下是&rdquo;换为&ldquo;\r&amp;&rdquo;，\r表示回车，&amp;表示被替换的部分，即&ldquo;以下是&rdquo;；%则表示全文；/gc表示一直替换（不是仅替换第一个），并且要用户确认。<br>
+看一下文件，你或许想，空2行可能更好。很简单，再重复一下刚才的命令就好了。不过，对强大的VIM来说，无须笨笨地重复输入上次的命令。在命令行按下:后，再按一下&uarr;（向上的方向键），看到刚才的命令了吧？直接回车，提问时输入a，任务完成。<br>
+既有变化，请及时保存。命令是<br>
+:w<br>
+当然，你也可以按ctrl+s。但ctrl+s之所以有效，是因为我在_vimrc中做了定义：当按下ctrl+s时，系统执行:w动作。因此，你完全可以定义其他热键，并把它映射到:w。</font></p>
+<p><font color="#003300"><strong>3.8 继续编辑<br>
+</strong>　　首先删除&ldquo;坚持&rdquo;两字，很简单，只要按gg2x就行了。为了看效果，你可以分开按：<br>
+gg，这时光标移到文章头。<br>
+2x，这时删掉了2个字符。<br>
+再一次体验VIM的神奇，比如按5x，于是5个字符消失了。当然，这5个字符是要保留的，没关系，你按一次u，就回来了吧？<br>
+再按一下Ctrl+r，是不是又没了？再来一次u，是不是又回来了？没错。u和Ctrl+r相当于（是相当于不是等同于）windows的undo和redo。</font></p>
+<p><font color="#003300">　　再试一下dd。是不是整行没有了？没关系，u回来就行了。<br>
+再试一下3dd。一下子删除了3行！没关系，u回来。<br>
+再来一个dG，哇，全文都没了？！仍然u回来啊。</font></p>
+<p><font color="#003300"><strong>3.9 更多编辑<br>
+任务a：把每一句分为一行，即达到如下效果</strong><br>
+以**为荣、<br>
+以**为耻，<br>
+解决：如果你记得上面的替换命令，就会想到，可以用2次替换（&ldquo;为荣、&rdquo;换为&ldquo;为荣、&rdquo;加回车，&ldquo;为耻，&rdquo;换为&ldquo;为耻，&rdquo;加回车）。但这两次替换在VIM中完全可以一次完成，即用正则表达式，在&ldquo;为&rdquo;及后面2字符（&ldquo;荣、&rdquo;或&ldquo;耻，&rdquo;）后加入回车。怎么表示呢？<br>
+:%s/为../&amp;\r/gc<br>
+看一下高亮，没问题，直接a<br>
+<img border="0" src="http://www.pconline.com.cn/pcedu/soft/gj/photo/0610/pic/061008_v3.gif"><br>
+哇，是不是很壮观啊？没觉得？如果是一千行一万行呢？</font></p>
+<p><font color="#003300">　　<strong>任务b：把行末的标点去掉，即&ldquo;荣&rdquo;后的顿号和&ldquo;耻&rdquo;后的逗号。</strong><br>
+解决：办法太多了，仍可以用替换。但此处还是展示一个新功能：列操作。<br>
+安全起见，按两下Esc，再gg$，这时光标应到了文章第一行最后一个字符，即顿号上。<br>
+再按ctrl+v，注意一下状态栏是否提示有&ldquo;可视 块&rdquo; 字样。（请确认你是采用了xbeta的_vimrc文件，如果没有，请试一下ctrl+q）<br>
+再15jx，是否标点全部删除了？因为15j表示向下选中15行，x表示删除。</font></p>
+<p><font color="#003300">　　<strong>任务c：错落有致</strong><br>
+操作：这次演示一下宏的用法，请严格按本教程操作。<br>
+先做一下确认：输入法没有打开，并Esc到normal状态，gg到文首。<br>
+按qa（q表示开始录制宏，宏的名字为a）<br>
+再shift+&gt;&gt;（表示按住shift，连按两下&gt;，再放开shift。此时第一行应当向后tab了一下）<br>
+再j^（此时下移一行，并置光标于行首）<br>
+再shift+&gt;&gt;再shift+&gt;&gt;（即第二行向后tab两下）<br>
+再j^（下移一行，并将光标置于行首，为后续操作做准备）<br>
+再q（表示宏录制结束，VIM会提示记录完成）<br>
+这样宏录完了，可以用了。<br>
+再@a，看到了效果了吧？宏执行了一次，即3、4行成功了。还剩下6段，但是你不用按6次@a，而是只要按下</font><a href="mailto:6@a"><font color="#003300">6@a</font></a><font color="#003300">就行了！！！<br>
+<img border="0" src="http://www.pconline.com.cn/pcedu/soft/gj/photo/0610/pic/061008_v4.gif"><br>
+太神奇了！回放一下？先u，再来一次</font><a href="mailto:6@a"><font color="#003300">6@a</font></a><font color="#003300">。既然可以6，当然可以千千万万！</font></p>
+<p><font color="#003300">　　补充说明：高手使用VIM是千变万化的。上面的前2个操作（分行+删标点），完全可以合成一个:%s/\(为.\)./\1\r/gc；或再把第3个操作（错落有致）融合到前一个操作中。</font></p>
+<p><font color="#003300"><strong>3.10 自由体验<br>
+</strong>　　体验光标移动：请随意按几下j和k，看看反应；再多按几下l和h，看看反应；然后，当你的光标在英文时，请按几下w和b。<br>
+对了，gVIM的每一种功能，都有无限可能，因此，你也可以在上面几个字母前加上数字，比如 9w 2h，看它的反应。</font></p>
+<p><font color="#003300">　　体验自动补全：i进来吧，到目前为止还没写过字呢！为简单起见，你直接把用鼠标放到中文的下一行，我们把 Eight Do's and Eight Don'ts 输入一遍。但是，输入一个E，先别动！按ctrl+p是不是自动补全了？</font></p>
+<p><font color="#003300">　　体验大小写（每次操作后，都用u恢复原状），试一下g~~和guu和gUU和g??（g??后可以不按u，再按一次g??也能恢复原状）<br>
+神奇吗？这还是VIM功能的单个表演，真正的高手是把它们组合在一起，完成你自己独特的编辑需求。</font></p>
+<p><font color="#003300"><strong>3.11 体验语法高亮和折叠</strong><br>
+此部分讲起来太复杂。如果你有其他编辑器如UltraEdit基础，会有助于你理解。但VIM在此方面的强大灵活，UltraEdit是难忘其项背的。<br>
+仍然是我们编辑的原文件，为简化计，请下载</font><a href="http://www.pconline.com.cn/pcedu/soft/gj/photo/0610/acc/test2.txt" target="_blank"><font color="#003300">test2.txt</font></a><font color="#003300">；下载</font><a href="http://www.pconline.com.cn/pcedu/soft/gj/photo/0610/acc/tx1.vim" target="_blank"><font color="#003300">tx1.vim</font></a><font color="#003300">并保存在d:\program files\vim\vimfiles\syntax\tx1.vim<br>
+用VIM打开（比如要打开d:\test2.txt，请在VIM中:tabnew d:\test2.txt）它。平平无奇是吗？这是因为VIM并不 知道这个文件要加亮。键入一个命令:setf tx1，这就相当于告诉VIM此文件的类型是tx1，所以就按照刚下载的tx1.vim进行高亮和折叠。<br>
+<img border="0" src="http://www.pconline.com.cn/pcedu/soft/gj/photo/0610/pic/061008_v5.png">　　此时你会发现test2.txt完全折起来了。如何打开？你可用鼠标点最左边的+，当然，也可以用命令zr或zR打开（zR打开全部；zr打开当前；zM折叠全部；zm折叠当前）。打开后，看到高亮效果了吧。可以对文字设定前景色、背景色、粗、斜、下划线风格。</font></p>
+<p><font color="#003300"><strong>3.12 加密文件</strong><br>
+<div> 　　文本文件打开最快，编辑起来最容易，并且在VIM中查找非常方便。因此，我用它来记日记，并作为通讯录。但是安全问题怎么办呢？很简单，VIM本身即 可加密（录然解密也要用VIM）。在上述打开的文件中键入:X（是大写X），VIM就提示你设定密码，安全起见要确认第2次。然后，保存（键入:w）。把  VIM或此文件关闭，再打开时，就要输入密码了。只有你输入正确的密码，才能得到正确的文件。</div>
+<br>
+</font><font color="#003300"><strong>4 我的应用<br>
+</strong>　　VIM和Total Commander一样，我把它们都设定为开机自动运行，其应用不可胜数。<br>
+比如说通讯录管理，我未用任何软件，就用VIM管理一个address.txt。它可以实现：快速启动（我在VIM中定义了书签，键入`A就会打 开），加密（用VIM的:X），超强搜索（无须多说），分组折叠（fold），email和电话号的高亮显示（自定义语法文件）吧。<br>
+再比如，笔者会用VIM来辅助word, excel, bbs发文，安全删除文件，制作精简的五笔词库等。具体可参见 《</font><a href="http://blog.sina.com.cn/u/46dac66f010004gy" target="_blank"><font color="#003300">我常用的VIM功能</font></a><font color="#003300">》，《</font><a href="http://blog.sina.com.cn/u/46dac66f010002xz" target="_blank"><font color="#003300">活学善用gVIM，提高工作效率:实例篇(合集)</font></a><font color="#003300">》，《</font><a href="http://blog.sina.com.cn/u/46dac66f010002he" target="_blank"><font color="#003300">用gVIM打造个性化记事本</font></a><font color="#003300">》等文章。<br>
+如下两图分别是我的个性化txt示例，和用VIM写此篇文章时的情况：<br>
+<img border="0" src="http://www.pconline.com.cn/pcedu/soft/gj/photo/0610/pic/061008_v6.png"><br>
+<img border="0" src="http://www.pconline.com.cn/pcedu/soft/gj/photo/0610/pic/061008_v7.png"><br>
+<br>
+<strong>5 后记</strong><br>
+这篇文章比最初计划写得长很多，但仍感觉很多非常优秀的功能没有提到。比如，眼下我写这篇文章，当然用VIM。但是因为有插图，所以用了htm格式。 在插入图片时，我只要输入img，VIM会自动换为&ldquo;&amp;lt;img src=&quot;&quot;&amp;gt;&rdquo;，并把光标放到两个引号中间，以便于我输入 图片名称。我输入lnk后，VIM会替换为&ldquo;&amp;lt;a href=&quot;&quot;&amp;gt;&amp;lt;/a&amp;gt;&rdquo;。当我想看一下 效果时，我只要:! g:\study\it\pconline\vim\xbeta-vim.htm 它就自动在浏览器中打开了。而这一个长长的路径， 因为有了自动补全和命令行历史，也非常容易。而当一些url还未确定，需要标注时，我就用一个`1，VIM就会以醒目的红色块标出来，一目了然。而下次再 打开此文件，它会记得我最后编辑的位置。<br>
+在用VIM之前，我曾试过几十种pad和editor，包括长期用Editpad，也曾经比较精通过UltraEdit，也曾经测过 EmEditor, EditPlus等。但用了VIM之后，我不再关心windows世界的成千上万的编辑器。因为使用它们的逻辑是&ldquo;如果有新需求，只 能等软件</font><a href="../../../../../../../lixuelin/blog/item/:;" target="_self"><u><strong><font color="#003300">升级</font></strong></u></a><font color="#003300">或换一个软件&rdquo;，而使用VIM的逻辑则是&ldquo;如果有新需求，请做个性化配置或下载插件&rdquo;。<br>
+VIM在手，夫复何求！<br>
+最后，向VIM所代表的追求卓越、开源共享的精神致敬！并希望有责任感的用户逐渐减少盗版！</font></p></div></td></tr></table>
+<br>
+<div class="opt">
+<a href="/adown/blog/category/%BC%BC%CA%F5%C2%DB%CE%C4" title="查看该分类中所有文章">类别：技术论文</a>
+
+	
+	| <a title="将此文章添加到百度搜藏" href="http://cang.baidu.com/do/add" onClick="return addToFavor();" target="_blank">添加到搜藏</a>
+	
+	| 浏览(<span id="result"></span>)
+	| <a href="#send">评论</a>&nbsp;(7)
+
+<script language="javascript">
+/*<![CDATA[*/
+var pre = [true,'8款邮件客户端软件横向评测', '8款邮件客户端软件横向评测','/adown/blog/item/3da43fc7f733eaddd100601e.html'];
+var post = [true,'50个有用的网站设计资源','50个有用的网站设计资源', '/adown/blog/item/d985f41f002738f4e0fe0b1e.html'];
+if(pre[0] || post[0]){
+	document.write('<div style="height:5px;line-height:5px;">&nbsp;</div><div id="in_nav">');
+	if(pre[0]){
+		document.write('上一篇：<a href="' + pre[3] + '" title="' + pre[1] + '">' +  pre[2] + '</a>&nbsp;&nbsp;&nbsp;&nbsp;');
+	}
+	if(post[0]){
+		document.write('下一篇：<a href="' + post[3] + '" title="' + post[1] + '">' +  post[2] + '</a>');
+	}
+	document.write('</div>');
+}
+/*]]>*/
+</script>
+
+</div>
+<div class="line">&nbsp;</div>
+
+
+
+    <style type="text/css">
+/*<![CDATA[*/
+#in_related_doc a { text-decoration:none; }
+/*]]>*/
+</style>
+<div id="in_related_tmp"></div>
+<script language="javascript" type="text/javascript">
+/*<![CDATA[*/
+function HI_MOD_IN_RELATED_DOC_CALLBACK(arg){
+    if(arg.length <= 1) return false;
+    var hasMore = arg[0];
+    var D=function(A,B){A[A.length]=B;}
+    if(arg.length % 2 == 0) D(arg, ["","","",""]);
+
+    var html = ['<div id="in_related_doc"><div class="tit">相关文章：</div>'];
+    D(html, '<table cellpadding="0" cellspacing="3" border="0">');
+    for(var i = 1, j = arg.length; i < j; i += 2){
+        D(html, '<tr>');
+        D(html, '<td width="15px"><a style="font-size:25px" >&#8226;</a></td><td><a href="http://hi.baidu.com/' + arg[i][3] + '/blog/item/' + arg[i][2] + '.html" target="_blank" title="' + arg[i][0] + '">' + arg[i][1] + '</a>');
+        D(html, new Array(10).join('\u3000'));
+        D(html, '</td>');
+        if(arg[i + 1][0] != "")
+            D(html, '<td width="15px"><a style="font-size:25px" >&#8226;</a></td><td><a href="http://hi.baidu.com/' + arg[i + 1][3] + '/blog/item/' + arg[i + 1][2] + '.html" target="_blank" title="' + arg[i + 1][0] + '">' + arg[i + 1][1] + '</a></td>');
+        else
+            D(html, '<td>&nbsp;</td><td>&nbsp;</td>');
+        D(html, '</tr>');
+    }
+    if(hasMore) D(html, '<tr><td colspan="4"><a target="_blank" href="/sys/search?pageno=1&type=7&sort=1&word=%C6%D5%CD%A8%C8%CB%B5%C4%B1%E0%BC%AD%C0%FB%C6%F7%A1%AA%A1%AAVIM%20%28for%20windows%29&item=9c28a94b43bc67f183025c7f">更多&gt;&gt;</a></td></tr>');
+    D(html, '</table></div><div class="line">&nbsp;</div>');
+
+    var div = document.getElementById('in_related_tmp');
+    if(div){
+        div.innerHTML = html.join('');
+        while(div.firstChild){
+            div.parentNode.insertBefore(div.firstChild, div);
+        }
+        div.parentNode.removeChild(div);
+    }
+	window.setTimeout("tracker_init('in_related_doc')",100);
+}
+
+if(RelatedDocData == -1){	// not supported xhr
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = '/sys/search?type=8&word=%C6%D5%CD%A8%C8%CB%B5%C4%B1%E0%BC%AD%C0%FB%C6%F7%A1%AA%A1%AAVIM%20%28for%20windows%29&item=9c28a94b43bc67f183025c7f&t=' + new Date().getTime();
+    document.getElementsByTagName('HEAD')[0].appendChild(script);
+}else if(RelatedDocData == null){
+	GetAndEval = true;
+}else{
+	eval(RelatedDocData);
+}
+
+/*]]>*/
+</script>
+    
+
+
+
+
+
+
+<div id="in_reader">
+<div class="tit">最近读者：</div>
+
+<script>
+
+	var g_spAnnony=true;
+
+
+var g_read=[
+
+["hostwmtt","d1fb686f7374776d74741d05","hostwmtt"],
+
+["lgw2010","51976c6777323031304905","lgw2010"],
+
+["tieniuzai","90417469656e69757a61691001","tieniuzai"],
+
+["shenyixin99","a4c87368656e796978696e39395807","shenyixin99"],
+
+["fly2neverland","852f666c79326e657665727903","fly2never"],
+
+["nk%5Fysg","95476e6b5f7973672e05","nk_ysg"],
+
+["ybsolar","a170d0cecabdb5c4d2e2d2e5f402","形式的意义"],
+
+["caocao808","ce3563616f63616f3830387600","caocao808"],
+
+{}
+];
+g_read.length=g_read.length-1;
+
+var _rh1="";
+var _rh2="";
+
+function wrreader(){
+	_rh1 += '<table width="100%" ><tr>';
+	_rh2+='<tr>';
+	if(g_spAnnony){
+		_rh1+='<td align="center" width="10%" ><img border="0" width="55" height="55" src="http://img.baidu.com/hi/img/portraitn.jpg"></td>';
+		_rh2+='<td>&nbsp;</td>';
+		if(g_read.length>0){
+			_rh1+='<td align="left" width="12%">';
+		}else{
+			_rh1+='<td align="left" width="100%">';
+		}
+		_rh1+='<a href="https://passport.baidu.com/?login&tpl=sp&tpl_reg=sp&u='+myref+'" target="_self">登录</a>后，您就出现在这里。</td>';
+		_rh2+='<td>&nbsp;</td>'
+	}
+	if(g_read.length==0){
+		if(!g_spAnnony){
+			_rh1+='<td align=left width="100%">最近还没有登录用户看过这篇文章……</td>';
+			_rh2+='<td>&nbsp;</td>';
+		}
+	}else{
+		for(i=0,len=g_read.length;i<len;i++){
+			_rh1+='<td align="center" valign="bottom" width="10%" class="user"><a href="/'+g_read[i][0]+'" target="_blank"><img border="0" src="http://himg.baidu.com/sys/portraitn/item/'+g_read[i][1]+'.jpg"></a></td>';
+			_rh2+='<td align="center" valign="top" class="user"><a href="/'+g_read[i][0]+'" target="_blank">'+g_read[i][2]+'</a></td>';
+		}
+	}
+	_rh1+='<td width="100%"></td></tr>';
+	_rh2+='<td></td></tr></table>';
+	document.write(_rh1+_rh2);
+}
+
+wrreader();
+</script>
+
+
+
+
+
+	</div>
+
+<div class="line">&nbsp;</div>
+
+
+
+<script language="JavaScript">
+allkey=allkey+"774229f5ad959d25bc3109b2_9c28a94b43bc67f183025c7f_";
+</script>
+
+<div id="in_comment">
+<a name="comment"></a>
+<div class="tit">网友评论：</div>
+<script>
+function writecmt(type,id,cmtname,cmturl,portraitId){
+	var html1="";
+	cmturl=cmturl.replace("https://","http://");
+	if(type==1){
+			html1="<a href='"+cmturl+"' target='_blank' title='"+cmturl+"'><img  border='0' src='http://himg.baidu.com/sys/portraitn/item/"+portraitId+".jpg'><br>"+cmtname+"</a>";
+	}else{
+		if(cmtname=="" || cmtname=="匿名网友"){
+			if(cmturl==""){
+				html1="<a>匿名网友</a>";
+			}else{
+				html1="<a href='"+cmturl+"' target='_blank' title='"+cmturl+"'>"+cmtname+"</a>";
+			}
+		}else{
+			if(cmturl==""){
+				html1="<div class='f14' style='display:inline'>网友:<a>"+cmtname+"</a></div>";
+			}else{
+				html1="<div class='f14' style='display:inline'>网友:<a href='"+cmturl+"' target='_blank' title='"+cmturl+"'>"+cmtname+"</a></div>";
+			}
+		}
+	}
+	document.write(html1);
+}
+function filterCmtContent(n){
+	if(!BdBrowser.isIE){
+		var defaultfilter1='<span style="filter:glow(color=#000000,strength=2);height:0px;color:#000000">';
+		var defaultfilter2='<span style="height: 0px; color: rgb(0, 0, 0);">';
+		var commentDiv=document.getElementById(n);
+		var divs=commentDiv.getElementsByTagName('div');
+		var d,tmp;
+		for( var i=0,len=divs.length;i<len;i++){
+			d=divs[i];
+			if(d.getAttribute('name')=='cmtcontent'){
+				tmp=d.innerHTML;
+				tmp=tmp.replace(/<span style="filter:glow\(color=#([0-9a-z]{3,6}),strength=2\);height:0px;color:#([0-9a-z]{3,6})">/ig,defaultfilter1);
+				tmp=tmp.replace('<span style="height: 0px; color: rgb(255, 255, 255);">',defaultfilter2);
+				d.innerHTML=tmp;
+			}
+		}
+	}
+}
+
+</script>
+
+
+
+<a name="b699b6111af5257fcb80c437" rename="匿名网友" repid="0000c4e4c3fbcdf8d3d10000"></a>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="item" style="table-layout:fixed;word-wrap:break-word;overflow:hidden;";>
+<tr>
+<td valign="top" class="index" width="5%">1</td>
+<td align="center" valign="top" width="10%">
+<div class="user" style="overflow:hidden;">
+
+<script language="javascript">
+writecmt(2,"b699b6111af5257fcb80c437","匿名网友","","0000c4e4c3fbcdf8d3d10000");
+
+</script>
+
+</div>
+</td>
+<td class="cnt" style="padding-left:20px;"><span class="date">2007年04月08日 星期日  下午 03:02
+| <a href="#" onclick='cmtreply("匿名网友","0000c4e4c3fbcdf8d3d10000");return false;'>回复</a>
+
+
+</span><div class="desc" style="overflow:hidden;word-break:normal;"  name='cmtcontent'>
+	靠,还高级,全都要记什么命令还要输入命令,那数标发明来做什么的?
+</div></td></tr>
+
+</table>
+<div class="line">&nbsp;</div>
+
+<a name="6a149a2f491aab3b1f3089e5" rename="ImposIsNothing" repid="52cb496d706f7349734e6f7468696e672601"></a>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="item" style="table-layout:fixed;word-wrap:break-word;overflow:hidden;";>
+<tr>
+<td valign="top" class="index" width="5%">2</td>
+<td align="center" valign="top" width="10%">
+<div class="user" style="overflow:hidden;">
+
+<script>
+writecmt(1,"6a149a2f491aab3b1f3089e5","ImposIsNothing","http://passport.baidu.com/?business&un=ImposIsNothing","52cb496d706f7349734e6f7468696e672601");
+</script>
+
+</div>
+</td>
+<td class="cnt" style="padding-left:20px;"><span class="date">2007年09月27日 星期四  下午 02:42
+| <a href="#" onclick='cmtreply("ImposIsNothing","52cb496d706f7349734e6f7468696e672601");return false;'>回复</a>
+
+
+</span><div class="desc" style="overflow:hidden;word-break:normal;"  name='cmtcontent'>
+	ConTEXT (syntax higlight) + UltraEdit (column edit mode) 在 Windows 下相当不错了. 易用 / 灵活还是不可得兼
+</div></td></tr>
+
+</table>
+<div class="line">&nbsp;</div>
+
+<a name="0b480df7a11d5d21720eecda" rename="InfoHunter" repid="0000496e666f48756e7465720000"></a>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="item" style="table-layout:fixed;word-wrap:break-word;overflow:hidden;";>
+<tr>
+<td valign="top" class="index" width="5%">3</td>
+<td align="center" valign="top" width="10%">
+<div class="user" style="overflow:hidden;">
+
+<script language="javascript">
+writecmt(2,"0b480df7a11d5d21720eecda","InfoHunter","","0000496e666f48756e7465720000");
+
+</script>
+
+</div>
+</td>
+<td class="cnt" style="padding-left:20px;"><span class="date">2007年10月24日 星期三  上午 11:02
+| <a href="#" onclick='cmtreply("InfoHunter","0000496e666f48756e7465720000");return false;'>回复</a>
+
+
+</span><div class="desc" style="overflow:hidden;word-break:normal;"  name='cmtcontent'>
+	楼上2位根本不知道什么叫做“高级”就来乱吠
+</div></td></tr>
+
+</table>
+<div class="line">&nbsp;</div>
+
+<a name="e41c3d12f816c755f819b819" rename="观心苑主人" repid="9db0b9dbd0c4d4b7d6f7c8cbbd01"></a>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="item" style="table-layout:fixed;word-wrap:break-word;overflow:hidden;";>
+<tr>
+<td valign="top" class="index" width="5%">4</td>
+<td align="center" valign="top" width="10%">
+<div class="user" style="overflow:hidden;">
+
+<script>
+writecmt(1,"e41c3d12f816c755f819b819","观心苑主人","http://hi.baidu.com/shazi129","9db0b9dbd0c4d4b7d6f7c8cbbd01");
+</script>
+
+</div>
+</td>
+<td class="cnt" style="padding-left:20px;"><span class="date">2007年12月26日 星期三  下午 08:26
+| <a href="#" onclick='cmtreply("观心苑主人","9db0b9dbd0c4d4b7d6f7c8cbbd01");return false;'>回复</a>
+
+
+</span><div class="desc" style="overflow:hidden;word-break:normal;"  name='cmtcontent'>
+	经典!!! 一向在linux下用,没想到还有windows的,那个悔啊.
+</div></td></tr>
+
+</table>
+<div class="line">&nbsp;</div>
+
+<a name="4e247cf0c4fed2c57831aa5e" rename="匿名网友" repid="0000c4e4c3fbcdf8d3d10000"></a>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="item" style="table-layout:fixed;word-wrap:break-word;overflow:hidden;";>
+<tr>
+<td valign="top" class="index" width="5%">5</td>
+<td align="center" valign="top" width="10%">
+<div class="user" style="overflow:hidden;">
+
+<script language="javascript">
+writecmt(2,"4e247cf0c4fed2c57831aa5e","匿名网友","","0000c4e4c3fbcdf8d3d10000");
+
+</script>
+
+</div>
+</td>
+<td class="cnt" style="padding-left:20px;"><span class="date">2008年06月06日 星期五  上午 06:39
+| <a href="#" onclick='cmtreply("匿名网友","0000c4e4c3fbcdf8d3d10000");return false;'>回复</a>
+
+
+</span><div class="desc" style="overflow:hidden;word-break:normal;"  name='cmtcontent'>
+	話說人不要臉天下無敵
+轉載善用佳軟的文章也不說一聲。臉皮真厚啊
+</div></td></tr>
+
+</table>
+<div class="line">&nbsp;</div>
+
+<a name="81d46881d1ca0ad0bd3e1e57" rename="luckyang999" repid="247c6c75636b79616e673939395502"></a>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="item" style="table-layout:fixed;word-wrap:break-word;overflow:hidden;";>
+<tr>
+<td valign="top" class="index" width="5%">6</td>
+<td align="center" valign="top" width="10%">
+<div class="user" style="overflow:hidden;">
+
+<script>
+writecmt(1,"81d46881d1ca0ad0bd3e1e57","luckyang999","http://hi.baidu.com/luckyang999","247c6c75636b79616e673939395502");
+</script>
+
+</div>
+</td>
+<td class="cnt" style="padding-left:20px;"><span class="date">2008年09月27日 星期六  下午 04:27
+| <a href="#" onclick='cmtreply("luckyang999","247c6c75636b79616e673939395502");return false;'>回复</a>
+
+
+</span><div class="desc" style="overflow:hidden;word-break:normal;"  name='cmtcontent'>
+	呵呵，工具很强大，文章写得也不错
+</div></td></tr>
+
+</table>
+<div class="line">&nbsp;</div>
+
+<a name="359bf336ea2a153b0b55a93b" rename="匿名网友" repid="0000c4e4c3fbcdf8d3d10000"></a>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="item" style="table-layout:fixed;word-wrap:break-word;overflow:hidden;";>
+<tr>
+<td valign="top" class="index" width="5%">7</td>
+<td align="center" valign="top" width="10%">
+<div class="user" style="overflow:hidden;">
+
+<script language="javascript">
+writecmt(2,"359bf336ea2a153b0b55a93b","匿名网友","","0000c4e4c3fbcdf8d3d10000");
+
+</script>
+
+</div>
+</td>
+<td class="cnt" style="padding-left:20px;"><span class="date">2009年05月12日 星期二  上午 10:58
+| <a href="#" onclick='cmtreply("匿名网友","0000c4e4c3fbcdf8d3d10000");return false;'>回复</a>
+
+
+</span><div class="desc" style="overflow:hidden;word-break:normal;"  name='cmtcontent'>
+	支持，在Linux Unix 下习惯了，现在在windows下都可以用，不错。<br>
+</div></td></tr>
+
+</table>
+<div class="line">&nbsp;</div>
+
+
+
+<div id="page"></div>
+
+</div>
+<script>filterCmtContent('in_comment');</script>
+
+
+<div id="in_send">
+<a name="send"></a>
+<form name="form1" id="popFormSubmit" action="/adown/commit" method="post" onSubmit="return checkcmtform()">
+<input type="hidden" name="bdstoken" value="ede419392e161148eb079cc8a49d49c7">
+<input type="hidden" name="ct" value="8">
+<input type="hidden" name="cm" value="1">
+<input type="hidden" name="spBlogID" value="9c28a94b43bc67f183025c7f">
+<input type="hidden" name="spRefURL" id="spRefURL" />
+<script>
+    document.getElementById("spRefURL").value = window.location.href;
+</script>
+<div class="tit">发表评论：</div>
+<table width="620" border="0" cellspacing="5" cellpadding="0">
+<tr>
+
+<td class="f14">姓　名：</td>
+<td><input type="text" name="spBlogCmtor" id="spBlogCmtor" style="width:220px" onChange="checkname('spBlogCmtor')" maxlength="49" onFocus="hidErr(1);">
+<script>
+document.write(" &nbsp;&nbsp; <a href='http://hi.baidu.com/st/reg.html' target='_blank'>注册</a>");
+document.write(' | <a href="https://passport.baidu.com/?login&tpl=sp&tpl_reg=sp&u='+myref+'">登录</a>');
+
+</script>
+
+<div style="display:none" id="nmerror">*姓名最长为50字节</div></td>
+</tr>
+
+<tr id="1_err" style="display:none">
+<td>&nbsp;</td>
+<td><div class="error" id="1_err_con"></div></td>
+</tr>
+
+<tr>
+<td class="f14">网址或邮箱：</td>
+<td><input type="text" name="spBlogCmtURL" id="spBlogCmtURL" style="width:360px" maxlength="128" onChange="checkeandu('spBlogCmtURL')" onFocus="hidErr(2);"> (选填)</td>
+<script>
+G("spBlogCmtor").value="";
+G("spBlogCmtURL").value="";
+</script>
+
+</tr>
+
+<tr id="2_err" style="display:none">
+<td>&nbsp;</td>
+<td><div class="error" id="2_err_con"></div></td>
+</tr>
+
+<tr>
+<td valign="top" class="f14" id="reTitle">内　容：</td>
+<td><textarea name="spBlogCmtText" id="spBlogCmtText" style="width:520px;height:155px" onFocus="hidErr(3);" ></textarea>
+<script>
+	var editor=null;
+	try{
+		editor=new BdEditor("spBlogCmtText",{width:"100%",height:"155px"});
+		editor.onfocus = function(){hidErr(3);}
+		editor.render();
+	}catch(e){
+		var spBlogCmtText = document.getElementById("spBlogCmtText");
+		var p = spBlogCmtText.previousSibling;
+		while(p && p.nodeType != 1) p = p.previousSibling;
+		if(p && /bdeditor_container/.test(p.id)){
+			p.parentNode.removeChild(p);
+		}
+		spBlogCmtText.style.display = '';
+		editor=null;
+	}
+</script>
+
+<script>
+G("spBlogCmtor").value=G("spBlogCmtor").defaultValue;
+G("spBlogCmtText").value="";
+</script>
+</td>
+</tr>
+<tr id="3_err" style="display:none">
+<td>&nbsp;</td>
+<td><div class="error" id="3_err_con"></div></td>
+</tr>
+
+<tr id="vercode">
+<td valign="top" class="f14">验证码：</td>
+<td valign="top"><input type="hidden" name="spVcode" value="" />
+<input type="text" onFocus="f_focus()" id="spVerifyKey" name="spVerifyKey" size="6"  maxlength="4" autocomplete="off" tabindex=4>  请点击后输入四位验证码，字母不区分大小写<br/>
+<script type="text/javascript">
+/*<![CDATA[*/
+
+function f_focus(){
+	getVcode();
+}
+function getVcode(){
+	var url="http://hi.baidu.com/sys/file/getvcode?echoback=getVcodeDone&t="+(new Date().getTime());
+	BdAjax.loadJS(url)
+}
+
+function getVcodeDone(vcode){
+	document.form1.spVcode.value=vcode;
+	var imgsrc="http://hiup.baidu.com/cgi-bin/genimg?"+vcode;
+	G('verifypic').src=imgsrc;
+	G('yanzheng').style.display="block";
+}
+function newverifypic(){
+	getVcode();
+	return false;
+}
+/*]]>*/
+</script>
+<div id="yanzheng" style="display:none">
+<img id='verifypic' width='120' height='40'><wbr /><a onFocus="this.blur();" href="#" onClick="return newverifypic();" title="看不清左边的字符" >看不清?</a>
+</div>
+</td>
+</tr>
+
+
+<tr>
+<td valign="top"class="f14">&nbsp;</td>
+<td valign="top" class="f14"><input id="btn_ok" name="btn_ok" type="submit" value="发表评论" tabindex=5>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" id="cancleReLink" onClick="canclereply(); return false;" style="display:none; font-size:12px;color:#666;">取消回复</a></td>
+</tr>
+</table>
+</form>
+</div>
+
+
+
+
+<br>
+</div>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="8">
+<tr><td class="modbl" width="7">&nbsp;</td>
+<td class="modbc">&nbsp;</td>
+<td class="modbr" width="7">&nbsp;</td>
+</tr></table>
+
+
+
+
+</div>
+</div>
+
+</div>
+
+</div>
+<script language="javascript">
+
+//fck layout rework
+</script>
+<script src="/js/bgmusic.js?v=1.0.js" language="javascript"></script>
+<script language="javascript">
+function initBlogTextForFCK(){
+	//fck layout resize
+    /*
+    var fckLayoutArr=document.getElementById('blog_text').getElementsByTagName('table');
+	for(var i=0,n=fckLayoutArr.length;i<n;i++){
+		if(fckLayoutArr[i].className.indexOf('FCKLAYOUT')>-1){
+			fckLayoutArr[i].width="100%";
+			fckLayoutArr[i].style.width="100%";
+			fckLayoutArr[i].style.height="100%";
+		}
+	}
+    */
+
+	//fck init music
+	if(window.Node){Node.prototype.replaceNode=function(Node){this.parentNode.replaceChild(Node,this);}}
+	var imgBox=document.getElementsByName('musicName');
+	var isAutoPlay=true;
+	for(var i=0,n=imgBox.length;i<n;i++){
+		var img=imgBox[i];
+		if(img.getAttribute('rel')){
+			var musicSrc=img.getAttribute('rel');
+			var musicDiv = document.createElement("SPAN");
+			var tmp=musicSrc.substr (musicSrc.indexOf('#')+1, 1);
+			var tmpAutoPlay=(tmp=='1');
+			if(isAutoPlay&&tmpAutoPlay){
+				isAutoPlay=false;
+				tmpAutoPlay=true;
+			}else{
+				tmpAutoPlay=false;
+			}
+			var shtml=creatbgmusic(musicSrc.substr(0,musicSrc.indexOf('#')),1,true,false,tmpAutoPlay,tmpAutoPlay,'FckMusicHelper');
+			shtml=shtml.replace('width=100%','width=200').replace('width="100%"','width=200 height=45');			img.replaceNode(musicDiv);
+			musicDiv.innerHTML=shtml;
+			i--;n--;
+		}
+	}
+	//document.getElementById('blog_text').style.display='';
+}
+initBlogTextForFCK();
+</script>
+<script language="javascript">
+<!--
+var hstr="/adown/brwstat?key1=1";
+document.write("<script src='"+hstr+"&key2="+allkey+"'><\/script>");
+//-->
+</script>
+<br><center><div id="ft">&copy;2009 Baidu</div></center>
+
+<script>
+if(document.getElementById("m_blog"))
+{
+	var imgarray = document.getElementById("m_blog").getElementsByTagName('img');
+	var imgw = document.getElementById("m_blog").offsetWidth;
+	imgw =imgw-40;
+    for(var i=0; i<imgarray.length; i++){
+    	if(imgarray[i].className=="blogimg" && imgarray[i].width>=imgw) {
+	    	imgarray[i].width=imgw;
+        }
+    }
+}
+
+// Fix ff bugs
+var blog_text = document.getElementById('blog_text');
+blog_text.innerHTML = blog_text.innerHTML.replace(/href\s*=\s*("|')?(\.\.\/\.\.\/)/gi,"href=$1../$2");
+
+gotoreply();
+</script>
+</center>
+
+
+<img src="http://c.baidu.com/c.gif?t=6&p=3" style="display:none;"/>
+<iframe id="submitiframe" name="submitiframe" src="/st/blank.html" style="display:none;"></iframe>
+</body></html>
