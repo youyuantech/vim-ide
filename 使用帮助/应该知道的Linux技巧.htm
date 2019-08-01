@@ -1,0 +1,3178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+	<title>应该知道的Linux技巧 | 酷 壳 - CoolShell.cn</title>
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0 - 所有文章" href="http://coolshell.cn/feed" />
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0 - 所有评论" href="http://coolshell.cn/comments/feed" />
+	<link rel="pingback" href="http://coolshell.cn/xmlrpc.php" />
+
+	<!-- style START -->
+	<!-- default style -->
+	<style type="text/css" media="screen">@import url( http://coolshell.cn/wp-content/themes/inove/style.css );</style>
+	<link rel='stylesheet' id='open-sans-css'  href='http://coolshell.cn//wp-includes/css/google-font.css?ver=3.9.1' type='text/css' media='all' />
+	<!-- for translations -->
+			<link rel="stylesheet" href="http://coolshell.cn//wp-content/themes/inove/chinese.css" type="text/css" media="screen" />
+		<!--[if IE]>
+		<link rel="stylesheet" href="http://coolshell.cn//wp-content/themes/inove/ie.css" type="text/css" media="screen" />
+	<![endif]-->
+	<!-- style END -->
+
+	<!-- script START -->
+	<script type="text/javascript" src="http://coolshell.cn//wp-content/themes/inove/js/base.js"></script>
+	<script type="text/javascript" src="http://coolshell.cn//wp-content/themes/inove/js/menu.js"></script>
+	<!-- script END -->
+
+	<link rel="alternate" type="application/rss+xml" title="酷 壳 - CoolShell.cn &raquo; 应该知道的Linux技巧评论Feed" href="http://coolshell.cn/articles/8883.html/feed" />
+<script>var killIE6ImgUrl = "http://coolshell.cn//wp-content/plugins/lets-kill-ie6/img";</script><link rel='stylesheet' id='wp-postratings-css'  href='http://coolshell.cn//wp-content/plugins/wp-postratings/postratings-css.css?ver=1.63' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='http://coolshell.cn//wp-content/themes/inove/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<script type='text/javascript' src='http://coolshell.cn//wp-includes/js/jquery/jquery.js?ver=1.11.0'></script>
+<script type='text/javascript' src='http://coolshell.cn//wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://coolshell.cn//wp-content/plugins/lets-kill-ie6/lets-kill-ie6.js?ver=3.9.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://coolshell.cn/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://coolshell.cn//wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='程序算法与人生选择' href='http://coolshell.cn/articles/8790.html' />
+<link rel='next' title='从面向对象的设计模式看软件设计' href='http://coolshell.cn/articles/8961.html' />
+<meta name="generator" content="WordPress 3.9.1" />
+<link rel='shortlink' href='http://coolshell.cn/?p=8883' />
+	<link href="http://coolshell.cn//wp-content/plugins/google-syntax-highlighter/Styles/SyntaxHighlighter.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript">
+	window._wp_rp_static_base_url = 'https://wprp.zemanta.com/static/';
+	window._wp_rp_wp_ajax_url = "http://coolshell.cn/wp-admin/admin-ajax.php";
+	window._wp_rp_plugin_version = '3.5';
+	window._wp_rp_post_id = '8883';
+	window._wp_rp_num_rel_posts = '8';
+	window._wp_rp_thumbnails = false;
+	window._wp_rp_post_title = '%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%84Linux%E6%8A%80%E5%B7%A7';
+	window._wp_rp_post_tags = ['shell', 'unix', 'vim', 'bash', 'linux', 'performance', 'unix%2Flinux', '%3F%3F%3F%3F', 'vim', 'pid', 'df', 'abort', 'cd', 'ssh', 'ls', 'grep', 'yum', 'bash', 'amp', 'tip', 'linux', 'home', 'du'];
+	window._wp_rp_promoted_content = true;
+</script>
+<script type="text/javascript" src="https://wprp.zemanta.com/static/js/loader.js?version=3.5" async></script>
+<style type="text/css">
+.related_post_title {
+}
+ul.related_post {
+}
+ul.related_post li {
+}
+ul.related_post li a {
+}
+ul.related_post li img {
+}</style>
+
+<!-- All in One SEO Pack 2.1.7 by Michael Torbert of Semper Fi Web Design[326,378] -->
+<meta name="keywords" content="bash,linux,performance,shell,unix,vim,unix/linux,操作系统,杂项资源" />
+
+<link rel="canonical" href="http://coolshell.cn/articles/8883.html" />
+<meta property="og:title" content="应该知道的Linux技巧 | 酷 壳 - CoolShell.cn" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://coolshell.cn/articles/8883.html" />
+<meta property="og:image" content="http://coolshell.cn//wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" />
+<meta property="og:site_name" content="酷 壳 - CoolShell.cn" />
+<meta property="og:description" content="这篇文章来源于Quroa的一个问答《What are some time-saving tips that every Linux user should know?》—— Linux用户有哪些应该知道的提高效率的技巧。我觉得挺好的，总结得比较好，把其转过来，并加了一些自己的理解。 首先，我想告诉大家，在Unix/Linux下，最有效率技巧的不是操作图形界面，而是命令行操作，因为命令行意味着自动化。如果你看过《你可能不知道的Shell》以及《28个Unix/Linux的命令行神器》你就会知道Linux有多强大，这个强大完全来自于命令行，于是，就算你不知道怎么去做一个环保主义的程序员，至少他们可以让你少熬点夜，从而有利于你的身体健康和性生活。下面是一个有点长的列表，正如作者所说，你并不需要知道所有的这些东西，但是如果你还在很沉重地在使用Linux的话，这些东西都值得你看一看。 （注：如果你想知道下面涉及到的命令的更多的用法，你一定要man一点。对于一些命令，你可以需要先yum或apt-get来安装一下，如果有什么问题，别忘了Google。如果你要Baidu的话，我仅代表这个地球上所有的生物包括微生物甚至细菌病毒和小强BS你到宇宙毁灭） 基础  学习 Bash 。你可以man bash来看看bash的东西，并不复杂也并不长。你用别的shell也行，但是bash是很强大的并且也是系统默认的。（学习zsh或tsch只会让你在很多情况下受到限制）   学习 vim 。在Linux下，基本没有什么可与之竞争的编译辑器（就算你是一个Emacs或Eclipse的重度用户）。你可以看看《简明vim攻略》和 《Vim的冒险游戏》以及《给程序员的Vim速查卡》还有《把Vim变成一个编程的IDE》等等。   了解 ssh。明白不需要口令的用户认证（通过ssh-agent, ssh-add），学会用ssh翻墙，用scp而不是ftp传文件，等等。你知道吗？scp 远端的时候，你可以按tab键来查看远端的目录和文件（当然，需要无口令的用户认证），这都是bash的功劳。    熟悉bash的作业管理，如： &amp;, Ctrl-Z, Ctrl-C, jobs, fg, bg, kill, 等等。当然，你也要知道Ctrl+（SIGQUIT）和Ctrl+C （SIGINT）的区别。" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="这篇文章来源于Quroa的一个问答《What are some time-saving tips that every Linux user should know?》—— Linux用户有哪些应该知道的提高效率的技巧。我觉得挺好的，总结得比较好，把其转过来，并加了一些自己的理解。 首先，我想告诉大家，在Unix/Linux下，最有效率技巧的不是操作图形界面，而是命令行操作，因为命令行意味着自动化。如果你看过《你可能不知道的Shell》以及《28个Unix/Linux的命令行神器》你就会知道Linux有多强大，这个强大完全来自于命令行，于是，就算你不知道怎么去做一个环保主义的程序员，至少他们可以让你少熬点夜，从而有利于你的身体健康和性生活。下面是一个有点长的列表，正如作者所说，你并不需要知道所有的这些东西，但是如果你还在很沉重地在使用Linux的话，这些东西都值得你看一看。 （注：如果你想知道下面涉及到的命令的更多的用法，你一定要man一点。对于一些命令，你可以需要先yum或apt-get来安装一下，如果有什么问题，别忘了Google。如果你要Baidu的话，我仅代表这个地球上所有的生物包括微生物甚至细菌病毒和小强BS你到宇宙毁灭） 基础  学习 Bash 。你可以man bash来看看bash的东西，并不复杂也并不长。你用别的shell也行，但是bash是很强大的并且也是系统默认的。（学习zsh或tsch只会让你在很多情况下受到限制）   学习 vim 。在Linux下，基本没有什么可与之竞争的编译辑器（就算你是一个Emacs或Eclipse的重度用户）。你可以看看《简明vim攻略》和 《Vim的冒险游戏》以及《给程序员的Vim速查卡》还有《把Vim变成一个编程的IDE》等等。   了解 ssh。明白不需要口令的用户认证（通过ssh-agent, ssh-add），学会用ssh翻墙，用scp而不是ftp传文件，等等。你知道吗？scp 远端的时候，你可以按tab键来查看远端的目录和文件（当然，需要无口令的用户认证），这都是bash的功劳。    熟悉bash的作业管理，如： &amp;, Ctrl-Z, Ctrl-C, jobs, fg, bg, kill, 等等。当然，你也要知道Ctrl+（SIGQUIT）和Ctrl+C （SIGINT）的区别。" />
+<!-- /all in one seo pack -->
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+
+
+<body>
+<!-- wrap START -->
+<div id="wrap">
+
+<!-- container START -->
+<div id="container"  >
+
+<!-- header START -->
+<div id="header">
+
+	<!-- banner START -->
+			<div class="banner">
+			<a title="把这个链接拖到你的Chrome收藏夹工具栏中" href='javascript:(function(){function c(){var e=document.createElement("link");e.setAttribute("type","text/css");e.setAttribute("rel","stylesheet");e.setAttribute("href",f);e.setAttribute("class",l);document.body.appendChild(e)}function h(){var e=document.getElementsByClassName(l);for(var t=0;t<e.length;t++){document.body.removeChild(e[t])}}function p(){var e=document.createElement("div");e.setAttribute("class",a);document.body.appendChild(e);setTimeout(function(){document.body.removeChild(e)},100)}function d(e){return{height:e.offsetHeight,width:e.offsetWidth}}function v(i){var s=d(i);return s.height>e&&s.height<n&&s.width>t&&s.width<r}function m(e){var t=e;var n=0;while(!!t){n+=t.offsetTop;t=t.offsetParent}return n}function g(){var e=document.documentElement;if(!!window.innerWidth){return window.innerHeight}else if(e&&!isNaN(e.clientHeight)){return e.clientHeight}return 0}function y(){if(window.pageYOffset){return window.pageYOffset}return Math.max(document.documentElement.scrollTop,document.body.scrollTop)}function E(e){var t=m(e);return t>=w&&t<=b+w}function S(){var e=document.createElement("audio");e.setAttribute("class",l);e.src=i;e.loop=false;e.addEventListener("canplay",function(){setTimeout(function(){x(k)},500);setTimeout(function(){N();p();for(var e=0;e<O.length;e++){T(O[e])}},15500)},true);e.addEventListener("ended",function(){N();h()},true);e.innerHTML=" <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";document.body.appendChild(e);e.play()}function x(e){e.className+=" "+s+" "+o}function T(e){e.className+=" "+s+" "+u[Math.floor(Math.random()*u.length)]}function N(){var e=document.getElementsByClassName(s);var t=new RegExp("\\b"+s+"\\b");for(var n=0;n<e.length;){e[n].className=e[n].className.replace(t,"")}}var e=30;var t=30;var n=350;var r=350;var i="//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3";var s="mw-harlem_shake_me";var o="im_first";var u=["im_drunk","im_baked","im_trippin","im_blown"];var a="mw-strobe_light";var f="//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";var l="mw_added_css";var b=g();var w=y();var C=document.getElementsByTagName("*");var k=null;for(var L=0;L<C.length;L++){var A=C[L];if(v(A)){if(E(A)){k=A;break}}}if(A===null){console.warn("Could not find a node of the right size. Please try a different page.");return}c();S();var O=[];for(var L=0;L<C.length;L++){var A=C[L];if(v(A)){O.push(A)}}})()    '>High一下!</a>		</div>
+		<!-- banner END -->
+
+	<div id="caption">
+		<h1 id="title"><a href="http://coolshell.cn/">酷 壳 &#8211; CoolShell.cn</a></h1>
+		<div id="tagline">享受编程和技术所带来的快乐 &#8211; http://coolshell.cn</div>
+	</div>
+
+	<div class="fixed"></div>
+</div>
+<!-- header END -->
+
+<!-- navigation START -->
+<div id="navigation">
+	<!-- menus START -->
+	<ul id="menus">
+		<li class="page_item"><a class="home" title="首页" href="http://coolshell.cn/">首页</a></li>
+		<li class="page_item page-item-4194"><a href="http://coolshell.cn/featured_posts">推荐文章</a></li>
+<li class="page_item page-item-3839"><a href="http://coolshell.cn/plugins">本站插件</a></li>
+<li class="page_item page-item-2"><a href="http://coolshell.cn/guestbook">留言小本</a></li>
+<li class="page_item page-item-368"><a href="http://coolshell.cn/about">关于酷壳</a></li>
+<li class="page_item page-item-4470"><a href="http://coolshell.cn/haoel">关于陈皓</a></li>
+		<li><a class="lastmenu" href="javascript:void(0);"></a></li>
+	</ul>
+	<!-- menus END -->
+
+	<!-- searchbox START -->
+	<div id="searchbox">
+					<form action="http://coolshell.cn" method="get">
+				<div class="content">
+					<input type="text" class="textfield" name="s" size="24" value="" />
+					<input type="submit" class="button" value="" />
+				</div>
+			</form>
+			</div>
+<script type="text/javascript">
+//<![CDATA[
+	var searchbox = MGJS.$("searchbox");
+	var searchtxt = MGJS.getElementsByClassName("textfield", "input", searchbox)[0];
+	var searchbtn = MGJS.getElementsByClassName("button", "input", searchbox)[0];
+	var tiptext = "请输入关键字...";
+	if(searchtxt.value == "" || searchtxt.value == tiptext) {
+		searchtxt.className += " searchtip";
+		searchtxt.value = tiptext;
+	}
+	searchtxt.onfocus = function(e) {
+		if(searchtxt.value == tiptext) {
+			searchtxt.value = "";
+			searchtxt.className = searchtxt.className.replace(" searchtip", "");
+		}
+	}
+	searchtxt.onblur = function(e) {
+		if(searchtxt.value == "") {
+			searchtxt.className += " searchtip";
+			searchtxt.value = tiptext;
+		}
+	}
+	searchbtn.onclick = function(e) {
+		if(searchtxt.value == "" || searchtxt.value == tiptext) {
+			return false;
+		}
+	}
+//]]>
+</script>
+	<!-- searchbox END -->
+
+	<div class="fixed"></div>
+</div>
+<!-- navigation END -->
+
+<!-- content START -->
+<div id="content">
+
+	<!-- main START -->
+	<div id="main">
+
+
+	<div id="postpath">
+		<a title="转到首页" href="http://coolshell.cn/">首页</a>
+		 &gt; <a href="http://coolshell.cn/category/operatingsystem/unixlinux" title="查看Unix/Linux中的全部文章" rel="category tag">Unix/Linux</a>, <a href="http://coolshell.cn/category/operatingsystem" title="查看操作系统中的全部文章" rel="category tag">操作系统</a>, <a href="http://coolshell.cn/category/misc" title="查看杂项资源中的全部文章" rel="category tag">杂项资源</a>		 &gt; 应该知道的Linux技巧	</div>
+
+	<div class="post" id="post-8883">
+		<h2>应该知道的Linux技巧</h2>
+		<div class="info">
+			<span class="date">2013年1月9日</span>
+			<span class="author"><a href="http://coolshell.cn/articles/author/haoel" title="由陈皓发布" rel="author">陈皓</a></span>										<span class="addcomment"><a href="#respond">发表评论</a></span>
+				<span class="comments"><a href="#comments">阅读评论</a></span>
+						<span class="comments"> 130,290 人阅读  &nbsp;  &nbsp;</span>
+			<div class="fixed"></div>
+		</div>
+		<div class="content">
+			<p><img class="alignright size-full wp-image-8899" alt="" src="http://coolshell.cn//wp-content/uploads/2013/01/linux-bash-300x225.jpg" width="300" height="225" />这篇文章来源于Quroa的一个问答《<a href="http://www.quora.com/Linux/What-are-some-time-saving-tips-that-every-Linux-user-should-know#" target="_blank">What are some time-saving tips that every Linux user should know?</a>》—— Linux用户有哪些应该知道的提高效率的技巧。我觉得挺好的，总结得比较好，把其转过来，并加了一些自己的理解。 首先，我想告诉大家，<strong>在Unix/Linux下，最有效率技巧的不是操作图形界面，而是命令行操作，因为命令行意味着自动化</strong>。如果你看过《<a title="你可能不知道的Shell" href="http://coolshell.cn/articles/8619.html" target="_blank">你可能不知道的Shell</a>》以及《<a title="28个Unix/Linux的命令行神器" href="http://coolshell.cn/articles/7829.html" target="_blank">28个Unix/Linux的命令行神器</a>》你就会知道Linux有多强大，这个强大完全来自于命令行，于是，就算你不知道怎么去<a title="做个环保主义的程序员" href="http://coolshell.cn/articles/7186.html" target="_blank">做一个环保主义的程序员</a>，至少他们可以让你少熬点夜，从而有利于你的身体健康和性生活。下面是一个有点长的列表，正如作者所说，你并不需要知道所有的这些东西，但是如果你还在很沉重地在使用Linux的话，这些东西都值得你看一看。 （注：如果你想知道下面涉及到的命令的更多的用法，你一定要man一点。对于一些命令，你可以需要先yum或apt-get来安装一下，如果有什么问题，别忘了Google。如果你要Baidu的话，我仅代表这个地球上所有的生物包括微生物甚至细菌病毒和小强BS你到宇宙毁灭）</p>
+<h4>基础</h4>
+<ul>
+<li><strong>学习 <a href="http://www.quora.com/Bash-shell" target="_blank">Bash</a> </strong>。你可以man bash来看看bash的东西，并不复杂也并不长。你用别的shell也行，但是bash是很强大的并且也是系统默认的。（学习zsh或tsch只会让你在很多情况下受到限制）</li>
+</ul>
+<ul>
+<li><strong>学习 vim</strong> 。在Linux下，基本没有什么可与之竞争的编<del>译</del>辑器（就算你是一个Emacs或Eclipse的重度用户）。你可以看看《<a title="简明 Vim 练级攻略" href="http://coolshell.cn/articles/5426.html" target="_blank">简明vim攻略</a>》和 《<a title="游戏：VIM大冒险" href="http://coolshell.cn/articles/7166.html" target="_blank">Vim的冒险游戏</a>》以及《<a title="给程序员的VIM速查卡" href="http://coolshell.cn/articles/5479.html" target="_blank">给程序员的Vim速查卡</a>》还有《<a title="将vim变得简单:如何在vim中得到你最喜爱的IDE特性" href="http://coolshell.cn/articles/894.html" target="_blank">把Vim变成一个编程的IDE</a>》等等。</li>
+</ul>
+<ul>
+<li><strong>了解 ssh</strong>。明白不需要口令的用户认证（通过ssh-agent, ssh-add），学会用ssh翻墙，用scp而不是ftp传文件，等等。你知道吗？scp 远端的时候，你可以按tab键来查看远端的目录和文件（当然，需要无口令的用户认证），这都是bash的功劳。</li>
+</ul>
+<p><span id="more-8883"></span></p>
+<ul>
+<li><strong>熟悉bash的作业管理</strong>，如： &amp;, Ctrl-Z, Ctrl-C, jobs, fg, bg, kill, 等等。当然，你也要知道Ctrl+\（SIGQUIT）和Ctrl+C （SIGINT）的区别。</li>
+</ul>
+<ul>
+<li><strong>简单的文件管理</strong> ： ls 和 ls -l (你最好知道 &#8220;ls -l&#8221; 的每一列的意思), less, head, tail 和 tail -f, ln 和 ln -s (你知道明白hard link和soft link的不同和优缺点), chown, chmod, du (如果你想看看磁盘的大小 du -sk *), df, mount。当然，原作者忘了find命令。</li>
+</ul>
+<ul>
+<li><strong>基础的网络管理</strong>： ip 或 ifconfig, dig。当然，原作者还忘了如netstat, ping, traceroute, 等</li>
+</ul>
+<ul>
+<li><strong>理解正则表达式</strong>，还有grep/egrep的各种选项。比如： -o, -A, 和 -B 这些选项是很值得了解的。</li>
+</ul>
+<ul>
+<li><strong>学习使用 apt-get 和 yum 来查找和安装软件</strong>（前者的经典分发包是Ubuntu，后者的经典分发包是Redhat），我还建议你试着从源码编译安装软件。</li>
+</ul>
+<p><b>日常</b></p>
+<ul>
+<li>在 bash 里，使用 Ctrl-R 而不是上下光标键来查找历史命令。</li>
+</ul>
+<ul>
+<li>在 bash里，使用 Ctrl-W 来删除最后一个单词，使用 Ctrl-U 来删除一行。请man bash后查找Readline Key Bindings一节来看看bash的默认热键，比如：Alt-. 把上一次命令的最后一个参数打出来，而Alt-* 则列出你可以输入的命令。</li>
+</ul>
+<ul>
+<li>回到上一次的工作目录： cd &#8211;  （回到home是 cd ~）</li>
+</ul>
+<ul>
+<li>使用 xargs。这是一个很强大的命令。你可以使用-L来限定有多少个命令，也可以用-P来指定并行的进程数。如果你不知道你的命令会变成什么样，你可以使用xargs echo来看看会是什么样。当然， -I{} 也很好用。示例：</li>
+</ul>
+<blockquote><pre class="brush: bash; title: ; notranslate" title="">find . -name \*.py | xargs grep some_function
+
+cat hosts | xargs -I{} ssh root@{} hostname</pre>
+</blockquote>
+<ul>
+<li>pstree -p 可以帮你显示进程树。（读过我的那篇《<a title="一个fork的面试题" href="http://coolshell.cn/articles/7965.html" target="_blank">一个fork的面试题</a>》的人应该都不陌生）</li>
+</ul>
+<ul>
+<li>使用 pgrep 和 pkill 来找到或是kill 某个名字的进程。 (-f 选项很有用).</li>
+</ul>
+<ul>
+<li>了解可以发给进程的信号。例如：要挂起一个进程，使用 kill -STOP [pid]. 使用 man 7 signal 来查看各种信号，使用kill -l 来查看数字和信号的对应表</li>
+</ul>
+<ul>
+<li>使用 nohup 或  disown 如果你要让某个进程运行在后台。</li>
+</ul>
+<ul>
+<li>使用netstat -lntp来看看有侦听在网络某端口的进程。当然，也可以使用 lsof。</li>
+</ul>
+<ul>
+<li>在bash的脚本中，你可以使用 set -x 来debug输出。使用 set -e 来当有错误发生的时候abort执行。考虑使用 set -o pipefail 来限制错误。还可以使用trap来截获信号（如截获ctrl+c）。</li>
+</ul>
+<ul>
+<li>在bash 脚本中，subshells (写在圆括号里的) 是一个很方便的方式来组合一些命令。一个常用的例子是临时地到另一个目录中，例如：</li>
+</ul>
+<blockquote><pre class="brush: bash; title: ; notranslate" title=""># do something in current dir
+(cd /some/other/dir; other-command)
+# continue in original dir</pre>
+</blockquote>
+<ul>
+<li>在 bash 中，注意那里有很多的变量展开。如：检查一个变量是否存在: ${name:?error message}。如果一个bash的脚本需要一个参数，也许就是这样一个表达式 input_file=${1:?usage: $0 input_file}。一个计算表达式： i=$(( (i + 1) % 5 ))。一个序列： {1..10}。 截断一个字符串： ${var%suffix} 和 ${var#prefix}。 示例： if var=foo.pdf, then echo ${var%.pdf}.txt prints &#8220;foo.txt&#8221;.</li>
+</ul>
+<ul>
+<li>通过 &lt;(some command) 可以把某命令当成一个文件。示例：比较一个本地文件和远程文件 /etc/hosts： diff /etc/hosts &lt;(ssh somehost cat /etc/hosts)</li>
+</ul>
+<ul>
+<li>了解什么叫 &#8220;<a href="http://zh.wikipedia.org/wiki/Here%E6%96%87%E6%A1%A3" target="_blank">here documents</a>&#8221; ，就是诸如 cat &lt;&lt;EOF 这样的东西。</li>
+</ul>
+<ul>
+<li>在 bash中，使用重定向到标准输出和标准错误。如： some-command &gt;logfile 2&gt;&amp;1。另外，要确认某命令没有把某个打开了的文件句柄重定向给标准输入，最佳实践是加上 &#8220;&lt;/dev/null&#8221;，把/dev/null重定向到标准输入。</li>
+</ul>
+<ul>
+<li>使用 man ascii 来查看 ASCII 表。</li>
+</ul>
+<ul>
+<li>在远端的 ssh 会话里，使用 screen 或 dtach 来保存你的会话。（参看《<a title="28个Unix/Linux的命令行神器" href="http://coolshell.cn/articles/7829.html" target="_blank">28个Unix/Linux的命令行神器</a>》）</li>
+</ul>
+<ul>
+<li>要来debug Web，试试curl 和 curl -I 或是 wget 。我觉得debug Web的利器是firebug，curl和wget是用来抓网页的，呵呵。</li>
+</ul>
+<ul>
+<li>把 HTML 转成文本： lynx -dump -stdin</li>
+</ul>
+<ul>
+<li>如果你要处理XML，使用 xmlstarlet</li>
+</ul>
+<ul>
+<li>对于 Amazon S3， s3cmd 是一个很方便的命令（还有点不成熟）</li>
+</ul>
+<ul>
+<li>在 ssh中，知道怎么来使用ssh隧道。通过 -L or -D (还有-R) ，翻墙神器。</li>
+</ul>
+<ul>
+<li>你还可以对你的ssh 做点优化。比如，.ssh/config 包含着一些配置：避免链接被丢弃，链接新的host时不需要确认，转发认证，以前使用压缩（如果你要使用scp传文件）：</li>
+</ul>
+<blockquote><pre class="brush: bash; title: ; notranslate" title="">TCPKeepAlive=yes
+ServerAliveInterval=15
+ServerAliveCountMax=6
+StrictHostKeyChecking=no
+Compression=yes
+ForwardAgent=yes</pre>
+</blockquote>
+<ul>
+<li>如果你有输了个命令行，但是你改变注意了，但你又不想删除它，因为你要在历史命令中找到它，但你也不想执行它。那么，你可以按下 Alt-# ，于是这个命令关就被加了一个#字符，于是就被注释掉了。</li>
+</ul>
+<p><b>数据处理 </b></p>
+<ul>
+<li>了解 sort 和 uniq 命令 (包括 uniq 的 -u 和 -d 选项).</li>
+</ul>
+<ul>
+<li>了解用 cut, paste, 和 join 命令来操作文本文件。很多人忘了在cut前使用join。</li>
+</ul>
+<ul>
+<li>如果你知道怎么用sort/uniq来做集合交集、并集、差集能很大地促进你的工作效率。假设有两个文本文件a和b已解被 uniq了，那么，用sort/uniq会是最快的方式，无论这两个文件有多大（sort不会被内存所限，你甚至可以使用-T选项，如果你的/tmp目录很小）</li>
+</ul>
+<blockquote><pre class="brush: bash; title: ; notranslate" title="">cat a b | sort | uniq &gt; c   # c is a union b 并集
+
+cat a b | sort | uniq -d &gt; c   # c is a intersect b 交集
+
+cat a b b | sort | uniq -u &gt; c   # c is set difference a - b 差集</pre>
+</blockquote>
+<ul>
+<li>了解和字符集相关的命令行工具，包括排序和性能。很多的Linux安装程序都会设置LANG 或是其它和字符集相关的环境变量。这些东西可能会让一些命令（如：sort）的执行性能慢N多倍（注：就算是你用UTF-8编码文本文件，你也可以很安全地使用ASCII来对其排序）。如果你想Disable那个i18n 并使用传统的基于byte的排序方法，那就设置export LC_ALL=C （实际上，你可以把其放在 .bashrc）。如果这设置这个变量，你的sort命令很有可能会是错的。</li>
+</ul>
+<ul>
+<li>了解 awk 和 sed，并用他们来做一些简单的数据修改操作。例如：求第三列的数字之和： awk &#8216;{ x += $3 } END { print x }&#8217;。这可能会比Python快3倍，并比Python的代码少三倍。</li>
+</ul>
+<ul>
+<li>使用 shuf 来打乱一个文件中的行或是选择文件中一个随机的行。</li>
+</ul>
+<ul>
+<li>了解sort命令的选项。了解key是什么（-t和-k）。具体说来，你可以使用-k1,1来对第一列排序，-k1来对全行排序。</li>
+</ul>
+<ul>
+<li>Stable sort (sort -s) 会很有用。例如：如果你要想对两例排序，先是以第二列，然后再以第一列，那么你可以这样： sort -k1,1 | sort -s -k2,2</li>
+</ul>
+<ul>
+<li>我们知道，在bash命令行下，Tab键是用来做目录文件自动完成的事的。但是如果你想输入一个Tab字符（比如：你想在sort -t选项后输入&lt;tab&gt;字符），你可以先按Ctrl-V，然后再按Tab键，就可以输入&lt;tab&gt;字符了。当然，你也可以使用$&#8217;\t&#8217;。</li>
+</ul>
+<ul>
+<li>如果你想查看二进制文件，你可以使用hd命令（在CentOS下是hexdump命令），如果你想编译二进制文件，你可以使用bvi命令（<a href="http://bvi.sourceforge.net/" target="_blank">http://bvi.sourceforge.net/</a> 墙）</li>
+</ul>
+<ul>
+<li>另外，对于二进制文件，你可以使用strings（配合grep等）来查看二进制中的文本。</li>
+</ul>
+<ul>
+<li>对于文本文件转码，你可以试一下 iconv。或是试试更强的 uconv 命令（这个命令支持更高级的Unicode编码）</li>
+</ul>
+<ul>
+<li>如果你要分隔一个大文件，你可以使用split命令（split by size）和csplit命令（split by a pattern）。</li>
+</ul>
+<p><b>系统调试</b></p>
+<ul>
+<li>如果你想知道磁盘、CPU、或网络状态，你可以使用 iostat, netstat, top (或更好的 htop), 还有 dstat 命令。你可以很快地知道你的系统发生了什么事。关于这方面的命令，还有iftop, iotop等（参看《<a title="28个Unix/Linux的命令行神器" href="http://coolshell.cn/articles/7829.html" target="_blank">28个Unix/Linux的命令行神器</a>》）</li>
+</ul>
+<ul>
+<li>要了解内存的状态，你可以使用free和vmstat命令。具体来说，你需要注意 “cached” 的值，这个值是Linux内核占用的内存。还有free的值。</li>
+</ul>
+<ul>
+<li>Java 系统监控有一个小的技巧是，你可以使用kill -3 &lt;pid&gt; 发一个SIGQUIT的信号给JVM，可以把堆栈信息（包括垃圾回收的信息）dump到stderr/logs。</li>
+</ul>
+<ul>
+<li>使用 mtr 会比使用 traceroute 要更容易定位一个网络问题。</li>
+</ul>
+<ul>
+<li>如果你要找到哪个socket或进程在使用网络带宽，你可以使用 iftop 或 nethogs。</li>
+</ul>
+<ul>
+<li>Apache的一个叫 ab 的工具是一个很有用的，用quick-and-dirty的方式来测试网站服务器的性能负载的工作。如果你需要更为复杂的测试，你可以试试 siege。</li>
+</ul>
+<ul>
+<li>如果你要抓网络包的话，试试 wireshark 或 tshark。</li>
+</ul>
+<ul>
+<li>了解 strace 和 ltrace。这两个命令可以让你查看进程的系统调用，这有助于你分析进程的hang在哪了，怎么crash和failed的。你还可以用其来做性能profile，使用 -c 选项，你可以使用-p选项来attach上任意一个进程。</li>
+</ul>
+<ul>
+<li>了解用ldd命令来检查相关的动态链接库。注意：<a title="ldd 的一个安全问题" href="http://coolshell.cn/articles/1626.html" target="_blank">ldd的安全问题</a></li>
+</ul>
+<ul>
+<li>使用gdb来调试一个正在运行的进程或分析core dump文件。参看我写的《<a title="GDB中应该知道的几个调试方法" href="http://coolshell.cn/articles/3643.html" target="_blank">GDB中应该知道的几个调试方法</a>》</li>
+</ul>
+<ul>
+<li>学会到 /proc 目录中查看信息。这是一个Linux内核运行时记录的整个操作系统的运行统计和信息，比如： /proc/cpuinfo, /proc/xxx/cwd, /proc/xxx/exe, /proc/xxx/fd/, /proc/xxx/smaps.</li>
+</ul>
+<ul>
+<li>如果你调试某个东西为什么出错时，sar命令会有用。它可以让你看看 CPU, 内存, 网络, 等的统计信息。</li>
+</ul>
+<ul>
+<li>使用 dmesg 来查看一些硬件或驱动程序的信息或问题。</li>
+</ul>
+<p>作者最后加了一个免责声明：Disclaimer: Just because you <i>can</i> do something in bash, doesn&#8217;t necessarily mean you should. ;) （全文完）
+<div style="margin-top: 15px; font-size: 11px;color: #cc0000;">
+<p align=center><strong>（转载本站文章请注明作者和出处 <a href="http://coolshell.cn/">酷 壳 &#8211; CoolShell.cn</a> ，请勿用于任何商业用途）</strong></div>
+<div style="text-align:center;padding:0px;font-size: 14px;margin-bottom: 50px;">——=== <b>访问 <a href=http://coolshell.cn/404/ target=_blank>酷壳404页面</a> 寻找遗失儿童。</b> ===——</div>
+<div style="clear:both; margin-top:5px; margin-bottom:5px;"></div><div style="float:left"><!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_tsohu"></a>
+<a class="jiathis_button_t163"></a>
+<a class="jiathis_button_douban"></a>
+<a class="jiathis_button_renren"></a>
+<a class="jiathis_button_zhuaxia"></a>
+<a class="jiathis_button_fanfou"></a>
+<a class="jiathis_button_twitter"></a>
+<a class="jiathis_button_fb"></a>
+<a class="jiathis_button_gmail"></a>
+<a class="jiathis_button_linkedin"></a>
+<a class="jiathis_button_friendfeed"></a>
+<a class="jiathis_button_digg"></a>
+<a href="http://www.jiathis.com/share?uid=1541368" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	data_track_clickback:true,
+	summary:"",
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1541368" charset="utf-8"></script>
+<!-- JiaThis Button END --></div><div style="clear:both; margin-top:5px; margin-bottom:5px;"></div>			<div class="fixed"></div>
+		</div>
+		<div class="under">
+			<span class="categories">分类: </span><span><a href="http://coolshell.cn/category/operatingsystem/unixlinux" title="查看Unix/Linux中的全部文章" rel="category tag">Unix/Linux</a>, <a href="http://coolshell.cn/category/operatingsystem" title="查看操作系统中的全部文章" rel="category tag">操作系统</a>, <a href="http://coolshell.cn/category/misc" title="查看杂项资源中的全部文章" rel="category tag">杂项资源</a></span>			<span class="tags">标签: </span><span><a href="http://coolshell.cn/tag/bash" rel="tag">Bash</a>, <a href="http://coolshell.cn/tag/linux" rel="tag">Linux</a>, <a href="http://coolshell.cn/tag/performance" rel="tag">Performance</a>, <a href="http://coolshell.cn/tag/shell" rel="tag">Shell</a>, <a href="http://coolshell.cn/tag/unix" rel="tag">Unix</a>, <a href="http://coolshell.cn/tag/vim" rel="tag">vim</a></span>		</div>
+<div id="post-ratings-8883" class="post-ratings" itemscope itemtype="http://schema.org/Article" data-nonce="d762bb36c3"><img id="rating_8883_1" src="http://coolshell.cn//wp-content/plugins/wp-postratings/images/stars_crystal/rating_on.gif" alt="好烂啊" title="好烂啊" onmouseover="current_rating(8883, 1, '好烂啊');" onmouseout="ratings_off(4.7, 5, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0px;" /><img id="rating_8883_2" src="http://coolshell.cn//wp-content/plugins/wp-postratings/images/stars_crystal/rating_on.gif" alt="有点差" title="有点差" onmouseover="current_rating(8883, 2, '有点差');" onmouseout="ratings_off(4.7, 5, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0px;" /><img id="rating_8883_3" src="http://coolshell.cn//wp-content/plugins/wp-postratings/images/stars_crystal/rating_on.gif" alt="凑合看看" title="凑合看看" onmouseover="current_rating(8883, 3, '凑合看看');" onmouseout="ratings_off(4.7, 5, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0px;" /><img id="rating_8883_4" src="http://coolshell.cn//wp-content/plugins/wp-postratings/images/stars_crystal/rating_on.gif" alt="还不错" title="还不错" onmouseover="current_rating(8883, 4, '还不错');" onmouseout="ratings_off(4.7, 5, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0px;" /><img id="rating_8883_5" src="http://coolshell.cn//wp-content/plugins/wp-postratings/images/stars_crystal/rating_half.gif" alt="很精彩" title="很精彩" onmouseover="current_rating(8883, 5, '很精彩');" onmouseout="ratings_off(4.7, 5, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0px;" /> (<strong>57</strong> 人打了分，平均分： <strong>4.65</strong> )<br /><span class="post-ratings-text" id="ratings_8883_text"></span><meta itemprop="name" content="应该知道的Linux技巧" /><meta itemprop="description" content="这篇文章来源于Quroa的一个问答《What are some time-saving tips that every Linux user should know?》&mdash;&mdash; Linux用户有哪些应该知道的提高效率的技巧。我觉得挺好的，总结得比较好，把其转过来，并加了一些自己的理解。 首先，我想告诉大家，在Unix/Linux下，最有效率技巧的不是操作图形界面，而是命令行操作，因为命令行意味着自动化..." /><meta itemprop="url" content="http://coolshell.cn/articles/8883.html" /><div style="display: none;" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"><meta itemprop="bestRating" content="5" /><meta itemprop="ratingValue" content="4.65" /><meta itemprop="ratingCount" content="57" /></div></div>
+<div id="post-ratings-8883-loading"  class="post-ratings-loading"><img src="http://coolshell.cn//wp-content/plugins/wp-postratings/images/loading.gif" width="16" height="16" alt="Loading ..." title="Loading ..." class="post-ratings-image" />&nbsp;Loading ...</div>
+ 
+	</div>
+
+	<!-- related posts START -->
+	<div id="related_posts">
+<div class="wp_rp_wrap  wp_rp_plain" id="wp_rp_first"><div class="wp_rp_content"><h3 class="related_post_title">相关文章</h3><ul class="related_post wp_rp"><li data-position="0" data-poid="in-8619" data-post-type="none" ><small class="wp_rp_publish_date">2012年11月23日</small> <a href="http://coolshell.cn/articles/8619.html" class="wp_rp_title">你可能不知道的Shell</a></li><li data-position="1" data-poid="in-7829" data-post-type="none" ><small class="wp_rp_publish_date">2012年07月11日</small> <a href="http://coolshell.cn/articles/7829.html" class="wp_rp_title">28个Unix/Linux的命令行神器</a></li><li data-position="2" data-poid="in-7490" data-post-type="none" ><small class="wp_rp_publish_date">2012年06月20日</small> <a href="http://coolshell.cn/articles/7490.html" class="wp_rp_title">性能调优攻略</a></li><li data-position="3" data-poid="in-9070" data-post-type="none" ><small class="wp_rp_publish_date">2013年02月17日</small> <a href="http://coolshell.cn/articles/9070.html" class="wp_rp_title">AWK 简明教程</a></li><li data-position="4" data-poid="in-8088" data-post-type="none" ><small class="wp_rp_publish_date">2012年08月16日</small> <a href="http://coolshell.cn/articles/8088.html" class="wp_rp_title">对技术的态度</a></li><li data-position="5" data-poid="in-7965" data-post-type="none" ><small class="wp_rp_publish_date">2012年08月01日</small> <a href="http://coolshell.cn/articles/7965.html" class="wp_rp_title">一个fork的面试题</a></li><li data-position="6" data-poid="in-9410" data-post-type="none" ><small class="wp_rp_publish_date">2013年04月26日</small> <a href="http://coolshell.cn/articles/9410.html" class="wp_rp_title">Unix考古记：一个“遗失”的shell</a></li><li data-position="7" data-poid="in-1379" data-post-type="none" ><small class="wp_rp_publish_date">2009年08月31日</small> <a href="http://coolshell.cn/articles/1379.html" class="wp_rp_title">如何调试bash脚本</a></li></ul></div></div>
+</div><div class="fixed"></div>	<!-- related posts END -->
+
+	<script type="text/javascript" src="http://coolshell.cn//wp-content/themes/inove/js/comment.js"></script>
+
+
+
+<div id="comments">
+
+<div id="cmtswitcher">
+			<a id="commenttab" class="curtab" href="javascript:void(0);" onclick="MGJS.switchTab('thecomments,commentnavi', 'thetrackbacks', 'commenttab', 'curtab', 'trackbacktab', 'tab');">评论 (108)</a>
+		<a id="trackbacktab" class="tab" href="javascript:void(0);" onclick="MGJS.switchTab('thetrackbacks', 'thecomments,commentnavi', 'trackbacktab', 'curtab', 'commenttab', 'tab');">Trackbacks (38)</a>
+				<span class="addcomment"><a href="#respond">发表评论</a></span>
+				<span class="addtrackback"><a href="http://coolshell.cn/articles/8883.html/trackback">Trackback</a></span>
+		<div class="fixed"></div>
+</div>
+
+<div id="commentlist">
+	<!-- comments START -->
+	<ol id="thecomments">
+		<li class="comment regularcomment" id="comment-260957">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://0.gravatar.com/avatar/ec6c4d8998778478ced03cfbb25f55a1?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-260957" class="url" href="http://blog.csdn.net/airekans" rel="external nofollow">
+				
+				airekans
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日08:47					 | <a href="#comment-260957">#1</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-260957', 'comment-260957', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-260957', 'comment-260957', 'commentbody-260957', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-260957">
+					<p>赞一个，很多东西的确是工作中经常用的。不过目前来说我更偏向于用Python来做系统管理，这样可以省得去记一些比较复杂的Bash语法。</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-260961">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://0.gravatar.com/avatar/8471d335c78c0b922dde49216c238304?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-260961" class="url" href="http://www.chinabin.cn" rel="external nofollow">
+				
+				小小虎
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日08:56					 | <a href="#comment-260961">#2</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-260961', 'comment-260961', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-260961', 'comment-260961', 'commentbody-260961', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-260961">
+					<p>好东西～已经添加本博订阅了。无论如何，我都加了您的友情链接了，方便访问，哈哈哈～</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-260964">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://0.gravatar.com/avatar/c6377c2d4ecfadf24157caaf0daa7f8b?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-260964" class="url" href="http://blog.csdn.net/coolypf" rel="external nofollow">
+				
+				coolypf
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日09:00					 | <a href="#comment-260964">#3</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-260964', 'comment-260964', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-260964', 'comment-260964', 'commentbody-260964', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-260964">
+					<p>是“我谨代表”。</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-260967">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/7c342a11f169120b3b3db034d13e91c1?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-260967" class="url" href="http://mckelv.in" rel="external nofollow">
+				
+				McKelvin
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日09:01					 | <a href="#comment-260967">#4</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-260967', 'comment-260967', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-260967', 'comment-260967', 'commentbody-260967', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-260967">
+					<p>赞一个，！btw：“学习 vim 。在Linux下，基本没有什么可与之竞争的编译器”，“编译器”大丈夫吗？</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-260971">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/fed57522492acfc4aad622b8dd81a66d?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-260971" class="url" href="http://www.springzoo.com/" rel="external nofollow">
+				
+				一刀
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日09:04					 | <a href="#comment-260971">#5</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-260971', 'comment-260971', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-260971', 'comment-260971', 'commentbody-260971', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-260971">
+					<p>要系统的看完一个bash的书，基本命令都应该会了。目前正在看《linux shell编程从入门到精通 》</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-260973">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/fed57522492acfc4aad622b8dd81a66d?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-260973" class="url" href="http://www.springzoo.com/" rel="external nofollow">
+				
+				一刀
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日09:04					 | <a href="#comment-260973">#6</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-260973', 'comment-260973', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-260973', 'comment-260973', 'commentbody-260973', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-260973">
+					<p><a href="#comment-260957" rel="nofollow">@airekans </a><br />
+请问下python做系统管理跟bash比有什么优势</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-260975">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/bdcb7088f5fff3a28850bae51058d19d?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-260975" class="url" href="http://blog.csdn.net/nieyinyin" rel="external nofollow">
+				
+				jerry
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日09:06					 | <a href="#comment-260975">#7</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-260975', 'comment-260975', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-260975', 'comment-260975', 'commentbody-260975', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-260975">
+					<blockquote cite="#commentbody-260967"><p>
+<strong><a href="#comment-260967" rel="nofollow">McKelvin </a> :</strong>赞一个，！btw：“学习 vim 。在Linux下，基本没有什么可与之竞争的编译器”，“编译器”大丈夫吗？</p></blockquote>
+<p>编译器是不是应该改为编辑器？</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-260976">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://0.gravatar.com/avatar/2c7b93284abc777ded0cf9e0fe37cd0e?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<span id="commentauthor-260976">
+				
+				Luckyvan
+									</span>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日09:07					 | <a href="#comment-260976">#8</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-260976', 'comment-260976', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-260976', 'comment-260976', 'commentbody-260976', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-260976">
+					<p>虽然总有人发这些东西，不过这些东西就是应该总被时不时翻出来普及下</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-260984">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/7f5ff9cad07a9d4da26173f6a305d3df?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<span id="commentauthor-260984">
+				
+				王嘘嘘
+									</span>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日09:11					 | <a href="#comment-260984">#9</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-260984', 'comment-260984', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-260984', 'comment-260984', 'commentbody-260984', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-260984">
+					<p>总结是linux有助于身体健康和性生活。。。亮瞎了</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-260996">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://0.gravatar.com/avatar/8765b499eef879966eb0899fa997a495?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-260996" class="url" href="http://www.imtz.info" rel="external nofollow">
+				
+				Terry
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日09:21					 | <a href="#comment-260996">#10</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-260996', 'comment-260996', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-260996', 'comment-260996', 'commentbody-260996', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-260996">
+					<p>推荐一个命令, 基础的网络管理 中的ip 工具包中包含ss, 可以完美代替netstat.</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261010">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/fcc836944c6691a682615b1f140b9b29?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-261010" class="url" href="http://ucarenya.com/" rel="external nofollow">
+				
+				MeaCulpa
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日09:28					 | <a href="#comment-261010">#11</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261010', 'comment-261010', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261010', 'comment-261010', 'commentbody-261010', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261010">
+					<p>用bash无可厚非，但是看bash的资料很容易让你在那些无聊不标准的bash addition对新人很不好。建议看ksh的书，用zsh。bash比zsh限制少？语法混乱不等于限制少，bash这货，还是留给root自己玩吧。我个人交互用zsh天花乱坠，工作代码谨尊ksh语法保证通用性。</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261030">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://0.gravatar.com/avatar/8765b499eef879966eb0899fa997a495?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-261030" class="url" href="http://www.imtz.info" rel="external nofollow">
+				
+				Terry
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日09:42					 | <a href="#comment-261030">#12</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261030', 'comment-261030', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261030', 'comment-261030', 'commentbody-261030', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261030">
+					<p><a href="#comment-260973" rel="nofollow">@一刀 </a><br />
+同求, 最近也在找比Bash 更给力的工具, 现在偶尔会在脚本里调第3 方的应用, POST 一下JSON的数据, Bash 脚本处理这些东东感觉很麻烦.</p>
+<p>现在RHEL系统中的Yum、system-config-network-tui 这些工具和Xend的服务脚本. 还有N多系统工具有Python的开发包, 为什么还会有那么多Ruby 的系统管理工具?</p>
+<p>下面是 <a href="http://devopsanywhere.blogspot.com/2011/09/how-ruby-is-beating-python-in-battle.html" rel="nofollow">http://devopsanywhere.blogspot.com/2011/09/how-ruby-is-beating-python-in-battle.html</a> 这篇文章中列出来用Ruby和Python 开发的和系统管理相关项目<br />
+Off-hand here is a non-definitive list of sysadmin/devops related projects in ruby:<br />
+[1] puppet<br />
+[2] chef<br />
+[2] vagrant<br />
+[3] mcollective<br />
+[4] cucumber (behavior-driven testing)<br />
+[5] capistrano<br />
+[6] rake (ruby Make)<br />
+[7] aeolus project/openshift<br />
+[8] cloud foundry<br />
+[9] graylog2<br />
+[10] logstash<br />
+[11] travis-ci</p>
+<p>and in Python:<br />
+[1] openstack<br />
+[2] cobbler<br />
+[3] fabric<br />
+[4] func<br />
+[5] buildbot</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261035">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/1b8d9485cf453dc3716f9afcd10eb3e0?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-261035" class="url" href="http://www.alisper.com" rel="external nofollow">
+				
+				想买橘子
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日09:49					 | <a href="#comment-261035">#13</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261035', 'comment-261035', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261035', 'comment-261035', 'commentbody-261035', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261035">
+					<p>Ubuntu下按住Win键几秒中，有惊喜 (*^__^*) 嘻嘻……</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261039">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://0.gravatar.com/avatar/4fb8104c77762d1e0db18c1bf5fefb09?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<span id="commentauthor-261039">
+				
+				root
+									</span>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日09:53					 | <a href="#comment-261039">#14</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261039', 'comment-261039', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261039', 'comment-261039', 'commentbody-261039', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261039">
+					<p>虽然很多都已经知道了，但还是赞这种分享精神。</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261060">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/d6f9a1c6744f15eb213033985473c1b5?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-261060" class="url" href="http://weibo.com/u/1402076767" rel="external nofollow">
+				
+				badcow
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日10:24					 | <a href="#comment-261060">#15</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261060', 'comment-261060', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261060', 'comment-261060', 'commentbody-261060', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261060">
+					<p>不知道为什么pstree在我这里输出会有很多乱码，个人比较喜欢用 ps -aux &#8211;forest ， 这看的不止是tree，而是forest啊，哈哈哈！ 如果嫌进程显示不够长，再加上3个www就好了： ps -auxwww &#8211;forest</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261062">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://0.gravatar.com/avatar/8f83c9585789faf360d7d5e180991691?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-261062" class="url" href="http://blog.ueder.info" rel="external nofollow">
+				
+				welpher.yu
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日10:24					 | <a href="#comment-261062">#16</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261062', 'comment-261062', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261062', 'comment-261062', 'commentbody-261062', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261062">
+					<p>是呀，用着用着就全都会了</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261066">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/5069f65804d2a4c9f1022b9bf7e6e32f?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-261066" class="url" href="http://www.byhard.com" rel="external nofollow">
+				
+				海纳百川
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日10:27					 | <a href="#comment-261066">#17</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261066', 'comment-261066', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261066', 'comment-261066', 'commentbody-261066', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261066">
+					<p>lunix学的不多，但很吸引力，我想学啊。</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261068">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://0.gravatar.com/avatar/075016040852e1ddf8171997de5daa9c?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<span id="commentauthor-261068">
+				
+				Loda
+									</span>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日10:27					 | <a href="#comment-261068">#18</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261068', 'comment-261068', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261068', 'comment-261068', 'commentbody-261068', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261068">
+					<p>Sublime Text 2 也不错</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261079">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/1f261a013b6a32e6d80a3c3d7cae1586?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-261079" class="url" href="http://monnand.me" rel="external nofollow">
+				
+				monnand
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日10:38					 | <a href="#comment-261079">#19</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261079', 'comment-261079', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261079', 'comment-261079', 'commentbody-261079', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261079">
+					<p>vim 是编辑器</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261097">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://0.gravatar.com/avatar/e296d059491e65764b2cd5f28608f76d?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<span id="commentauthor-261097">
+				
+				bells
+									</span>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日11:05					 | <a href="#comment-261097">#20</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261097', 'comment-261097', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261097', 'comment-261097', 'commentbody-261097', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261097">
+					<p>&#8220;Alt-. 把上一次命令的最后一个参数打出来，而Alt-* 则列出你可以输入的命令。&#8221;</p>
+<p>“Alt-.”  这个命令  怎么用？</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261118">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/f67f0f662d20e085ad62789029ada283?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<span id="commentauthor-261118">
+				
+				CaptainCooky
+									</span>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日11:37					 | <a href="#comment-261118">#21</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261118', 'comment-261118', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261118', 'comment-261118', 'commentbody-261118', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261118">
+					<p>Sublime Text 2 拳打 emacs 脚踢 vim</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261171">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/3e3c1cb94b9ad3551cd9d43f2e52e105?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-261171" class="url" href="http://lilydjwg.is-programmer.com/" rel="external nofollow">
+				
+				依云
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日12:39					 | <a href="#comment-261171">#22</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261171', 'comment-261171', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261171', 'comment-261171', 'commentbody-261171', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261171">
+					<blockquote cite="#commentbody-261118"><p>
+<strong><a href="#comment-261118" rel="nofollow">CaptainCooky</a> :</strong><br />
+Sublime Text 2 拳打 emacs 脚踢 vim
+</p></blockquote>
+<p>(sublime_text:7200): Gtk-WARNING **: cannot open display:<br />
+:D</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261172">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/3e3c1cb94b9ad3551cd9d43f2e52e105?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-261172" class="url" href="http://lilydjwg.is-programmer.com/" rel="external nofollow">
+				
+				依云
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日12:40					 | <a href="#comment-261172">#23</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261172', 'comment-261172', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261172', 'comment-261172', 'commentbody-261172', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261172">
+					<p><a href="#comment-261060" rel="nofollow">@badcow </a><br />
+好难看……我还是乖乖用我的 htop 去 :-)</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261208">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/1da5178921f227dc27d31390ccd393d9?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<span id="commentauthor-261208">
+				
+				jlake
+									</span>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日13:31					 | <a href="#comment-261208">#24</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261208', 'comment-261208', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261208', 'comment-261208', 'commentbody-261208', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261208">
+					<p>文章说的是Linux命令，有些人看到vim就搬出Sublime Text 2，一看就知道是小白。<br />
+几乎所有的Linux发行版，vim是内置命令之一，通过终端即可运行，Sublime Text 2是哪门子的命令？<br />
+举个例子，说起命令 ls，难道你就会想起 Windows 的文件管理器？如果真是这样，我只能说，I 服了 You!</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261210">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://0.gravatar.com/avatar/8bd9c131364e4dd7cac8442986af4383?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-261210" class="url" href="http://www.diguage.com/" rel="external nofollow">
+				
+				D瓜哥
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日13:32					 | <a href="#comment-261210">#25</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261210', 'comment-261210', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261210', 'comment-261210', 'commentbody-261210', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261210">
+					<p>看来，我所谓的Linux学的不错还是差太多太多了！！</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261223">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://0.gravatar.com/avatar/2dabf4a1641cf35a8e3efabbd1c5c41d?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<span id="commentauthor-261223">
+				
+				fe
+									</span>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日13:48					 | <a href="#comment-261223">#26</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261223', 'comment-261223', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261223', 'comment-261223', 'commentbody-261223', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261223">
+					<p>Vim 是个牛逼而影响广泛的编辑器, 很多项目都有为了讨好 vim 专门写的语法高亮.</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261241">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://0.gravatar.com/avatar/6ea2bbebf39d8f4d9ba654471289d576?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-261241" class="url" href="http://blog.hanfeisun.info" rel="external nofollow">
+				
+				hanfei sun
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日14:14					 | <a href="#comment-261241">#27</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261241', 'comment-261241', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261241', 'comment-261241', 'commentbody-261241', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261241">
+					<p>没怎么用过vim，一直用emacs，自从emacs24以后有了package管理器以后更喜欢用了。</p>
+<p>另外自从我用过emacs的daemon模式以后，就再也没用过screen和tmux</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261261">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/3e3c1cb94b9ad3551cd9d43f2e52e105?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-261261" class="url" href="http://lilydjwg.is-programmer.com/" rel="external nofollow">
+				
+				依云
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日14:48					 | <a href="#comment-261261">#28</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261261', 'comment-261261', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261261', 'comment-261261', 'commentbody-261261', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261261">
+					<p><a href="#comment-261241" rel="nofollow">@hanfei sun </a><br />
+emacs 的 daemon 模式和 screen/tmux 有什么关系么？（是嫌 emacs 启动慢么？还是它的终端版不支持多 window/buffer/tab？）</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261289">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://0.gravatar.com/avatar/8cef22bfd427da090a4aa9ddd156b250?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<span id="commentauthor-261289">
+				
+				尚磊
+									</span>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日15:25					 | <a href="#comment-261289">#29</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261289', 'comment-261289', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261289', 'comment-261289', 'commentbody-261289', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261289">
+					<p>都是一些常用的东东</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261416">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/1da0bdf49217e0dc9dd263166b8425a2?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<span id="commentauthor-261416">
+				
+				Kai
+									</span>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日18:06					 | <a href="#comment-261416">#30</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261416', 'comment-261416', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261416', 'comment-261416', 'commentbody-261416', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261416">
+					<p>为什么`lynx -dump`后面还要跟上-stdin？直接`lynx -dump <a href="http://google.com" rel="nofollow">http://google.com</a>`不就可以了吗？</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261470">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/3aafc21aa5214ad342492239e96cae39?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<span id="commentauthor-261470">
+				
+				Jules
+									</span>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日18:33					 | <a href="#comment-261470">#31</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261470', 'comment-261470', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261470', 'comment-261470', 'commentbody-261470', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261470">
+					<p>vim没有竞争，不是很同意。<br />
+我先用gvim很久，后来用了emacs, 发现emacs更顺手，功能更强大。</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261483">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/dc6cf2e27adfc07241d7c534feb73375?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-261483" class="url" href="http://EverET.org" rel="external nofollow">
+				
+				ET
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日18:57					 | <a href="#comment-261483">#32</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261483', 'comment-261483', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261483', 'comment-261483', 'commentbody-261483', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261483">
+					<p>Ctrl-U 是删除此行*光标之前*的内容吧。</p>
+<p>假如&#8221;[]&#8220;为光标位置：</p>
+<p>&#8220;`<br />
+find . -name \*.py | xargs [] grep some_function<br />
+&#8220;`</p>
+<p>此时按下Ctrl-U会变成<br />
+&#8220;`<br />
+grep some_function<br />
+&#8220;`</p>
+<p>所以，我觉得所有情况都可用的删除一行的快捷键是`\C-a\C-k`。</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261563">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/d63c836b93a49e727f5dadd72ebed5ce?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<span id="commentauthor-261563">
+				
+				scott
+									</span>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日20:35					 | <a href="#comment-261563">#33</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261563', 'comment-261563', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261563', 'comment-261563', 'commentbody-261563', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261563">
+					<p><a href="#comment-261208" rel="nofollow">@jlake </a><br />
+vim是默认的？vi才是默认的吧，vim需要自己安装</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261597">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://0.gravatar.com/avatar/0fb0364d2f64f05fd177c31d2f4277dc?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-261597" class="url" href="http://maxhis.info" rel="external nofollow">
+				
+				iStar
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日21:07					 | <a href="#comment-261597">#34</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261597', 'comment-261597', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261597', 'comment-261597', 'commentbody-261597', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261597">
+					<p>看来皓哥换工作了心情不错嘛，行文都幽默了，哈哈！</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-261725">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://0.gravatar.com/avatar/e3b292a6f4c3eae35bec74c0e6d0a4bf?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<span id="commentauthor-261725">
+				
+				稀烂
+									</span>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月9日23:16					 | <a href="#comment-261725">#35</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-261725', 'comment-261725', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-261725', 'comment-261725', 'commentbody-261725', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-261725">
+					<p><a href="#comment-260996" rel="nofollow">@Terry </a><br />
+如何替代？比如看监听端口</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-262115">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://0.gravatar.com/avatar/eac9046d4d3fcb13fb55ae0f85c53575?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-262115" class="url" href="http://blog.tektea.com" rel="external nofollow">
+				
+				茶话汇
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月10日07:57					 | <a href="#comment-262115">#36</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-262115', 'comment-262115', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-262115', 'comment-262115', 'commentbody-262115', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-262115">
+					<p>呵呵，我每天的工作几乎都和LINUX打交道，习惯了命令行，在GUI界面下操作反而觉得别扭。。。</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-262218">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/fbc0cd12c02734fed82d2e36035dd986?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<span id="commentauthor-262218">
+				
+				bhunter
+									</span>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月10日09:58					 | <a href="#comment-262218">#37</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-262218', 'comment-262218', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-262218', 'comment-262218', 'commentbody-262218', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-262218">
+					<p>vi是编辑器。bash里面的行快捷键其实和EMACS中的快捷键都是一样的，用习惯了emacs的人，在bash下的几个快捷会很亲切。vim是非常强大的编辑器，但如果说没有对手？这个有点夸张了。</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-262264">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://0.gravatar.com/avatar/c9d297c276fd213413d04f531953a6ff?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-262264" class="url" href="http://www.54dev.com" rel="external nofollow">
+				
+				54dev
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月10日10:51					 | <a href="#comment-262264">#38</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-262264', 'comment-262264', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-262264', 'comment-262264', 'commentbody-262264', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-262264">
+					<p>平时用得最多的是ls tar find / -name xxx tail -f scp  screen，但遇到特殊情况时就得上网去查了。</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-262265">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/7e795755fe8a817981c3a81620faf359?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-262265" class="url" href="http://www.sobuhu.com" rel="external nofollow">
+				
+				MrROY
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月10日10:51					 | <a href="#comment-262265">#39</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-262265', 'comment-262265', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-262265', 'comment-262265', 'commentbody-262265', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-262265">
+					<p>尝试了好多次学习bash，但工作中用的不多实在是记不住，都是直接用Python来写脚本了&#8230;&#8230;</p>
+<p>如果能写一篇bash的原理分析就好了</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-262269">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://0.gravatar.com/avatar/2a4acbb263f7950d34b9290695d36262?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-262269" class="url" href="http://xq.com.nu" rel="external nofollow">
+				
+				haitao
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月10日10:53					 | <a href="#comment-262269">#40</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-262269', 'comment-262269', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-262269', 'comment-262269', 'commentbody-262269', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-262269">
+					<p>命令行容易被程序控制，gui容易被人操作，各有优劣。<br />
+个人倾向为命令行做对应的gui，把常用的选项、配置由gui简单下拉就能组成命令行参数发出，用户根本不用记任何参数及组合了。<br />
+另外，gui也不一定是图形的，ide（文本模式的集成界面）也一样好用（只是最低分辨率不是像素而是字符而已），经典如：mc。<br />
+在win里，我也是把涉及底层的工作（RSA算法、IC读写、串口/usb访问。。。）由c编译为命令行exe，由delphi写的gui来调用：取两者的优点！</p>
+<p>linux在桌面普及率始终远远低于win，其实原因就在这里。<br />
+IT人不能独享清高，独乐乐不如众乐乐</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-262466">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://0.gravatar.com/avatar/227395322602200960c0969ea1951d37?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<span id="commentauthor-262466">
+				
+				AntiLinuxism
+									</span>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月10日14:35					 | <a href="#comment-262466">#41</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-262466', 'comment-262466', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-262466', 'comment-262466', 'commentbody-262466', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-262466">
+					<p>作者的逻辑是：<br />
+linux&#8211;&gt;命令行（shell）&#8211;&gt;bash，<br />
+所以bash的技巧就是linux的技巧。我不同意这种看法。试对上面两个箭头（&#8211;&gt;）进行反驳：</p>
+<p>一、“你就会知道Linux有多强大，这个强大完全来自于命令行”<br />
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br />
+首先，Linux的强大不完全来自于命令行。可以从很多方面评价一个操作系统的好坏，比如性能，安全性，硬件兼容性等等；如果Linux在这些方面很差的话，光有个bash，也强大不起来。<br />
+其次，命令行也不是只让Linux更强大。这片文章中的提到的很多技巧，很多非Linux用户，比如FreeBSD用户也一样可以用，但是这些技巧却被冠名为“Linux技巧”，听起来好像是“天不生Linux，万古长如夜”一般。而事实上，bash年纪比Linux大。</p>
+<p>二、“你用别的shell也行，但是bash是很强大的并且也是系统默认的。（学习zsh或tsch只会让你在很多情况下受到限制）”<br />
+我要说的是，命令行（shell）也不光是bash。当然这主要是个人口味问题。我不知道作者说bash很强大是指交互能力还是指脚本能力。如果是前者，其实各个shell都差不多，甚至有不少人认为bash的交互能力不如某些shell。如果是后者，复杂的任务我是能不用shell编程就不用的，宁愿用p字系的；简单的任务还是那句话，其实各个shell都差不多。</p>
+<p>按照作者的逻辑，我也可以说：做为PC用户的你，用别的操作系统也行，但是Windows是很强大的并且也是很多品牌机/软件/(IE only)网站默认的。（学习Linux或BSD只会让你在很多情况下受到限制，比如进不了某某网银，玩不了某某游戏）。</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-262493">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/3e3c1cb94b9ad3551cd9d43f2e52e105?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-262493" class="url" href="http://lilydjwg.is-programmer.com/" rel="external nofollow">
+				
+				依云
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月10日15:13					 | <a href="#comment-262493">#42</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-262493', 'comment-262493', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-262493', 'comment-262493', 'commentbody-262493', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-262493">
+					<p><a href="#comment-262466" rel="nofollow">@AntiLinuxism </a><br />
+shell 的交互能力的话，不管怎么看 bash 只能好过 (t)csh，无论 zsh 还是 fish 都比 bash 的交互要好。<br />
+复杂任务用 shell 的话就是这样子——https://github.com/clvv/fasd/blob/master/fasd :D</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-262607">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/7e43dae3d6286d163f2f7f1ad863c6f9?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-262607" class="url" href="http://www.exlde.net" rel="external nofollow">
+				
+				德国阳光蓄电池
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月10日17:18					 | <a href="#comment-262607">#43</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-262607', 'comment-262607', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-262607', 'comment-262607', 'commentbody-262607', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-262607">
+					<p>支持原创</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-262634">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/7acc3f47065371e2595a53230f8a130d?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-262634" class="url" href="http://apt-blog.net" rel="external nofollow">
+				
+				BOYPT
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月10日17:46					 | <a href="#comment-262634">#44</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-262634', 'comment-262634', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-262634', 'comment-262634', 'commentbody-262634', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-262634">
+					<p>（学习Linux或BSD只会让你在很多情况下受到限制，比如进不了某某网银，玩不了某某游戏）</p>
+<p>笑。。。。。。</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-262661">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/399c1056613c98ea810bcead186b32c9?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<span id="commentauthor-262661">
+				
+				地精
+									</span>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月10日18:23					 | <a href="#comment-262661">#45</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-262661', 'comment-262661', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-262661', 'comment-262661', 'commentbody-262661', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-262661">
+					<p><a href="#comment-262466" rel="nofollow">@AntiLinuxism  不得不说，你这个回复真的是在抬扛。你所谓的“作者的逻辑”并不是真的从作者嘴里说出来的，你上述所谓的“作者的逻辑”只是你猜测、猜想的某种延伸意思（人家是不是有这个意思，那就不得而知了），而你还对这个延伸意思进行了一番“反驳”；如果你只是在你自己脑子里这么想想，倒也无妨，不关别人的事，可是你却偏要在这里对你的“猜想与反驳”进行了一番莫名其妙的陈述（因为你没办法证明你所谓的“作者的逻辑”就真的是作者的逻辑），所以你的回复显得多少有些空中楼阁、莫名其妙，左手打右手，只是为了过嘴瘾罢了。 </a></p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-262663">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://0.gravatar.com/avatar/227395322602200960c0969ea1951d37?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<span id="commentauthor-262663">
+				
+				AntiLinuxism
+									</span>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月10日18:24					 | <a href="#comment-262663">#46</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-262663', 'comment-262663', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-262663', 'comment-262663', 'commentbody-262663', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-262663">
+					<blockquote cite="#commentbody-262634"><p>
+<strong><a href="#comment-262634" rel="nofollow">BOYPT</a> :</strong><br />
+（学习Linux或BSD只会让你在很多情况下受到限制，比如进不了某某网银，玩不了某某游戏）<br />
+笑。。。。。。
+</p></blockquote>
+<p>所以我也笑：“你用别的shell也行，但是bash是很强大的并且也是系统默认的。（学习zsh或tsch只会让你在很多情况下受到限制）</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-262709">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://0.gravatar.com/avatar/227395322602200960c0969ea1951d37?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<span id="commentauthor-262709">
+				
+				AntiLinuxism
+									</span>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月10日19:24					 | <a href="#comment-262709">#47</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-262709', 'comment-262709', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-262709', 'comment-262709', 'commentbody-262709', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-262709">
+					<p><a href="#comment-262661" rel="nofollow">@地精 </a> </p>
+<p>这篇文章命中注定要被人抬杠。你没有发现作者的语气很冲么，很有舍我其谁的霸气，试摘录如下：</p>
+<blockquote><p>
+你用别的shell也行，但是bash是很强大的并且也是系统默认的。（学习zsh或tsch只会让你在很多情况下受到限制）
+</p></blockquote>
+<p>对不起我又引用了这句,bash宗在赤裸裸的鄙视其他shell异端</p>
+<blockquote><p>学习 vim 。在Linux下，基本没有什么可与之竞争的编译辑器（就算你是一个Emacs或Eclipse的重度用户）</p></blockquote>
+<p>vim宗在赤裸裸的鄙视emacs异端</p>
+<p>你觉得我的回复莫名其妙，是因为你没有中枪而且觉得没有人会中枪。<br />
+我是为那些中了枪的沉默的一小撮而发了这个回复的，包括但不限于：</p>
+<p>1.在Linux下不用bash也不用vim也能活得很轻松的<br />
+2&#8230;<br />
+3&#8230;<br />
+4.不用Linux但是用bash也用vim也能活得很轻松的<br />
+5&#8230;<br />
+6&#8230;</p>
+<p>其实作者发的文章都还不错的，但是这种“歧视异端”的口气让我受不了。<br />
+而且我觉得这篇文章的取名为“Linux用户应该知道的技巧”比“应该知道的Linux技巧”要恰当。因为后者给人一个误解，以为文章中介绍的技巧都是Linux专有的。</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-262718">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://0.gravatar.com/avatar/6f77acc58dd4fdf6ac1736cfcb7fe5ed?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<span id="commentauthor-262718">
+				
+				宇文高下
+									</span>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月10日19:37					 | <a href="#comment-262718">#48</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-262718', 'comment-262718', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-262718', 'comment-262718', 'commentbody-262718', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-262718">
+					<p><a href="#comment-261172" rel="nofollow">@依云 </a><br />
+weibo.com/vimcoding</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-262899">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/5c8a40c05ecbdfc288afc82750865571?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<a id="commentauthor-262899" class="url" href="http://blog-mking.rhcloud.com" rel="external nofollow">
+				
+				Mr.king
+									</a>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月10日23:14					 | <a href="#comment-262899">#49</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-262899', 'comment-262899', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-262899', 'comment-262899', 'commentbody-262899', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-262899">
+					<p>楼上的，别争了，作者写出来只是作者的观点，又没逼你们都接受。觉得正确的吸收就是了，抬什么杠啊。。。</p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	<li class="comment regularcomment" id="comment-262938">
+		<div class="author">
+			<div class="pic">
+				<img alt='' src='http://1.gravatar.com/avatar/399c1056613c98ea810bcead186b32c9?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			</div>
+			<div class="name">
+									<span id="commentauthor-262938">
+				
+				地精
+									</span>
+							</div>
+		</div>
+
+		<div class="info">
+			<div class="date">
+				2013年1月11日00:19					 | <a href="#comment-262938">#50</a>
+			</div>
+			<div class="act">
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-262938', 'comment-262938', 'comment');">回复</a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-262938', 'comment-262938', 'commentbody-262938', 'comment');">引用</a>
+							</div>
+			<div class="fixed"></div>
+			<div class="content">
+				
+				<div id="commentbody-262938">
+					<p><a href="#comment-262709" rel="nofollow">@AntiLinuxism 好吧。我确实没中你的枪。那你继续扫射吧，直到有人中枪&#8230; &#8230;如果那能让你感觉好些的话 </a></p>
+				</div>
+			</div>
+		</div>
+		<div class="fixed"></div>
+
+</li><!-- #comment-## -->
+	</ol>
+	<!-- comments END -->
+
+		<div id="commentnavi">
+			<span class="pages">评论分页</span>
+			<div id="commentpager">
+				<span class='page-numbers current'>1</span>
+<a class='page-numbers' href='http://coolshell.cn/articles/8883.html/comment-page-2#comments'>2</a>
+<a class='page-numbers' href='http://coolshell.cn/articles/8883.html/comment-page-3#comments'>3</a>
+<a class="next page-numbers" href="http://coolshell.cn/articles/8883.html/comment-page-2#comments">下一页 &raquo;</a>				<span id="cp_post_id">8883</span>
+			</div>
+			<div class="fixed"></div>
+		</div>
+
+	<!-- trackbacks START -->
+			<ol id="thetrackbacks">
+												<li class="trackback">
+						<div class="date">
+							2013年1月9日09:33							 | <a href="#comment-261021">#1</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://www.ubuntuhome.com/should-konw-linux-tips.html">
+								应该知道的Linux技巧 | Ubuntu Home							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年1月9日22:43							 | <a href="#comment-261684">#2</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://gjkiss.info/2013/01/%e5%ba%94%e8%af%a5%e7%9f%a5%e9%81%93%e7%9a%84linux%e6%8a%80%e5%b7%a7">
+								牧场勿语 &raquo; 应该知道的Linux技巧							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年1月10日14:23							 | <a href="#comment-262452">#3</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://www.aifishingnet.com/2013/01/10/shell-%e5%91%bd%e4%bb%a4%ef%bc%88%e4%b8%80%ef%bc%89-2/">
+								Shell 命令（一） &raquo; 漫长的旅行							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年1月10日23:07							 | <a href="#comment-262888">#4</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://argcandargv.com/archives/968">
+								应该知道的Linux技巧 | argc &amp;&amp; argv							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年1月13日15:30							 | <a href="#comment-265746">#5</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://blog.maxrocky.cn/201301/334.html">
+								你应该知道的一些 Linux 技巧 zz | MAXROCKY 创新 BLOG							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年1月21日13:59							 | <a href="#comment-274534">#6</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://ruvidocollie.com/timesaving-linux/">
+								Time-saving tips that every Linux user should know | Firenze							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年1月28日02:06							 | <a href="#comment-280692">#7</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://read.guoruei.net/archives/1228">
+								read.guoruEi &raquo; Blog Archive &raquo; 你可能不知道的Shell							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年2月17日08:38							 | <a href="#comment-292851">#8</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://coolshell.cn/articles/9070.html">
+								AWK 简明教程 | 酷壳 &#8211; CoolShell.cn							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年2月17日11:54							 | <a href="#comment-292929">#9</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://jaring.me/?p=1179">
+								AWK 简明教程 | Jaring&#039;s blog							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年2月17日15:42							 | <a href="#comment-293022">#10</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://isee.sinaapp.com/?p=94">
+								I-see &raquo; 应该知道的Linux技巧							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年2月17日17:46							 | <a href="#comment-293067">#11</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://digest.definite.name/awk-jian-ming-jiao-cheng.html">
+								Definite Digest &raquo; AWK 简明教程							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年2月18日04:24							 | <a href="#comment-293276">#12</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://read.guoruei.net/archives/1757">
+								read.guoruEi &raquo; Blog Archive &raquo; AWK 简明教程							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年2月20日16:40							 | <a href="#comment-294703">#13</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://lidashuang.sinaapp.com/2013/02/awk-%e7%ae%80%e6%98%8e%e6%95%99%e7%a8%8b/">
+								AWK 简明教程 | Google Reader分享							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年2月22日06:08							 | <a href="#comment-295638">#14</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://xlinblog.sinaapp.com/?p=4948">
+								AWK 简明教程 | 奇言妙事-文学奇谈小小说阅读xlinblog.sinaapp.com							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年2月26日10:02							 | <a href="#comment-298097">#15</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://www.versun.org/%e3%80%8e%e8%bd%ac%e3%80%8fawk-%e7%ae%80%e6%98%8e%e6%95%99%e7%a8%8b-728/">
+								『转』AWK 简明教程 | VerSun							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年3月10日11:59							 | <a href="#comment-307766">#16</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://phpjoin.sinaapp.com/?p=46">
+								PHP个人BLOG &raquo; AWK 简明教程							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年3月25日14:28							 | <a href="#comment-316643">#17</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://in-life.info/?p=3100">
+								awk | 某個爵士酒館							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年4月4日13:17							 | <a href="#comment-321279">#18</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://jhjguxin.sinaapp.com/2013/04/04/%e5%88%86%e4%ba%ab%e4%b8%80%e4%ba%9b%e8%b5%84%e6%96%99%ef%bc%88%e4%be%a7%e9%87%8dlinux%ef%bc%89-by-d%e7%93%9c%e5%93%a5/">
+								分享一些资料（侧重Linux） &#8211;by D瓜哥 &laquo; jhjguxin							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年4月6日13:16							 | <a href="#comment-322153">#19</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://www.crazyshell.net/?p=162">
+								应该知道的Linux技巧&#8211;陈皓 | CrazyShell-疯狂的贝壳							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年4月10日23:40							 | <a href="#comment-323937">#20</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://www.diguage.com/archives/6.html">
+								分享一些资料（侧重Linux） | &quot;地瓜哥&quot;博客网							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年4月17日10:17							 | <a href="#comment-328504">#21</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://bberzy.com/%e5%ba%94%e8%af%a5%e7%9f%a5%e9%81%93%e7%9a%84linux%e6%8a%80%e5%b7%a7/">
+								应该知道的Linux技巧【转载】 | Yuzhic							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年4月18日04:55							 | <a href="#comment-329503">#22</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://yaha.me/%e5%ba%94%e8%af%a5%e7%9f%a5%e9%81%93%e7%9a%84linux%e6%8a%80%e5%b7%a7/">
+								应该知道的Linux技巧							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年4月25日09:11							 | <a href="#comment-344138">#23</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://www.yandong.org/archives/497">
+								让人感觉很牛叉的shell | The Best Practice is Use Your Brain							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年4月30日19:28							 | <a href="#comment-372077">#24</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://www.520lily.com/html/851.html">
+								AWK 简明教程 | 午后小憩							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年5月30日23:14							 | <a href="#comment-512829">#25</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://chauncey.info/2013/05/bash-shell-shortcuts/">
+								你可能不知道的Bash Shell快捷键 | Chauncey&#039;s Live							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年6月13日17:08							 | <a href="#comment-544677">#26</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://blog.xmuauto.tk/?p=470">
+								Linux小仓储 &raquo; AWK 简明教程							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年8月12日18:31							 | <a href="#comment-653441">#27</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://www.w3c.com.cn/%e9%85%b7%e5%a3%b3%e7%83%ad%e6%96%87%ef%bc%9a%e5%ba%94%e8%af%a5%e7%9f%a5%e9%81%93%e7%9a%84linux%e6%8a%80%e5%b7%a7">
+								酷壳热文：应该知道的Linux技巧 &#8211; Sina App Engine &#8211; 开发者第964295个问答							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年10月2日15:02							 | <a href="#comment-779170">#28</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://silenceper.com/archives/933.html">
+								AWK 简明教程 | silenceper							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年11月8日14:17							 | <a href="#comment-897600">#29</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://blog.guetsec.org/?p=141">
+								Vim配置和Vim的自动补全（not completed) | blog@guetsec							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年11月10日16:29							 | <a href="#comment-909540">#30</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://www.multiprocess.net/?p=134">
+								面试题：火车运煤问题 | multiprocess							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年11月10日16:29							 | <a href="#comment-909544">#31</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://www.multiprocess.net/?p=225">
+								AWK 简明教程 | multiprocess							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2013年12月25日22:11							 | <a href="#comment-1105784">#32</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://hedengcheng.com/?p=828">
+								2013年个人微博推荐技术资料汇总 | 何登成的技术博客							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2014年2月28日09:40							 | <a href="#comment-1317244">#33</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="https://zend-bbxyard.rhcloud.com/blog/2014/02/%e8%bd%acawk-%e7%ae%80%e6%98%8e%e6%95%99%e7%a8%8b/">
+								[转]AWK 简明教程 | bbxyard							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2014年3月17日22:41							 | <a href="#comment-1387471">#34</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://zhanjindong.info/2014/03/16/linux-swiss-army-knife/">
+								Linux“瑞士军刀”学习资料 | ZHANJINDONG`S NOTES							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2014年4月11日17:25							 | <a href="#comment-1420295">#35</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://buptguo.com/2014/04/11/%e6%94%b6%e9%9b%86%e7%9a%84%e4%b8%80%e4%ba%9blinux%e5%ae%9e%e7%94%a8%e5%b7%a5%e5%85%b7-2014-4-11/">
+								收集的一些Linux实用工具——2014.4.11 | Guo&#039;Blog							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2014年4月27日18:35							 | <a href="#comment-1447644">#36</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://blog.ithomer.net/2013/11/simple-awk-tutorial/">
+								IT-Homer 博客 &raquo; awk 简明教程							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2014年4月30日14:20							 | <a href="#comment-1450443">#37</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://www.kongyuan.org/wp/2014/01/26/archlinux-cmd/">
+								ArchLinux-CMD | 小憩幻楼							</a>
+						</div>
+					</li>
+									<li class="trackback">
+						<div class="date">
+							2014年6月16日01:23							 | <a href="#comment-1481977">#38</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://blog.makaidong.com/28670.html">
+								你可能不知道的Shell &#8211; 马开东博客							</a>
+						</div>
+					</li>
+				
+					</ol>
+		<div class="fixed"></div>
+	<!-- trackbacks END -->
+</div>
+
+</div>
+
+	<form action="http://coolshell.cn/wp-comments-post.php" method="post" id="commentform">
+	<div id="respond">
+
+					
+			<div id="author_info">
+				<div class="row">
+					<input type="text" name="author" id="author" class="textfield" value="" size="24" tabindex="1" />
+					<label for="author" class="small">昵称 (必填)</label>
+				</div>
+				<div class="row">
+					<input type="text" name="email" id="email" class="textfield" value="" size="24" tabindex="2" />
+					<label for="email" class="small">电子邮箱 (我们会为您保密) (必填)</label>
+				</div>
+				<div class="row">
+					<input type="text" name="url" id="url" class="textfield" value="" size="24" tabindex="3" />
+					<label for="url" class="small">网址</label>
+				</div>
+			</div>
+
+			
+		
+		<!-- comment input -->
+		<div class="row">
+			<textarea name="comment" id="comment" tabindex="4" rows="8" cols="50"></textarea>
+		</div>
+
+		<!-- comment submit and rss -->
+		<div id="submitbox">
+			<a class="feed" href="http://coolshell.cn/comments/feed">订阅评论</a>
+			<div class="submitbutton">
+				<input name="submit" type="submit" id="submit" class="button" tabindex="5" value="提交评论" />
+			</div>
+						<input type="hidden" name="comment_post_ID" value="8883" />
+			<div class="fixed"></div>
+		</div>
+
+	</div>
+	<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="4d6846e079" /></p><script type='text/javascript' src='http://coolshell.cn//wp-content/plugins/akismet/_inc/form.js?ver=3.0.0'></script>
+<p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="143"/></p>	</form>
+
+	
+
+	<div id="postnavi">
+		<span class="prev"><a href="http://coolshell.cn/articles/8961.html" rel="next">从面向对象的设计模式看软件设计</a></span>
+		<span class="next"><a href="http://coolshell.cn/articles/8790.html" rel="prev">程序算法与人生选择</a></span>
+		<div class="fixed"></div>
+	</div>
+
+
+<script type='text/javascript'>
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-7486123-1']);
+_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+	</div>
+	<!-- main END -->
+
+	
+<!-- sidebar START -->
+<div id="sidebar">
+
+<!-- sidebar north START -->
+<div id="northsidebar" class="sidebar">
+
+	<!-- feeds -->
+	<div class="widget widget_feeds">
+		<div class="content">
+			<div id="subscribe">
+				<a rel="external nofollow" id="feedrss" title="订阅这个博客的文章" href="http://coolshell.cn/feed">订阅</a>
+									<ul id="feed_readers">
+						<li id="google_reader"><a rel="external nofollow" class="reader" title="订阅到 Google" href="http://fusion.google.com/add?feedurl=http://coolshell.cn/feed"><span> Google</span></a></li>
+						<li id="youdao_reader"><a rel="external nofollow" class="reader" title="订阅到有道" href="http://reader.youdao.com/#url=http://coolshell.cn/feed"><span>有道</span></a></li>
+						<li id="xianguo_reader"><a rel="external nofollow" class="reader" title="订阅到鲜果" href="http://www.xianguo.com/subscribe.php?url=http://coolshell.cn/feed"><span>鲜果</span></a></li>
+						<li id="zhuaxia_reader"><a rel="external nofollow" class="reader" title="订阅到抓虾" href="http://www.zhuaxia.com/add_channel.php?url=http://coolshell.cn/feed"><span>抓虾</span></a></li>
+						<li id="yahoo_reader"><a rel="external nofollow" class="reader" title="订阅到 My Yahoo!"	href="http://add.my.yahoo.com/rss?url=http://coolshell.cn/feed"><span> My Yahoo!</span></a></li>
+						<li id="newsgator_reader"><a rel="external nofollow" class="reader" title="订阅到 newsgator"	href="http://www.newsgator.com/ngs/subscriber/subfext.aspx?url=http://coolshell.cn/feed"><span> newsgator</span></a></li>
+						<li id="bloglines_reader"><a rel="external nofollow" class="reader" title="订阅到 Bloglines"	href="http://www.bloglines.com/sub/http://coolshell.cn/feed"><span> Bloglines</span></a></li>
+						<li id="inezha_reader"><a rel="external nofollow" class="reader" title="订阅到哪吒"	href="http://inezha.com/add?url=http://coolshell.cn/feed"><span>哪吒</span></a></li>
+<li id="qq_reader"><a class="reader" title="订阅到QQ Mail" onclick="window.open(this.href);return false;" rel="external nofollow" href="http://mail.qq.com/cgi-bin/feed?u=http://coolshell.cn/feed"><span>
+			QQ Mail            </span></a></li>
+            <li id="douban_reader"><a class="reader" title="订阅到Douban" onclick="window.open(this.href);return false;" rel="external nofollow" href="http://9.douban.com/reader/subscribe?url=http://coolshell.cn/feed"><span>
+			Douban            </span></a></li>
+            <li id="rojo_reader"><a class="reader" title="订阅到Rojo" onclick="window.open(this.href);return false;" rel="external nofollow" href="http://www.rojo.com/add-subscription?resource=http://coolshell.cn/feed"><span>
+            Rojo            </span></a></li>
+            <li id="pageflakes_reader"><a class="reader" title="订阅到Pageflakes" onclick="window.open(this.href);return false;" rel="external nofollow" href="http://www.pageflakes.com/subscribe.aspx?url=http://coolshell.cn/feed"><span>
+            Pageflakes            </span></a></li>
+					</ul>
+							</div>
+							<a id="followme" title="Follow me!" href="http://twitter.com/haoel/">Twitter</a>
+						<div class="fixed"></div>
+		</div>
+	</div>
+
+	<!-- showcase -->
+			<div class="widget">
+							<h3>本站公告</h3>
+						<div class="content">
+				<p align="center" style="background-color: #777;padding: 5px;color: white;font-weight: bold;border: solid 1px black;text-shadow: 0px 0px 3px black;">访问 <a href="http://coolshell.cn/404/" target=_blank style="color: #FFE249;">酷壳404页面</a> 寻找遗失儿童！</p>
+
+<p>酷壳建议大家多使用RSS访问阅读（本站已经是全文输出，推荐使用cloud.feedly.com 或 digg.com）。有相关事宜欢迎电邮：haoel(at)hotmail.com。最后，感谢大家对酷壳的支持和体谅！</p>
+
+<p align=center><b>感谢 <a href=http://42qu.com/ title="42区 找到给你答案的人" target=_blank >42qu.com</a> 为本站提供 <a href="http://vps.42qu.com/" target=_blank  title="42区虚拟主机，卖给创业的你">VPS</a> </b></p>
+
+<!--<div style="background-color: #DA2D03;color: white;text-align: center;padding: 5px;border: solid 1px black;text-shadow: 0px 0px 3px black;"><b>感谢 <a href=http://42qu.com/ title="42区 找到给你答案的人" target=_blank style="color: #E9F300;">42qu.com</a> 为本站提供 <a href="http://vps.42qu.com/" target=_blank style="color: #E9F300;" title="42区虚拟主机，卖给创业的你">VPS</a> </b></div>-->			</div>
+		</div>
+	
+		<div id="recent-posts-2" class="widget widget_recent_entries">		<h3>最新文章</h3>		<ul>
+					<li>
+				<a href="http://coolshell.cn/articles/11656.html">开发团队的效率</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/11609.html">TCP 的那些事儿（下）</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/11564.html">TCP 的那些事儿（上）</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/11629.html">「我只是认真」聊聊工匠情怀</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/11541.html">面向GC的Java编程</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/11466.html">C语言的整型溢出问题</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/11454.html">从LongAdder看更高效的无锁实现</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/11432.html">从Code Review 谈如何做技术</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/11377.html">C语言结构体里的成员数组和指针</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/11312.html">无插件Vim编程技巧</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/11265.html">Python修饰器的函数式编程</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/11235.html">一个浮点数跨平台产生的问题</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/11175.html">Java中的CopyOnWrite容器</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/11170.html">如何用最有创造力的方式输出42</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/11112.html">由苹果的低级Bug想到的</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/11094.html">可视化编程</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/11021.html">从“黑掉Github”学Web安全开发</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/10975.html">一个“蝇量级” C 语言协程库</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/10910.html">分布式系统的事务处理</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/10822.html">函数式编程</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/10804.html">X-Y Problem</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/10739.html">Lua简明教程</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/10688.html">编程能力与编程年龄</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/10652.html">程序的本质复杂性和元语言抽象</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/10590.html">二维码的生成细节和原理</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/10427.html">伙伴分配器的一个极简实现</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/10476.html">C++11的Lambda使用一例：华容道求解</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/10478.html">C++面试中string类的一种正确写法</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/10449.html">C++模板”&gt;&gt;”编译问题与词法消歧设计</a>
+						</li>
+					<li>
+				<a href="http://coolshell.cn/articles/10337.html">数据即代码：元驱动编程</a>
+						</li>
+				</ul>
+		</div><div id="views-4" class="widget widget_views"><h3>全站热门</h3><ul>
+<li><a href="http://coolshell.cn/articles/4990.html"  title="程序员技术练级攻略 - 455,048 人阅读">程序员技术练级攻略</a></li><li><a href="http://coolshell.cn/articles/5426.html"  title="简明 Vim 练级攻略 - 367,709 人阅读">简明 Vim 练级攻略</a></li><li><a href="http://coolshell.cn/articles/7186.html"  title="做个环保主义的程序员 - 169,671 人阅读">做个环保主义的程序员</a></li><li><a href="http://coolshell.cn/articles/4102.html"  title="如何学好C语言 - 161,232 人阅读">如何学好C语言</a></li><li><a href="http://coolshell.cn/articles/914.html"  title="6个变态的C语言Hello World程序 - 135,853 人阅读">6个变态的C语言Hello World程序</a></li><li><a href="http://coolshell.cn/articles/8883.html"  title="应该知道的Linux技巧 - 130,290 人阅读">应该知道的Linux技巧</a></li><li><a href="http://coolshell.cn/articles/2250.html"  title="&ldquo;21天教你学会C++&rdquo; - 126,528 人阅读">&ldquo;21天教你学会C++&rdquo;</a></li><li><a href="http://coolshell.cn/articles/6470.html"  title="由12306.cn谈谈网站性能技术 - 125,845 人阅读">由12306.cn谈谈网站性能技术</a></li><li><a href="http://coolshell.cn/articles/9308.html"  title="&ldquo;作环保的程序员，从不用百度开始&rdquo; - 116,837 人阅读">&ldquo;作环保的程序员，从不用百度开始&rdquo;</a></li><li><a href="http://coolshell.cn/articles/1870.html"  title="我是怎么招聘程序员的 - 110,823 人阅读">我是怎么招聘程序员的</a></li><li><a href="http://coolshell.cn/articles/10688.html"  title="编程能力与编程年龄 - 106,951 人阅读">编程能力与编程年龄</a></li><li><a href="http://coolshell.cn/articles/7829.html"  title="28个Unix/Linux的命令行神器 - 106,157 人阅读">28个Unix/Linux的命令行神器</a></li><li><a href="http://coolshell.cn/articles/3549.html"  title="Android将允许纯C/C++开发应用 - 104,582 人阅读">Android将允许纯C/C++开发应用</a></li><li><a href="http://coolshell.cn/articles/6043.html"  title="Web开发中需要了解的东西 - 100,053 人阅读">Web开发中需要了解的东西</a></li><li><a href="http://coolshell.cn/articles/9070.html"  title="AWK 简明教程 - 93,183 人阅读">AWK 简明教程</a></li><li><a href="http://coolshell.cn/articles/2287.html"  title="C++ 程序员自信心曲线图 - 93,030 人阅读">C++ 程序员自信心曲线图</a></li><li><a href="http://coolshell.cn/articles/1391.html"  title="编程真难啊 - 87,075 人阅读">编程真难啊</a></li><li><a href="http://coolshell.cn/articles/4119.html"  title="如何学好C++语言 - 87,018 人阅读">如何学好C++语言</a></li><li><a href="http://coolshell.cn/articles/355.html"  title="20本最好的Linux免费书籍 - 86,808 人阅读">20本最好的Linux免费书籍</a></li><li><a href="http://coolshell.cn/articles/5701.html"  title="SteveY对Amazon和Google平台的吐槽 - 82,693 人阅读">SteveY对Amazon和Google平台的吐槽</a></li><li><a href="http://coolshell.cn/articles/3008.html"  title="Windows编程革命简史 - 82,326 人阅读">Windows编程革命简史</a></li><li><a href="http://coolshell.cn/articles/5761.html"  title="深入理解C语言 - 80,820 人阅读">深入理解C语言</a></li><li><a href="http://coolshell.cn/articles/4758.html"  title="如何写出无法维护的代码 - 80,556 人阅读">如何写出无法维护的代码</a></li><li><a href="http://coolshell.cn/articles/7490.html"  title="性能调优攻略 - 78,061 人阅读">性能调优攻略</a></li><li><a href="http://coolshell.cn/articles/2058.html"  title="各种流行的编程风格 - 77,481 人阅读">各种流行的编程风格</a></li><li><a href="http://coolshell.cn/articles/8790.html"  title="程序算法与人生选择 - 77,418 人阅读">程序算法与人生选择</a></li><li><a href="http://coolshell.cn/articles/4429.html"  title="面试题：火车运煤问题 - 75,289 人阅读">面试题：火车运煤问题</a></li><li><a href="http://coolshell.cn/articles/10217.html"  title="加班与效率 - 75,082 人阅读">加班与效率</a></li><li><a href="http://coolshell.cn/articles/1695.html"  title="别的程序员是怎么读你的简历的 - 74,221 人阅读">别的程序员是怎么读你的简历的</a></li><li><a href="http://coolshell.cn/articles/945.html"  title="C语言的谜题 - 74,157 人阅读">C语言的谜题</a></li></ul>
+</div><div id="text-400151743" class="widget widget_text"><h3>新浪微博</h3>			<div class="textwidget"><iframe width="100%" height="120" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=1401880315&verifier=f47cc89f&dpc=1"></iframe></div>
+		</div><div id="tag_cloud-2" class="widget widget_tag_cloud"><h3>标签</h3><div class="tagcloud"><a href='http://coolshell.cn/tag/agile' class='tag-link-17' title='15个话题' style='font-size: 11.8888888889pt;'>agile</a>
+<a href='http://coolshell.cn/tag/ajax' class='tag-link-34' title='11个话题' style='font-size: 10.3333333333pt;'>AJAX</a>
+<a href='http://coolshell.cn/tag/algorithm' class='tag-link-76' title='22个话题' style='font-size: 13.962962963pt;'>Algorithm</a>
+<a href='http://coolshell.cn/tag/android' class='tag-link-145' title='8个话题' style='font-size: 8.64814814815pt;'>Android</a>
+<a href='http://coolshell.cn/tag/bash' class='tag-link-190' title='8个话题' style='font-size: 8.64814814815pt;'>Bash</a>
+<a href='http://coolshell.cn/tag/c' class='tag-link-59' title='84个话题' style='font-size: 21.3518518519pt;'>C++</a>
+<a href='http://coolshell.cn/tag/coding' class='tag-link-135' title='25个话题' style='font-size: 14.6111111111pt;'>Coding</a>
+<a href='http://coolshell.cn/tag/css' class='tag-link-96' title='21个话题' style='font-size: 13.7037037037pt;'>CSS</a>
+<a href='http://coolshell.cn/tag/database' class='tag-link-109' title='7个话题' style='font-size: 8pt;'>Database</a>
+<a href='http://coolshell.cn/tag/design' class='tag-link-71' title='18个话题' style='font-size: 12.9259259259pt;'>Design</a>
+<a href='http://coolshell.cn/tag/design-pattern' class='tag-link-25' title='8个话题' style='font-size: 8.64814814815pt;'>design pattern</a>
+<a href='http://coolshell.cn/tag/ebook' class='tag-link-101' title='15个话题' style='font-size: 11.8888888889pt;'>ebook</a>
+<a href='http://coolshell.cn/tag/flash' class='tag-link-98' title='7个话题' style='font-size: 8pt;'>Flash</a>
+<a href='http://coolshell.cn/tag/game' class='tag-link-125' title='9个话题' style='font-size: 9.2962962963pt;'>Game</a>
+<a href='http://coolshell.cn/tag/go' class='tag-link-238' title='9个话题' style='font-size: 9.2962962963pt;'>Go</a>
+<a href='http://coolshell.cn/tag/google' class='tag-link-32' title='31个话题' style='font-size: 15.9074074074pt;'>Google</a>
+<a href='http://coolshell.cn/tag/html' class='tag-link-38' title='32个话题' style='font-size: 16.037037037pt;'>HTML</a>
+<a href='http://coolshell.cn/tag/ie' class='tag-link-175' title='10个话题' style='font-size: 9.81481481481pt;'>IE</a>
+<a href='http://coolshell.cn/tag/java' class='tag-link-13' title='48个话题' style='font-size: 18.2407407407pt;'>Java</a>
+<a href='http://coolshell.cn/tag/javascript' class='tag-link-114' title='51个话题' style='font-size: 18.6296296296pt;'>Javascript</a>
+<a href='http://coolshell.cn/tag/jquery' class='tag-link-191' title='11个话题' style='font-size: 10.3333333333pt;'>jQuery</a>
+<a href='http://coolshell.cn/tag/linux' class='tag-link-37' title='58个话题' style='font-size: 19.2777777778pt;'>Linux</a>
+<a href='http://coolshell.cn/tag/mysql' class='tag-link-106' title='7个话题' style='font-size: 8pt;'>MySQL</a>
+<a href='http://coolshell.cn/tag/oop' class='tag-link-245' title='8个话题' style='font-size: 8.64814814815pt;'>OOP</a>
+<a href='http://coolshell.cn/tag/password' class='tag-link-319' title='8个话题' style='font-size: 8.64814814815pt;'>password</a>
+<a href='http://coolshell.cn/tag/performance' class='tag-link-120' title='15个话题' style='font-size: 11.8888888889pt;'>Performance</a>
+<a href='http://coolshell.cn/tag/php' class='tag-link-35' title='25个话题' style='font-size: 14.6111111111pt;'>PHP</a>
+<a href='http://coolshell.cn/tag/programmer' class='tag-link-70' title='92个话题' style='font-size: 21.8703703704pt;'>Programmer</a>
+<a href='http://coolshell.cn/tag/programming-language' class='tag-link-115' title='12个话题' style='font-size: 10.7222222222pt;'>programming language</a>
+<a href='http://coolshell.cn/tag/puzzle' class='tag-link-514' title='9个话题' style='font-size: 9.2962962963pt;'>Puzzle</a>
+<a href='http://coolshell.cn/tag/pythondev' class='tag-link-33' title='29个话题' style='font-size: 15.5185185185pt;'>Python</a>
+<a href='http://coolshell.cn/tag/ruby' class='tag-link-69' title='10个话题' style='font-size: 9.81481481481pt;'>Ruby</a>
+<a href='http://coolshell.cn/tag/sql' class='tag-link-131' title='10个话题' style='font-size: 9.81481481481pt;'>SQL</a>
+<a href='http://coolshell.cn/tag/tdd' class='tag-link-485' title='8个话题' style='font-size: 8.64814814815pt;'>TDD</a>
+<a href='http://coolshell.cn/tag/ui' class='tag-link-47' title='12个话题' style='font-size: 10.7222222222pt;'>UI</a>
+<a href='http://coolshell.cn/tag/unix' class='tag-link-21' title='31个话题' style='font-size: 15.9074074074pt;'>Unix</a>
+<a href='http://coolshell.cn/tag/vim' class='tag-link-50' title='19个话题' style='font-size: 13.1851851852pt;'>vim</a>
+<a href='http://coolshell.cn/tag/web' class='tag-link-30' title='36个话题' style='font-size: 16.6851851852pt;'>Web</a>
+<a href='http://coolshell.cn/tag/windows' class='tag-link-49' title='17个话题' style='font-size: 12.6666666667pt;'>Windows</a>
+<a href='http://coolshell.cn/tag/xml' class='tag-link-104' title='8个话题' style='font-size: 8.64814814815pt;'>XML</a>
+<a href='http://coolshell.cn/tag/%e5%8f%a3%e4%bb%a4' class='tag-link-320' title='7个话题' style='font-size: 8pt;'>口令</a>
+<a href='http://coolshell.cn/tag/%e5%ae%89%e5%85%a8' class='tag-link-318' title='18个话题' style='font-size: 12.9259259259pt;'>安全</a>
+<a href='http://coolshell.cn/tag/%e7%a8%8b%e5%ba%8f%e5%91%98' class='tag-link-58' title='94个话题' style='font-size: 22pt;'>程序员</a>
+<a href='http://coolshell.cn/tag/%e7%ae%97%e6%b3%95' class='tag-link-77' title='9个话题' style='font-size: 9.2962962963pt;'>算法</a>
+<a href='http://coolshell.cn/tag/interview' class='tag-link-164' title='15个话题' style='font-size: 11.8888888889pt;'>面试</a></div>
+</div></div>
+<!-- sidebar north END -->
+
+<div id="centersidebar">
+
+	<!-- sidebar east START -->
+	<div id="eastsidebar" class="sidebar">
+	<div id="categories-367921423" class="widget widget_categories"><h3>分类目录</h3>		<ul>
+	<li class="cat-item cat-item-189"><a href="http://coolshell.cn/category/proglanguage/dotnet" title="查看.NET编程下的所有文章">.NET编程</a> (3)
+</li>
+	<li class="cat-item cat-item-8"><a href="http://coolshell.cn/category/proglanguage/ajaxdev" title="查看Ajax开发下的所有文章">Ajax开发</a> (9)
+</li>
+	<li class="cat-item cat-item-5"><a href="http://coolshell.cn/category/proglanguage/cplusplus" title="查看C/C++语言下的所有文章">C/C++语言</a> (63)
+</li>
+	<li class="cat-item cat-item-186"><a href="http://coolshell.cn/category/proglanguage/erlang" title="查看Erlang下的所有文章">Erlang</a> (1)
+</li>
+	<li class="cat-item cat-item-4"><a href="http://coolshell.cn/category/proglanguage/javadev" title="查看Java语言下的所有文章">Java语言</a> (32)
+</li>
+	<li class="cat-item cat-item-11"><a href="http://coolshell.cn/category/proglanguage/phpdev" title="查看PHP脚本下的所有文章">PHP脚本</a> (11)
+</li>
+	<li class="cat-item cat-item-33"><a href="http://coolshell.cn/category/proglanguage/pythondev" title="查看Python下的所有文章">Python</a> (23)
+</li>
+	<li class="cat-item cat-item-100"><a href="http://coolshell.cn/category/proglanguage/rubydev" title="查看Ruby下的所有文章">Ruby</a> (5)
+</li>
+	<li class="cat-item cat-item-20"><a href="http://coolshell.cn/category/operatingsystem/unixlinux" title="查看Unix/Linux下的所有文章">Unix/Linux</a> (66)
+</li>
+	<li class="cat-item cat-item-7"><a href="http://coolshell.cn/category/proglanguage/webdev" title="查看Web开发下的所有文章">Web开发</a> (100)
+</li>
+	<li class="cat-item cat-item-19"><a href="http://coolshell.cn/category/operatingsystem/mswindows" title="查看Windows下的所有文章">Windows</a> (12)
+</li>
+	<li class="cat-item cat-item-195"><a href="http://coolshell.cn/category/itnews" title="查看业界新闻下的所有文章">业界新闻</a> (26)
+</li>
+	<li class="cat-item cat-item-509"><a href="http://coolshell.cn/category/%e4%bc%81%e4%b8%9a%e5%ba%94%e7%94%a8" title="查看企业应用下的所有文章">企业应用</a> (2)
+</li>
+	<li class="cat-item cat-item-9"><a href="http://coolshell.cn/category/technews" title="查看技术新闻下的所有文章">技术新闻</a> (32)
+</li>
+	<li class="cat-item cat-item-550"><a href="http://coolshell.cn/category/%e6%8a%80%e6%9c%af%e7%ae%a1%e7%90%86" title="查看技术管理下的所有文章">技术管理</a> (12)
+</li>
+	<li class="cat-item cat-item-12"><a href="http://coolshell.cn/category/techarticle" title="查看技术读物下的所有文章">技术读物</a> (114)
+</li>
+	<li class="cat-item cat-item-18"><a href="http://coolshell.cn/category/operatingsystem" title="查看操作系统下的所有文章">操作系统</a> (43)
+</li>
+	<li class="cat-item cat-item-105"><a href="http://coolshell.cn/category/datebase" title="查看数据库下的所有文章">数据库</a> (10)
+</li>
+	<li class="cat-item cat-item-10"><a href="http://coolshell.cn/category/misc" title="查看杂项资源下的所有文章">杂项资源</a> (258)
+</li>
+	<li class="cat-item cat-item-15"><a href="http://coolshell.cn/category/process" title="查看流程方法下的所有文章">流程方法</a> (46)
+</li>
+	<li class="cat-item cat-item-23"><a href="http://coolshell.cn/category/progdesign" title="查看程序设计下的所有文章">程序设计</a> (80)
+</li>
+	<li class="cat-item cat-item-602"><a href="http://coolshell.cn/category/%e7%b3%bb%e7%bb%9f%e6%9e%b6%e6%9e%84" title="查看系统架构下的所有文章">系统架构</a> (8)
+</li>
+	<li class="cat-item cat-item-1"><a href="http://coolshell.cn/category/tools" title="查看编程工具下的所有文章">编程工具</a> (64)
+</li>
+	<li class="cat-item cat-item-3"><a href="http://coolshell.cn/category/proglanguage" title="查看编程语言下的所有文章">编程语言</a> (168)
+</li>
+	<li class="cat-item cat-item-6"><a href="http://coolshell.cn/category/netsecurity" title="查看网络安全下的所有文章">网络安全</a> (25)
+</li>
+	<li class="cat-item cat-item-39"><a href="http://coolshell.cn/category/career" title="查看职场生涯下的所有文章">职场生涯</a> (33)
+</li>
+	<li class="cat-item cat-item-271"><a href="http://coolshell.cn/category/funny" title="查看趣味问题下的所有文章">趣味问题</a> (16)
+</li>
+	<li class="cat-item cat-item-52"><a href="http://coolshell.cn/category/story" title="查看轶事趣闻下的所有文章">轶事趣闻</a> (146)
+</li>
+		</ul>
+</div>	</div>
+	<!-- sidebar east END -->
+
+	<!-- sidebar west START -->
+	<div id="westsidebar" class="sidebar">
+	<div id="archives-2" class="widget widget_archive"><h3>归档</h3>		<ul>
+	<li><a href='http://coolshell.cn/articles/date/2014/06'>2014年六月</a>&nbsp;(1)</li>
+	<li><a href='http://coolshell.cn/articles/date/2014/05'>2014年五月</a>&nbsp;(4)</li>
+	<li><a href='http://coolshell.cn/articles/date/2014/04'>2014年四月</a>&nbsp;(4)</li>
+	<li><a href='http://coolshell.cn/articles/date/2014/03'>2014年三月</a>&nbsp;(5)</li>
+	<li><a href='http://coolshell.cn/articles/date/2014/02'>2014年二月</a>&nbsp;(3)</li>
+	<li><a href='http://coolshell.cn/articles/date/2014/01'>2014年一月</a>&nbsp;(2)</li>
+	<li><a href='http://coolshell.cn/articles/date/2013/12'>2013年十二月</a>&nbsp;(3)</li>
+	<li><a href='http://coolshell.cn/articles/date/2013/11'>2013年十一月</a>&nbsp;(1)</li>
+	<li><a href='http://coolshell.cn/articles/date/2013/10'>2013年十月</a>&nbsp;(6)</li>
+	<li><a href='http://coolshell.cn/articles/date/2013/08'>2013年八月</a>&nbsp;(1)</li>
+	<li><a href='http://coolshell.cn/articles/date/2013/07'>2013年七月</a>&nbsp;(8)</li>
+	<li><a href='http://coolshell.cn/articles/date/2013/06'>2013年六月</a>&nbsp;(2)</li>
+	<li><a href='http://coolshell.cn/articles/date/2013/05'>2013年五月</a>&nbsp;(3)</li>
+	<li><a href='http://coolshell.cn/articles/date/2013/04'>2013年四月</a>&nbsp;(3)</li>
+	<li><a href='http://coolshell.cn/articles/date/2013/03'>2013年三月</a>&nbsp;(3)</li>
+	<li><a href='http://coolshell.cn/articles/date/2013/02'>2013年二月</a>&nbsp;(5)</li>
+	<li><a href='http://coolshell.cn/articles/date/2013/01'>2013年一月</a>&nbsp;(1)</li>
+	<li><a href='http://coolshell.cn/articles/date/2012/12'>2012年十二月</a>&nbsp;(4)</li>
+	<li><a href='http://coolshell.cn/articles/date/2012/11'>2012年十一月</a>&nbsp;(5)</li>
+	<li><a href='http://coolshell.cn/articles/date/2012/10'>2012年十月</a>&nbsp;(3)</li>
+	<li><a href='http://coolshell.cn/articles/date/2012/09'>2012年九月</a>&nbsp;(4)</li>
+	<li><a href='http://coolshell.cn/articles/date/2012/08'>2012年八月</a>&nbsp;(8)</li>
+	<li><a href='http://coolshell.cn/articles/date/2012/07'>2012年七月</a>&nbsp;(4)</li>
+	<li><a href='http://coolshell.cn/articles/date/2012/06'>2012年六月</a>&nbsp;(7)</li>
+	<li><a href='http://coolshell.cn/articles/date/2012/05'>2012年五月</a>&nbsp;(6)</li>
+	<li><a href='http://coolshell.cn/articles/date/2012/04'>2012年四月</a>&nbsp;(6)</li>
+	<li><a href='http://coolshell.cn/articles/date/2012/03'>2012年三月</a>&nbsp;(6)</li>
+	<li><a href='http://coolshell.cn/articles/date/2012/02'>2012年二月</a>&nbsp;(3)</li>
+	<li><a href='http://coolshell.cn/articles/date/2012/01'>2012年一月</a>&nbsp;(6)</li>
+	<li><a href='http://coolshell.cn/articles/date/2011/12'>2011年十二月</a>&nbsp;(5)</li>
+	<li><a href='http://coolshell.cn/articles/date/2011/11'>2011年十一月</a>&nbsp;(9)</li>
+	<li><a href='http://coolshell.cn/articles/date/2011/10'>2011年十月</a>&nbsp;(6)</li>
+	<li><a href='http://coolshell.cn/articles/date/2011/09'>2011年九月</a>&nbsp;(5)</li>
+	<li><a href='http://coolshell.cn/articles/date/2011/08'>2011年八月</a>&nbsp;(14)</li>
+	<li><a href='http://coolshell.cn/articles/date/2011/07'>2011年七月</a>&nbsp;(6)</li>
+	<li><a href='http://coolshell.cn/articles/date/2011/06'>2011年六月</a>&nbsp;(12)</li>
+	<li><a href='http://coolshell.cn/articles/date/2011/05'>2011年五月</a>&nbsp;(5)</li>
+	<li><a href='http://coolshell.cn/articles/date/2011/04'>2011年四月</a>&nbsp;(18)</li>
+	<li><a href='http://coolshell.cn/articles/date/2011/03'>2011年三月</a>&nbsp;(16)</li>
+	<li><a href='http://coolshell.cn/articles/date/2011/02'>2011年二月</a>&nbsp;(16)</li>
+	<li><a href='http://coolshell.cn/articles/date/2011/01'>2011年一月</a>&nbsp;(18)</li>
+	<li><a href='http://coolshell.cn/articles/date/2010/12'>2010年十二月</a>&nbsp;(11)</li>
+	<li><a href='http://coolshell.cn/articles/date/2010/11'>2010年十一月</a>&nbsp;(11)</li>
+	<li><a href='http://coolshell.cn/articles/date/2010/10'>2010年十月</a>&nbsp;(19)</li>
+	<li><a href='http://coolshell.cn/articles/date/2010/09'>2010年九月</a>&nbsp;(15)</li>
+	<li><a href='http://coolshell.cn/articles/date/2010/08'>2010年八月</a>&nbsp;(10)</li>
+	<li><a href='http://coolshell.cn/articles/date/2010/07'>2010年七月</a>&nbsp;(20)</li>
+	<li><a href='http://coolshell.cn/articles/date/2010/06'>2010年六月</a>&nbsp;(9)</li>
+	<li><a href='http://coolshell.cn/articles/date/2010/05'>2010年五月</a>&nbsp;(13)</li>
+	<li><a href='http://coolshell.cn/articles/date/2010/04'>2010年四月</a>&nbsp;(12)</li>
+	<li><a href='http://coolshell.cn/articles/date/2010/03'>2010年三月</a>&nbsp;(11)</li>
+	<li><a href='http://coolshell.cn/articles/date/2010/02'>2010年二月</a>&nbsp;(7)</li>
+	<li><a href='http://coolshell.cn/articles/date/2010/01'>2010年一月</a>&nbsp;(9)</li>
+	<li><a href='http://coolshell.cn/articles/date/2009/12'>2009年十二月</a>&nbsp;(22)</li>
+	<li><a href='http://coolshell.cn/articles/date/2009/11'>2009年十一月</a>&nbsp;(27)</li>
+	<li><a href='http://coolshell.cn/articles/date/2009/10'>2009年十月</a>&nbsp;(17)</li>
+	<li><a href='http://coolshell.cn/articles/date/2009/09'>2009年九月</a>&nbsp;(14)</li>
+	<li><a href='http://coolshell.cn/articles/date/2009/08'>2009年八月</a>&nbsp;(21)</li>
+	<li><a href='http://coolshell.cn/articles/date/2009/07'>2009年七月</a>&nbsp;(18)</li>
+	<li><a href='http://coolshell.cn/articles/date/2009/06'>2009年六月</a>&nbsp;(19)</li>
+	<li><a href='http://coolshell.cn/articles/date/2009/05'>2009年五月</a>&nbsp;(27)</li>
+	<li><a href='http://coolshell.cn/articles/date/2009/04'>2009年四月</a>&nbsp;(53)</li>
+	<li><a href='http://coolshell.cn/articles/date/2009/03'>2009年三月</a>&nbsp;(43)</li>
+		</ul>
+</div>	</div>
+	<!-- sidebar west END -->
+	<div class="fixed"></div>
+</div>
+
+<!-- sidebar south START -->
+<div id="southsidebar" class="sidebar">
+<div id="get-recent-comments" class="widget widget_get_recent_comments"><h3>最新评论</h3><div id="get_recent_comments_wrap"><ul>	<li><a href="http://coolshell.cn/articles/4429.html#comment-1496763" title="面试题：火车运煤问题, 2011年04月11日">123</a>: 双头火车就行了，不用掉头</li>
+	<li><a href="http://coolshell.cn/articles/7965.html#comment-1496619" title="一个fork的面试题, 2012年08月01日">123</a>: 你这图用啥画的？</li>
+	<li><a href="http://coolshell.cn/articles/4990.html#comment-1496586" title="程序员技术练级攻略, 2011年07月18日">子嘉</a>: 您好， 写的很好，先写评论回头仔细阅读。 对于有的朋友说，全学完至少10年。 我想说，一定要有选择性的去学。 如果把天下武功都学会但不去施展还是个废人。</li>
+	<li><a href="http://coolshell.cn/articles/5761.html#comment-1496575" title="深入理解C语言, 2011年11月01日">shanon</a>: 最新编程技术站点lippiouyangonline.info </li>
+	<li><a href="http://coolshell.cn/articles/5761.html#comment-1496574" title="深入理解C语言, 2011年11月01日">Lippi</a>: 最新编程技术站点lippiouyangonline.info </li>
+	<li><a href="http://coolshell.cn/articles/8883.html#comment-1496573" title="应该知道的Linux技巧, 2013年01月09日">Lippi</a>: 最新编程技术站点lippiouyangonline.info </li>
+	<li><a href="http://coolshell.cn/articles/1870.html#comment-1496572" title="我是怎么招聘程序员的, 2009年12月02日">Lippi</a>: 最新编程技术站点lippiouyangonline.info </li>
+	<li><a href="http://coolshell.cn/articles/7490.html#comment-1496570" title="性能调优攻略, 2012年06月20日">Lippi</a>: 最新编程技术站点lippiouyangonline.info </li>
+	<li><a href="http://coolshell.cn/articles/4102.html#comment-1496569" title="如何学好C语言, 2011年03月29日">Lippi</a>: 最新编程技术站点lippiouyangonline.info </li>
+	<li><a href="http://coolshell.cn/articles/4990.html#comment-1496568" title="程序员技术练级攻略, 2011年07月18日">Lippi</a>: 最新编程技术站点lippiouyangonline.info </li>
+	<li><a href="http://coolshell.cn/articles/11609.html#comment-1496567" title="TCP 的那些事儿（下）, 2014年05月28日">Lippi</a>: 这个网站介绍的不错lippiouyangonline.inf o</li>
+	<li><a href="http://coolshell.cn/articles/4951.html#comment-1496529" title="软件公司的两种管理方式, 2011年07月06日">gothikawang</a>: 混合型的更加符合公司利益吧。</li>
+	<li><a href="http://coolshell.cn/articles/2287.html#comment-1496474" title="C++ 程序员自信心曲线图, 2010年04月01日">Debasish</a>: A protvcavioe insight! Just what we need!</li>
+	<li><a href="http://coolshell.cn/articles/656.html#comment-1496467" title="Linux 的僵尸(zombie)进程, 2009年04月25日">Necklaces</a>: Robert/Nick: Thanks for suggestions. Outlined on our site be interested to hear associated with any...</li>
+	<li><a href="http://coolshell.cn/articles/5132.html#comment-1496313" title="疯狂的 Web 应用开源项目, 2011年08月11日">meizitang botanical slimming</a>: Antique Bakery a un look tr&#232;s sp&#233;cifique &#224; ce sujet qui semble presque...</li>
+</ul></div></div><div id="text-2" class="widget widget_text"><h3>友情链接</h3>			<div class="textwidget"><ul class='blogroll'>
+<li><a href="http://blog.csdn.net/haoel" target="_blank" onclick="pageTracker._trackPageview('/outgoing/blog.csdn.net/haoel?referer=http://coolshell.cn');">陈皓的博客</a></li>
+
+<li><a href="http://ifeve.com/" target="_blank" title="促进并发编程的研究和推广" onclick="pageTracker._trackPageview('/outgoing/ifeve.com/?referer=http://coolshell.cn');">并发编程</a></li>
+
+
+<li><a href="http://www.raychase.net/" target="_blank" title="一个啰嗦的程序员" onclick="pageTracker._trackPageview('/outgoing/www.raychase.net/?referer=http://coolshell.cn');">四火的唠叨</a></li>
+
+
+
+<li><a href="http://www.hellogcc.org/" target=_blank title="致力于讨论和学习GNU Toolchain方面的工作组" onclick="pageTracker._trackPageview('/outgoing/www.hellogcc.org//?referer=http://coolshell.cn/');">HelloGcc Working Group</a></li>
+
+<li><a href="http://http://blog.lvscar.info/" target=_blank title="Just for Fun" onclick="pageTracker._trackPageview('/outgoing/http://blog.lvscar.info/?referer=http://coolshell.cn/');">吕毅的Blog</a></li>
+
+<li><a href="http://www.cnblogs.com/weidagang2046/" target=_blank title="Just for Fun" onclick="pageTracker._trackPageview('/outgoing/http://www.cnblogs.com/weidagang2046/?referer=http://coolshell.cn/');">Todd Wei的Blog</a></li>
+
+<li><a href="http://www.cppfans.org/" target=_blank title="记录我们点滴学习工作生活" onclick="pageTracker._trackPageview('/outgoing/http://www.cppfans.org/?referer=http://coolshell.cn/');">C++爱好者博客</a></li>
+
+<li><a href="http://www.mhtml5.com/" target=_blank title="致力于HTML5在中国的发展与应用" onclick="pageTracker._trackPageview('/outgoing/http://www.mhtml5.com/?referer=http://coolshell.cn/');">HTML5研究小组</a></li>
+
+
+<li><a href="http://zhuwenhao.com/" target=_blank title="朱文昊的中文博客－－专注技术，向往自由" onclick="pageTracker._trackPageview('/outgoing/http://zhuwenhao.com/?referer=http://coolshell.cn/');">朱文昊Albert Zhu</a></li>
+
+
+<li><a href="http://www.cguage.com/" target=_blank title="某VC++软件开发爱好者" onclick="pageTracker._trackPageview('/outgoing/http://www.cguage.com/?referer=http://coolshell.cn/');">C瓜哥的博客</a></li>
+
+
+<li><a href="http://www.kaiyuanba.cn/" target=_blank title="汇聚各种开源项目的中英文混合介绍并分类排列，致力于软件项目的开源事业" onclick="pageTracker._trackPageview('/outgoing/http://www.kaiyuanba.cn/?referer=http://coolshell.cn/');">开源吧</a></li>
+
+
+
+<li><a href="http://HelloACM.com/" target=_blank title="Smart Ideas, Smart Algorithms" onclick="pageTracker._trackPageview('/outgoing/http://HelloACM.com/?referer=http://coolshell.cn/');">ACMer</a></li>
+
+<li><a href="http://chenpeng.info/" target=_blank title="优秀的开源软件让生活更简单" onclick="pageTracker._trackPageview('/outgoing/http://chenpeng.info/?referer=http://coolshell.cn/');">陈鹏个人博客</a></li>
+
+<li><a href="http://www.coderli.com/" target=_blank title="一个普通的coder，coding为了生活，coding因为消遣:-) Just a coder" onclick="pageTracker._trackPageview('/outgoing/http://www.coderli.com/?referer=http://coolshell.cn/');">OneCoder</a></li>
+
+<li><a href="http://www.crazyshell.org/" target=_blank title="专注于底层基础, TCP/IP, 存储, (高性能.高可用.分布式.高并发系统) 研究" onclick="pageTracker._trackPageview('/outgoing/http://www.crazyshell.org/?referer=http://coolshell.cn/');">狂Shell – Happy Hacking</a></li>
+
+<li><a href="http://www.tektea.com" target=_blank title="关注IT技术 | 分享 | 交流 | 记录" onclick="pageTracker._trackPageview('/outgoing/http://www.tektea.com/?referer=http://coolshell.cn/');">TekTea's Blog </a></li>
+
+<li><a href="http://shellblog.sinaapp.com/" target=_blank title="我有一颗百度的心。" onclick="pageTracker._trackPageview('/outgoing/http://blog.tektea.comshellblog.sinaapp.com/?referer=http://coolshell.cn/');">夕水溪下 </a></li>
+</ul></div>
+		</div><div id="meta-3" class="widget widget_meta"><h3>功能</h3>			<ul>
+			<li><a href="http://coolshell.cn/wp-login.php?action=register">注册</a></li>			<li><a href="http://coolshell.cn/wp-login.php">登录</a></li>
+			<li><a href="http://coolshell.cn/feed" title="使用RSS 2.0订阅本站点内容">文章<abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://coolshell.cn/comments/feed" title="使用RSS订阅本站点的所有文章的近期评论">评论<abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="https://cn.wordpress.org/" title="基于WordPress，一个优美、先进的个人信息发布平台。">WordPress.org</a></li>			</ul>
+</div><div id="text-400151742" class="widget widget_text">			<div class="textwidget"><script src="http://s50.cnzz.com/stat.php?id=1785679&web_id=1785679&show=pic1" language="JavaScript" charset="gb2312"></script>
+
+
+
+</div>
+		</div></div>
+<!-- sidebar south END -->
+
+</div>
+<!-- sidebar END -->
+	<div class="fixed"></div>
+</div>
+<!-- content END -->
+
+<!-- footer START -->
+<div id="footer">
+	<a id="gotop" href="#" onclick="MGJS.goTop();return false;">回到顶部</a>
+	<a id="powered" href="http://wordpress.org/">WordPress</a>
+	<div id="copyright">
+		版权所有 &copy; 2009-2014 酷 壳 &#8211; CoolShell.cn	</div>
+	<div id="themeinfo">
+		主题由 <a href="http://www.neoease.com/">NeoEase</a> 提供, 通过 <a href="http://validator.w3.org/check?uri=referer">XHTML 1.1</a> 和 <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">CSS 3</a> 验证.	</div>
+</div>
+<!-- footer END -->
+
+</div>
+<!-- container END -->
+</div>
+<!-- wrap END -->
+
+<script class="javascript" src="http://coolshell.cn//wp-content/plugins/google-syntax-highlighter/Scripts/shCore.js"></script>
+<script class="javascript" src="http://coolshell.cn//wp-content/plugins/google-syntax-highlighter/Scripts/shBrushCSharp.js"></script>
+<script class="javascript" src="http://coolshell.cn//wp-content/plugins/google-syntax-highlighter/Scripts/shBrushPhp.js"></script>
+<script class="javascript" src="http://coolshell.cn//wp-content/plugins/google-syntax-highlighter/Scripts/shBrushJScript.js"></script>
+<script class="javascript" src="http://coolshell.cn//wp-content/plugins/google-syntax-highlighter/Scripts/shBrushJava.js"></script>
+<script class="javascript" src="http://coolshell.cn//wp-content/plugins/google-syntax-highlighter/Scripts/shBrushVb.js"></script>
+<script class="javascript" src="http://coolshell.cn//wp-content/plugins/google-syntax-highlighter/Scripts/shBrushSql.js"></script>
+<script class="javascript" src="http://coolshell.cn//wp-content/plugins/google-syntax-highlighter/Scripts/shBrushXml.js"></script>
+<script class="javascript" src="http://coolshell.cn//wp-content/plugins/google-syntax-highlighter/Scripts/shBrushDelphi.js"></script>
+<script class="javascript" src="http://coolshell.cn//wp-content/plugins/google-syntax-highlighter/Scripts/shBrushPython.js"></script>
+<script class="javascript" src="http://coolshell.cn//wp-content/plugins/google-syntax-highlighter/Scripts/shBrushRuby.js"></script>
+<script class="javascript" src="http://coolshell.cn//wp-content/plugins/google-syntax-highlighter/Scripts/shBrushCss.js"></script>
+<script class="javascript" src="http://coolshell.cn//wp-content/plugins/google-syntax-highlighter/Scripts/shBrushCpp.js"></script>
+<script class="javascript">
+dp.SyntaxHighlighter.ClipboardSwf = 'http://coolshell.cn//wp-content/plugins/google-syntax-highlighter/Scripts/clipboard.swf';
+dp.SyntaxHighlighter.HighlightAll('code');
+</script>
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript">
+	<!-- 
+		var sc_project=8326668; 
+		var sc_security="cccb27f2"; 
+		var sc_invisible=1;
+	//-->
+	</script>
+	<script type="text/javascript" src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+<noscript><div class="statcounter"><a title="web analytics" href="http://statcounter.com/"><img class="statcounter" src="http://c.statcounter.com/8326668/0/cccb27f2/1/" alt="web analytics" /></a></div></noscript>	
+	<!-- End of StatCounter Code -->
+<!-- Powered by WPtouch: 3.4.2 --><script type='text/javascript' src='http://coolshell.cn//wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9'></script>
+<script type='text/javascript' src='http://coolshell.cn//wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushBash.js?ver=3.0.9'></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://coolshell.cn//wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://coolshell.cn//wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.9";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '帮助';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = '无法找到Brush：';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush不能设置 html-script选项';
+	SyntaxHighlighter.defaults['class-name'] = 'coolshell_syntaxhighlighter';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ratingsL10n = {"plugin_url":"http:\/\/coolshell.cn\/wp-content\/plugins\/wp-postratings","ajax_url":"http:\/\/coolshell.cn\/wp-admin\/admin-ajax.php","text_wait":"Please rate only 1 post at a time.","image":"stars_crystal","image_ext":"gif","max":"5","show_loading":"1","show_fading":"1","custom":"0"};
+var ratings_mouseover_image=new Image();ratings_mouseover_image.src=ratingsL10n.plugin_url+"/images/"+ratingsL10n.image+"/rating_over."+ratingsL10n.image_ext;;
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://coolshell.cn//wp-content/plugins/wp-postratings/postratings-js.js?ver=1.63'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var viewsCacheL10n = {"admin_ajax_url":"http:\/\/coolshell.cn\/wp-admin\/admin-ajax.php","post_id":"8883"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://coolshell.cn//wp-content/plugins/wp-postviews/postviews-cache.js?ver=1.67'></script>
+<script src="http://s50.cnzz.com/stat.php?id=1785679&web_id=1785679&show=pic1" language="JavaScript" charset="gb2312"></script>
+
+
+</body>
+</html>
+
+
+<script src="http://coolshell.cn//wp-content/themes/inove/js/1.9.0/jquery.min.js"></script>
+<script src="http://coolshell.cn//wp-content/themes/inove/js/jquery.bpopup-0.8.0.min.js"></script>
+
+<script type="text/javascript">
+;(function($) {
+    $(function() {
+        var url=document.referrer;
+        if ( url && url.search("http://")>-1) {
+            var refurl =  url.match(/:\/\/(.[^/]+)/)[1];
+            if(refurl.indexOf("baidu.com")>-1){
+                $('#nobaidu_dlg').bPopup();
+            }
+        }
+    });
+
+})(jQuery);
+</script>
+
+
+
+<div id="nobaidu_dlg" style="background-color:#fff; border-radius:15px;color:#000;display:none;padding:20px;min-width:450px;min-height:180px;">
+    <!--<span class="bClose" style="cursor:pointer; position:absolute; right:10px;top:5px;">x<span/>-->
+    <img src="http://coolshell.cn//wp-content/themes/inove/img/nobaidu.jpg" align="left">
+     <p style="margin-left:200px;margin-top: 20px; line-height: 30px;">
+     检测到你还在使用百度这个搜索引擎，<br/>
+     作为一个程序员，这是一种自暴自弃！<br/>
+     <br/>
+     </p>
+     <p align="center" style="margin-top:20px;">
+     <b><a href="http://coolshell.cn/articles/7186.html">做环保的程序员，从不用百度开始！</a></b>
+     </p>
+</div>
+
+
+<!-- Dynamic page generated in 0.833 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-07-19 01:47:41 -->
+
+<!-- Compression = gzip -->
